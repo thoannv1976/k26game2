@@ -1,78 +1,57 @@
-# English City Simulator (K26 – Game 1)
+# English Detective – AI Mystery Challenge (K26 – Game 2)
 
-Game mô phỏng thành phố ảo giúp sinh viên luyện **Nghe – Nói tiếng Anh B1–B2**: sinh viên đi trong thành phố isometric,
-vào sân bay, nhà hàng, trường đại học và **nói chuyện bằng giọng nói với nhân vật AI** để hoàn thành nhiệm vụ.
-AI đánh giá sơ bộ theo rubric 100 điểm, gợi ý luyện tập; giảng viên xem lại và thẩm định.
+Game điều tra bằng tiếng Anh giúp sinh viên luyện **Đọc – Viết – Tư duy phản biện** (B1–B2): đọc tài liệu, tự đánh dấu bằng chứng,
+phỏng vấn nhân vật AI, sắp xếp Case Board, chọn kết luận và viết báo cáo. AI chấm sơ bộ theo rubric 100 điểm; giảng viên thẩm định.
 
-Chạy trên **Google Cloud** (Cloud Run, Vertex AI Gemini, Speech-to-Text, Text-to-Speech, Cloud Storage) và **Firebase**
-(Hosting, Authentication, Firestore).
+Chạy trên **Google Cloud + Firebase**, dùng chung project và **tài khoản đăng nhập** với Game 1 (English City Simulator),
+dữ liệu tách riêng trong Firestore database `detective`.
 
 | Tài liệu | Nội dung |
 |---|---|
-| [PLAN.md](PLAN.md) | Kế hoạch xây dựng |
+| [PLAN.md](PLAN.md) | Kế hoạch đã duyệt |
 | [docs/COWORK-DEPLOY.md](docs/COWORK-DEPLOY.md) | **Hướng dẫn dán vào Claude Cowork để triển khai** |
-| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Triển khai lên GCP/Firebase (chi tiết, xử lý sự cố) |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Kiến trúc, luồng xử lý |
+| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Triển khai chi tiết, xử lý sự cố |
+| [docs/USER-GUIDE.md](docs/USER-GUIDE.md) | Hướng dẫn sử dụng cho sinh viên và giảng viên |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Kiến trúc, Game Engine, AI |
 | [docs/DATABASE.md](docs/DATABASE.md) | Cấu trúc Firestore |
-| [docs/API.md](docs/API.md) | REST API, API tích hợp LMS-AI9 |
+| [docs/API.md](docs/API.md) | REST API, API LMS-AI9 |
+| [docs/CASES.md](docs/CASES.md) | Ngân hàng vụ việc, cách viết/duyệt vụ việc mới |
 | [docs/TESTING.md](docs/TESTING.md) | Kiểm thử |
-| [docs/SECURITY.md](docs/SECURITY.md) | Bảo mật, quyền riêng tư, kiểm soát chi phí |
-| [docs/OPERATIONS.md](docs/OPERATIONS.md) | Vận hành, xử lý sự cố |
-| [docs/spec/game1-english-city-simulator.md](docs/spec/game1-english-city-simulator.md) | Đặc tả gốc |
-
-## Hình ảnh
-
-| Bản đồ thành phố | Hội thoại với nhân vật AI | Kết quả đánh giá |
-|---|---|---|
-| ![](docs/screenshots/1-city-map.png) | ![](docs/screenshots/3-conversation.png) | ![](docs/screenshots/4-results.png) |
-
-## Tính năng v1.0
-
-- 3 địa điểm (Airport, Restaurant & Café, University) + 3 địa điểm "sắp ra mắt"; **6 nhiệm vụ M01–M06** (B1/B2).
-- Hội thoại giọng nói hai chiều; chế độ gõ chữ dự phòng; gợi ý, nghe lại, tạm dừng, tiếp tục phiên dở.
-- Scenario Engine quản lý giai đoạn, mục tiêu, tình huống phát sinh, điều kiện hoàn thành.
-- Đánh giá AI + khuyến nghị học tập; XP, thành tích.
-- Dashboard sinh viên, giảng viên (giao bài, thẩm định, xuất CSV), quản trị trường (người dùng, lớp, ngân hàng nhiệm vụ,
-  cấu hình AI, hạn mức, chi phí, nhật ký), quản trị nền tảng (nhiều trường).
-- API tích hợp LMS-AI9 / AI English Learning Portfolio.
+| [docs/SECURITY.md](docs/SECURITY.md) | Bảo mật, quyền riêng tư, chi phí |
+| [docs/OPERATIONS.md](docs/OPERATIONS.md) | Vận hành |
+| [docs/spec/game2-english-detective.md](docs/spec/game2-english-detective.md) | Đặc tả gốc |
 
 ## Chạy trên máy phát triển
 
-Yêu cầu: Node.js 22, Java 21 (Firebase emulators).
+Yêu cầu Node.js 22, Java 21.
 
 ```bash
 npm install
 ```
 
-Terminal 1 – Firebase emulators (Auth + Firestore):
+Terminal 1:
 
 ```bash
 npm run emulators
 ```
 
-Terminal 2 – dữ liệu mẫu (trường demo, 6 nhiệm vụ đã duyệt, tài khoản demo, mật khẩu `Demo-12345`):
+Terminal 2 (dữ liệu mẫu: trường demo, 6 vụ việc đã duyệt, tài khoản demo mật khẩu `Demo-12345`), rồi API với AI offline:
 
 ```bash
 npm run seed:local
 ```
 
-Terminal 2 – API (nhà cung cấp AI/giọng nói offline, không tốn phí):
-
 ```bash
-FIRESTORE_EMULATOR_HOST=127.0.0.1:8085 FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 GCP_PROJECT_ID=demo-ecs npm run dev:api
+GCP_PROJECT_ID=demo-ed FIRESTORE_EMULATOR_HOST=127.0.0.1:8085 FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 npm run dev:api
 ```
 
-Terminal 3 – web (http://localhost:5173):
+Terminal 3 – web tại http://localhost:5173:
 
 ```bash
 cp apps/web/.env.example apps/web/.env.local && npm run dev:web
 ```
 
-Tài khoản demo: `student1@demo.edu.vn`, `teacher@demo.edu.vn`, `admin@demo.edu.vn`, `platform@demo.edu.vn` (mật khẩu `Demo-12345`).
-
-Ở chế độ offline, nhân vật dùng câu thoại kịch bản và giọng đọc của trình duyệt; nhận diện giọng nói trả về câu mẫu của giai đoạn.
-Muốn dùng AI thật khi phát triển: đăng nhập `gcloud auth application-default login` rồi đặt
-`AI_PROVIDER=vertex SPEECH_PROVIDER=google TTS_PROVIDER=google GCP_PROJECT_ID=k26game1`.
+Tài khoản demo: `student1@demo.edu.vn`, `teacher@demo.edu.vn`, `admin@demo.edu.vn`, `platform@demo.edu.vn`.
 
 ## Kiểm thử
 
@@ -80,20 +59,16 @@ Muốn dùng AI thật khi phát triển: đăng nhập `gcloud auth application
 npm run typecheck && npm run test:unit && npm run test:integration
 ```
 
-Chi tiết: [docs/TESTING.md](docs/TESTING.md).
-
 ## Cấu trúc
 
 ```
-apps/web          React + Vite + Tailwind (Firebase Hosting)
-apps/api          Fastify API (Cloud Run)
-packages/shared   Kiểu dữ liệu, Scenario Engine, chấm điểm
-content/missions  Nội dung 6 nhiệm vụ
-firebase/         Firestore/Storage rules, indexes
-infrastructure/   bootstrap.sh (hạ tầng GCP), Cloud Build
-scripts/          deploy.sh, seed.mts
-tests/e2e         Playwright
-docs/             Tài liệu
+apps/web               React + Vite + Tailwind
+apps/api               Fastify API (Cloud Run "detective-api")
+packages/shared        Kiểu dữ liệu, Canonical Case Dossier, định dạng minh chứng k26-evidence
+packages/game-engine   Luật điều tra xác định + chấm phần máy chấm + kiểm tra hồ sơ vụ việc
+packages/ai            Prompt, Gemini/offline provider, bộ lọc phản hồi AI
+content/cases          CASE01–CASE06
+firebase/ infrastructure/ scripts/ tests/e2e/ docs/
 ```
 
-> Kết quả do AI hỗ trợ đánh giá chỉ mang tính đánh giá quá trình, **không phải điểm VSTEP chính thức**.
+> Kết quả do AI hỗ trợ chỉ mang tính đánh giá quá trình, **không phải điểm chính thức**.

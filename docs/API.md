@@ -1,94 +1,76 @@
 # API
 
-Base URL: `https://<project>.web.app/api` (Firebase Hosting rewrite → Cloud Run). Mọi endpoint (trừ `GET /api/health`) cần
-header `Authorization: Bearer <Firebase ID token>`. Vai trò/trường lấy từ custom claims `{ tenantId, role }`.
+Base: `https://k26-detective.web.app/api` (Hosting → Cloud Run `detective-api`). Every endpoint except `GET /api/health` needs
+`Authorization: Bearer <Firebase ID token>` (accounts shared with English City Simulator). Errors:
+`{ "error": { "code", "message", "details" } }` – codes in `ApiErrorCodes` (`packages/shared/src/platform.ts`).
 
-Lỗi trả về dạng `{ "error": { "code": "QUOTA_EXCEEDED", "message": "...", "details": ... } }`. Mã lỗi: xem `ApiErrorCodes`
-trong `packages/shared/src/schemas.ts` (401 UNAUTHENTICATED, 403 FORBIDDEN/NOT_PROVISIONED/CONSENT_REQUIRED, 404, 400 VALIDATION,
-409 CONFLICT/TURN_IN_PROGRESS/SESSION_NOT_ACTIVE/TURN_LIMIT/TIME_LIMIT/HINT_LIMIT/REPLAY_LIMIT, 413 AUDIO_TOO_LONG,
-422 AUDIO_UNCLEAR/CONTENT_BLOCKED, 429 QUOTA_EXCEEDED/BUDGET_EXCEEDED/ATTEMPT_LIMIT).
+## Student
 
-## Người dùng & thế giới (mọi thành viên trường)
-
-| Method | Path | Mô tả |
+| Method | Path | Body / notes |
 |---|---|---|
-| GET | `/me` | Hồ sơ + trường. Tài khoản Google thuộc domain được phép sẽ tự được tạo (trả `refreshToken: true` → client làm mới token) |
-| PATCH | `/me` | `{locale?, level?, recordingConsent?, displayName?}` |
-| GET | `/locations` | 6 địa điểm (3 mở) + số nhiệm vụ |
-| GET | `/missions?locationId=&level=` | Nhiệm vụ đã duyệt (ẩn dữ kiện NPC/từ khóa) + đã hoàn thành/điểm cao nhất |
-| GET | `/missions/:id` | Chi tiết + `activeSessionId` nếu đang chơi dở |
+| GET | `/me` · PATCH `/me` | profile (created on first visit for accounts made in Game 1) · `{locale?, level?, displayName?}` |
+| GET | `/cases?level=` · `/cases/:id` | approved cases (no hidden data) + solved/best/activeSessionId |
+| POST | `/sessions` | `{caseId, assignmentId?, restart?}` → start or **resume**; returns the investigation view |
+| GET | `/sessions/:id` · `/sessions/:id/documents` | view: `{session, investigation, interviews, assistant, notebook, draft}` |
+| POST | `/sessions/:id/briefing` | acknowledge the briefing |
+| POST | `/sessions/:id/documents/:docId/open` | mark a document as read (locked → 409 LOCKED) |
+| POST | `/sessions/:id/answers` | `{questionId, value}` – one attempt; objective answers marked right/wrong |
+| POST | `/sessions/:id/highlights` | `{documentId, text}` → `result.kind` `evidence` (with label) or `clue` |
+| DELETE | `/sessions/:id/clues/:clueId` | remove a personal clue |
+| PUT/POST | `/sessions/:id/board` · `/sessions/:id/evidence` | `{items: {evidenceId: {category, note}}, links: [{a,b,note}]}` |
+| POST | `/sessions/:id/conclusion` | `{optionId, supportingEvidenceIds[], justification}` |
+| POST | `/sessions/:id/hint` | `{stage: documents|evidence|interviews|analysis|report}` → level 1–3 |
+| POST | `/sessions/:id/interviews` | `{clientMessageId (uuid), characterId, question}` → `{message: {reply, unlockedDocumentIds…}, …view}` |
+| POST | `/sessions/:id/assistant` | `{clientMessageId, stage, question}` → `{message: {answer, kind}}` |
+| PUT | `/sessions/:id/notes` | `{text}` |
+| PUT | `/sessions/:id/draft` | `{text, baseVersion}` → 409 `DRAFT_CONFLICT` with `details.current` if a newer draft exists |
+| POST | `/sessions/:id/submit` | `{text, draftVersion}` → **202**; 409 `NOT_READY_TO_SUBMIT` with `details.blockers` |
+| GET | `/sessions/:id/results` | `{status}` while grading; when graded `{assessment, report, solution, case}` |
+| GET | `/student/progress` · `/student/courses` · `/leaderboard?courseId=` | dashboard; leaderboard shows game points only |
 
-## Phiên chơi
+## Teacher (teacher, school_admin)
 
-| Method | Path | Mô tả |
-|---|---|---|
-| POST | `/sessions` | `{missionId, assignmentId?, restart?}` → tạo phiên hoặc **tiếp tục** phiên dở (`resumed: true`) |
-| GET | `/sessions/:id` | Trạng thái phiên + lượt hội thoại |
-| POST | `/sessions/:id/turns` | `{clientTurnId: uuid, text}` – lượt gõ chữ (không tính minh chứng Nói) |
-| POST | `/sessions/:id/voice` | multipart: `clientTurnId`, `audio` (WAV PCM 16-bit mono) – cần đồng ý ghi âm |
-| POST | `/sessions/:id/hint` | Gợi ý (giới hạn theo nhiệm vụ) |
-| POST | `/sessions/:id/replay` | `{kind: replay|repeat_request}` – nghe lại / yêu cầu nhắc lại |
-| POST | `/sessions/:id/pause` · `/resume` | Tạm dừng / tiếp tục (đồng hồ dừng khi tạm dừng) |
-| POST | `/sessions/:id/complete` | Kết thúc + đánh giá (idempotent) |
-| GET | `/sessions/:id/results` | Kết quả, rubric, phản hồi, transcript |
-| GET | `/tts/:hash` | Audio MP3 lời NPC |
-| GET | `/student/progress` | Dashboard sinh viên |
+`GET /teacher/classes`, `GET /teacher/classes/:id`, `POST /teacher/assignments {courseId, caseId, dueAt, note}`,
+`DELETE /teacher/assignments/:id`, `GET /teacher/students/:uid`, `GET /teacher/sessions/:id` (results),
+`GET /teacher/sessions/:id/process` (investigation trail), `PUT /teacher/assessments/:id/review {scores: {reading?, evidence?,
+criticalThinking?, writing?}, comment}`, `POST /teacher/assessments/:id/regrade`, `GET /teacher/export.csv?courseId=`.
 
-`TurnResponse`: `{clientTurnId, studentText, mode, npcText, ttsHash, fallback, needsClarification, objectivesCredited[], stageChanged, session}`.
+## Case bank (teacher, school_admin)
 
-## Giảng viên (teacher, school_admin)
+`GET /admin/cases`, `GET /admin/cases/:id` (versions + consistency check), `PUT /admin/cases/:id {dossier, note}` (new draft),
+`POST /admin/cases/:id/approve {version}` (refused if the check fails), `POST /admin/cases/:id/archive {archived}` (admin),
+`POST /admin/cases/seed` (admin), `POST /admin/cases/generate {caseId, topic, level, learningObjectives, documentCount,
+characterCount, minutes, writingType}` – AI Case Generator, creates a draft.
 
-| Method | Path | Mô tả |
-|---|---|---|
-| GET | `/teacher/classes` · `/teacher/classes/:id` | Lớp, sinh viên, bài giao, kết quả |
-| POST/DELETE | `/teacher/assignments` · `/teacher/assignments/:id` | Giao/xóa nhiệm vụ `{courseId, missionId, dueAt, note}` |
-| GET | `/teacher/students/:uid` | Lịch sử phiên của sinh viên |
-| GET | `/teacher/sessions/:id` · `/teacher/sessions/:id/audio/:turnId` | Xem lại hội thoại, nghe ghi âm |
-| PUT | `/teacher/assessments/:id/review` | `{scores: {grammar: 14, …}, comment}` – thẩm định/điều chỉnh |
-| GET | `/teacher/export.csv?courseId=` | Xuất kết quả CSV (UTF-8 BOM, mở được bằng Excel) |
+## School admin / platform
 
-## Quản trị trường (school_admin; mục Missions cho cả teacher)
+Same as Game 1: `/admin/users` (+ `/import`), `/admin/courses`, `/admin/settings`, `PUT /admin/ai-config`, `PUT /admin/quotas`,
+`PUT /admin/school`, `POST /admin/health/ai`, `GET /admin/usage` (+ `.csv`), `GET /admin/audit-logs`, `GET /admin/reports/overview`,
+`/platform/tenants`.
 
-`GET/POST /admin/users`, `POST /admin/users/import` (CSV `email,displayName,role,studentCode,courseCode,password`),
-`PATCH/DELETE /admin/users/:uid`, `GET/POST /admin/courses`, `PATCH/DELETE /admin/courses/:id`,
-`GET /admin/missions`, `GET/PUT /admin/missions/:id` (lưu nháp phiên bản mới), `POST /admin/missions/:id/approve {version}`,
-`POST /admin/missions/:id/archive`, `POST /admin/missions/seed`, `GET /admin/settings`, `PUT /admin/ai-config`, `PUT /admin/quotas`,
-`PUT /admin/school`, `POST /admin/health/ai`, `GET /admin/usage?month=YYYYMM`, `GET /admin/usage.csv`, `GET /admin/audit-logs`,
-`GET /admin/reports/overview`.
+## LMS-AI9 / AI English Learning Portfolio
 
-## Nền tảng (platform_admin)
-
-`GET/POST /platform/tenants`, `PATCH /platform/tenants/:id`. Quản trị nền tảng **không** đọc được dữ liệu học tập.
-
-## Tích hợp LMS-AI9 / AI English Learning Portfolio (`/lms/v1`, school_admin hoặc tài khoản tích hợp có vai trò school_admin)
-
-| Method | Path | Mô tả |
-|---|---|---|
-| GET | `/lms/v1/results?courseId=&since=ISO&limit=` | Danh sách minh chứng học tập |
-| GET | `/lms/v1/evidence/:sessionId` | Một minh chứng |
-
-Định dạng minh chứng (`schema: "ecs-evidence-1.0"`):
+`GET /lms/v1/results?courseId=&since=&limit=` and `GET /lms/v1/evidence/:sessionId` (school_admin) return the **common K26
+format** `k26-evidence-1.0` (also used by English City Simulator):
 
 ```json
 {
-  "schema": "ecs-evidence-1.0",
-  "evidenceId": "ecs:<tenantId>:<sessionId>",
-  "source": "english-city-simulator",
-  "learner": { "uid": "...", "email": "...", "studentCode": "SV001", "name": "..." },
-  "courseId": "...",
-  "activity": { "type": "speaking_mission", "missionId": "M02", "missionVersion": 1, "title": "Lost Luggage", "level": "B1" },
-  "skills": ["listening", "speaking"],
+  "schema": "k26-evidence-1.0",
+  "evidenceId": "ed:<tenantId>:<sessionId>",
+  "source": "english-detective",
+  "learner": { "uid": "…", "email": "…", "studentCode": "SV001", "name": "…" },
+  "courseId": "…",
+  "activity": { "type": "investigation_case", "id": "CASE01", "version": 1, "title": "The Missing Scholarship", "level": "B1" },
+  "skills": ["reading", "writing", "critical_thinking"],
   "result": {
-    "missionCompleted": true, "objectivesMet": 9, "objectivesRequired": 9,
-    "aiPercent": 82, "finalPercent": 85, "scoreType": "teacher_validated | ai_practice",
-    "criteria": { "taskCompletion": { "score": 30, "max": 30, "status": "assessed", "source": "engine" } },
-    "evidenceMode": "voice | text | mixed", "speakingEvidence": true
+    "completed": true, "aiPercent": 86, "finalPercent": 88, "scoreType": "ai_practice | teacher_validated",
+    "criteria": { "reading": { "score": 23, "max": 25, "status": "assessed", "source": "engine+ai" } }
   },
   "feedback": { "strengths": [], "improvements": [], "nextPractice": [] },
-  "timestamps": { "startedAt": "...", "completedAt": "...", "reviewedAt": null },
-  "versions": { "rubric": "ecs-rubric-1.0", "prompt": "ecs-prompt-1.0", "model": "vertex:gemini-2.5-flash", "mission": 1 },
-  "disclaimer": "AI-assisted learning feedback. This is not an official VSTEP score."
+  "timestamps": { "startedAt": "…", "completedAt": "…", "reviewedAt": null },
+  "versions": { "rubric": "ed-rubric-1.0", "prompt": "ed-prompt-1.0", "model": "vertex:gemini-3-flash-preview", "caseVersion": 1 },
+  "disclaimer": "AI-assisted learning feedback. This is not an official score."
 }
 ```
 
-`scoreType` phân biệt điểm luyện tập AI với điểm đã được giảng viên thẩm định. Đồng bộ sổ điểm Moodle/LTI 1.3 là giai đoạn sau.
+AI scores are not pushed to the Moodle gradebook; LMS-AI9 decides what to import (`scoreType` distinguishes practice vs validated).

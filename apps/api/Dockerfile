@@ -1,17 +1,18 @@
-# English City Simulator API – Cloud Run image.
-# Build from the repository root:  docker build -f apps/api/Dockerfile -t ecs-api .
-
+# English Detective API – Cloud Run image.
+# Build from the repository root:  docker build -f apps/api/Dockerfile -t detective-api .
 ARG NODE_IMAGE=node:22-slim
 
-# ---- build stage: bundle the API (+ shared package + mission content) ----
+# ---- build stage: bundle the API + workspace packages + case content ----
 FROM ${NODE_IMAGE} AS build
 WORKDIR /app
 COPY package.json package-lock.json tsconfig.base.json ./
 COPY packages/shared/package.json packages/shared/
+COPY packages/game-engine/package.json packages/game-engine/
+COPY packages/ai/package.json packages/ai/
 COPY apps/api/package.json apps/api/
 COPY apps/web/package.json apps/web/
 RUN npm ci --workspace @ed/api --include-workspace-root=false --ignore-scripts --no-audit --no-fund
-COPY packages/shared packages/shared
+COPY packages packages
 COPY content content
 COPY apps/api apps/api
 RUN npm run build --workspace @ed/api
@@ -22,6 +23,8 @@ ENV NODE_ENV=production
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY packages/shared/package.json packages/shared/
+COPY packages/game-engine/package.json packages/game-engine/
+COPY packages/ai/package.json packages/ai/
 COPY apps/api/package.json apps/api/
 COPY apps/web/package.json apps/web/
 RUN npm ci --omit=dev --workspace @ed/api --include-workspace-root=false --ignore-scripts --no-audit --no-fund && npm cache clean --force

@@ -2,7 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * E2E tests run the real web app + API against Firebase emulators with offline AI/speech providers.
- * Chromium's fake microphone produces a test tone; the offline STT returns the mission's sample lines.
  */
 export default defineConfig({
   testDir: '.',
@@ -18,9 +17,8 @@ export default defineConfig({
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     locale: 'vi-VN',
-    permissions: ['microphone'],
     launchOptions: {
-      args: ['--use-fake-ui-for-media-stream', '--use-fake-device-for-media-stream', '--autoplay-policy=no-user-gesture-required'],
+      args: [],
     },
   },
   projects: [

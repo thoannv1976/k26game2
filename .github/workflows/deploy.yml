@@ -20,7 +20,8 @@ jobs:
     env:
       PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
       REGION: ${{ vars.GCP_REGION || 'asia-southeast1' }}
-      IMAGE: ${{ vars.GCP_REGION || 'asia-southeast1' }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/ecs/ecs-api:${{ github.sha }}
+      IMAGE: ${{ vars.GCP_REGION || 'asia-southeast1' }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/detective/detective-api:${{ github.sha }}
+      SITE_ID: ${{ vars.HOSTING_SITE || 'k26-detective' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -46,11 +47,11 @@ jobs:
 
       - name: Deploy Cloud Run
         run: |
-          gcloud run deploy ecs-api --project "${PROJECT_ID}" --region "${REGION}" --image "${IMAGE}" \
+          gcloud run deploy detective-api --project "${PROJECT_ID}" --region "${REGION}" --image "${IMAGE}" \
             --service-account "${{ vars.RUNTIME_SA }}" --allow-unauthenticated \
-            --memory 1Gi --cpu 1 --concurrency 40 --timeout 120 \
+            --memory 1Gi --cpu 1 --concurrency 40 --timeout 300 \
             --min-instances "${{ vars.MIN_INSTANCES || '0' }}" --max-instances "${{ vars.MAX_INSTANCES || '10' }}" \
-            --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},VERTEX_LOCATION=${{ vars.VERTEX_LOCATION || vars.GCP_REGION || 'asia-southeast1' }},AUDIO_BUCKET=${{ vars.AUDIO_BUCKET }},GEMINI_MODEL=${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }},LOG_LEVEL=info"
+            --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},FIRESTORE_DATABASE=detective,VERTEX_LOCATION=${{ vars.VERTEX_LOCATION || 'global' }},GEMINI_MODEL=${{ vars.GEMINI_MODEL || 'gemini-3-flash-preview' }},LOG_LEVEL=info"
 
       - name: Build web
         env:
@@ -60,8 +61,10 @@ jobs:
           VITE_FIREBASE_APP_ID: ${{ vars.VITE_FIREBASE_APP_ID }}
         run: npm run build --workspace @ed/web
 
-      - name: Deploy Firebase Hosting, Firestore rules and indexes
-        run: npx firebase deploy --project "${PROJECT_ID}" --only hosting,firestore:rules,firestore:indexes --non-interactive
+      - name: Deploy Firebase Hosting (site ${{ vars.HOSTING_SITE || 'k26-detective' }}) and Firestore rules/indexes (database detective)
+        run: |
+          npx firebase target:apply hosting detective "${SITE_ID}" --project "${PROJECT_ID}"
+          npx firebase deploy --project "${PROJECT_ID}" --only hosting:detective,firestore --non-interactive
 
       - name: Smoke test
-        run: curl -fsS "https://${PROJECT_ID}.web.app/api/health"
+        run: curl -fsS "https://${SITE_ID}.web.app/api/health"

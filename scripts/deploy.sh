@@ -1,58 +1,55 @@
 #!/usr/bin/env bash
 # Manual deployment (Cloud Shell / Claude Cowork). GitHub Actions does the same on push to main.
-#   bash scripts/deploy.sh            # deploy API + web + rules/indexes to PROJECT_ID
-# Requires: gcloud (logged in), node 22, npm. Reads web config from apps/web/.env.production.
-# Env: PROJECT_ID (default k26game1), REGION (default asia-southeast1), GEMINI_MODEL (default gemini-2.5-flash),
-#      MIN_INSTANCES (default 0), MAX_INSTANCES (default 10)
+#   GEMINI_MODEL=gemini-3-flash-preview VERTEX_LOCATION=global bash scripts/deploy.sh
+# Requires: gcloud (logged in), firebase login (or ADC), node 22. Web config in apps/web/.env.production
+# (same Firebase Web App values as English City Simulator – the project and accounts are shared).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
 PROJECT_ID="${PROJECT_ID:-k26game1}"
 REGION="${REGION:-asia-southeast1}"
-GEMINI_MODEL="${GEMINI_MODEL:-gemini-2.5-flash}"
+SITE_ID="${SITE_ID:-k26-detective}"
+GEMINI_MODEL="${GEMINI_MODEL:-gemini-3-flash-preview}"
+VERTEX_LOCATION="${VERTEX_LOCATION:-global}"
 TAG="$(git rev-parse --short HEAD 2>/dev/null || date +%s)"
-IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/ecs/ecs-api:${TAG}"
-RUNTIME_SA="ecs-api@${PROJECT_ID}.iam.gserviceaccount.com"
+IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/detective/detective-api:${TAG}"
+RUNTIME_SA="detective-api@${PROJECT_ID}.iam.gserviceaccount.com"
+FIREBASE="npx --yes firebase-tools@14.27.0"
 
-if [[ ! -f apps/web/.env.production ]]; then
-  echo "Missing apps/web/.env.production (copy apps/web/.env.example and fill the Firebase web config)." >&2
-  exit 1
-fi
+[[ -f apps/web/.env.production ]] || { echo "Missing apps/web/.env.production (copy apps/web/.env.example)." >&2; exit 1; }
 
-echo "==> Installing dependencies"
+echo "==> Installing dependencies and running unit tests"
 npm ci --no-audit --no-fund
-
-echo "==> Tests (unit)"
 npm run test:unit
 
-echo "==> Building API image ${IMAGE} with Cloud Build"
+echo "==> Building API image ${IMAGE} (Cloud Build)"
 gcloud builds submit --project "${PROJECT_ID}" --config infrastructure/cloudbuild.api.yaml --substitutions "_IMAGE=${IMAGE}" .
 
-echo "==> Deploying Cloud Run service ecs-api"
-gcloud run deploy ecs-api --project "${PROJECT_ID}" --region "${REGION}" --image "${IMAGE}" \
+echo "==> Deploying Cloud Run service detective-api"
+gcloud run deploy detective-api --project "${PROJECT_ID}" --region "${REGION}" --image "${IMAGE}" \
   --service-account "${RUNTIME_SA}" --allow-unauthenticated \
-  --memory 1Gi --cpu 1 --concurrency 40 --timeout 120 \
+  --memory 1Gi --cpu 1 --concurrency 40 --timeout 300 \
   --min-instances "${MIN_INSTANCES:-0}" --max-instances "${MAX_INSTANCES:-10}" \
-  --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},VERTEX_LOCATION=${VERTEX_LOCATION:-${REGION}},AUDIO_BUCKET=${PROJECT_ID}-audio,GEMINI_MODEL=${GEMINI_MODEL},LOG_LEVEL=info"
+  --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},FIRESTORE_DATABASE=detective,VERTEX_LOCATION=${VERTEX_LOCATION},GEMINI_MODEL=${GEMINI_MODEL},LOG_LEVEL=info"
 
-# Firebase Hosting calls Cloud Run without a Google identity, so the service must accept public requests
-# (the API checks Firebase ID tokens itself). Organisations with "Domain restricted sharing" block allUsers;
-# in that case turn off the Cloud Run invoker IAM check instead.
-RUN_URL="$(gcloud run services describe ecs-api --project "${PROJECT_ID}" --region "${REGION}" --format='value(status.url)')"
+# Hosting calls Cloud Run without a Google identity; if the organisation blocks allUsers, disable the invoker IAM check
+# (the API verifies Firebase ID tokens on every endpoint).
+RUN_URL="$(gcloud run services describe detective-api --project "${PROJECT_ID}" --region "${REGION}" --format='value(status.url)')"
 if [[ "$(curl -s -o /dev/null -w '%{http_code}' "${RUN_URL}/api/health")" == "403" ]]; then
   echo "==> Public access blocked by IAM policy – disabling the Cloud Run invoker IAM check"
-  gcloud run services update ecs-api --project "${PROJECT_ID}" --region "${REGION}" --no-invoker-iam-check
+  gcloud run services update detective-api --project "${PROJECT_ID}" --region "${REGION}" --no-invoker-iam-check
 fi
 curl -fsS "${RUN_URL}/api/health" && echo
 
 echo "==> Building web app"
-npm run build --workspace @ecs/web
+npm run build --workspace @ed/web
 
-echo "==> Deploying Firebase Hosting, Firestore rules and indexes"
-npx firebase hosting:sites:get "${PROJECT_ID}" --project "${PROJECT_ID}" >/dev/null 2>&1 || \
-  npx firebase hosting:sites:create "${PROJECT_ID}" --project "${PROJECT_ID}" --non-interactive
-npx firebase deploy --project "${PROJECT_ID}" --only hosting,firestore:rules,firestore:indexes --non-interactive
+echo "==> Firebase Hosting site ${SITE_ID}"
+${FIREBASE} hosting:sites:get "${SITE_ID}" --project "${PROJECT_ID}" >/dev/null 2>&1 || ${FIREBASE} hosting:sites:create "${SITE_ID}" --project "${PROJECT_ID}" --non-interactive
+${FIREBASE} target:apply hosting detective "${SITE_ID}" --project "${PROJECT_ID}" >/dev/null
+
+echo "==> Deploying Hosting + Firestore rules/indexes for database 'detective'"
+${FIREBASE} deploy --project "${PROJECT_ID}" --only hosting:detective,firestore --non-interactive
 
 echo "==> Smoke test"
-URL="https://${PROJECT_ID}.web.app"
-curl -fsS "${URL}/api/health" && echo && echo "Deployed: ${URL}"
+curl -fsS "https://${SITE_ID}.web.app/api/health" && echo && echo "Deployed: https://${SITE_ID}.web.app"

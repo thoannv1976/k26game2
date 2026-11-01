@@ -21,6 +21,14 @@ dữ liệu tách riêng trong Firestore database `detective`.
 | [docs/OPERATIONS.md](docs/OPERATIONS.md) | Vận hành |
 | [docs/spec/game2-english-detective.md](docs/spec/game2-english-detective.md) | Đặc tả gốc |
 
+## Hình ảnh
+
+| Văn phòng thám tử | Phòng tài liệu | Phỏng vấn nhân vật AI |
+|---|---|---|
+| ![](docs/screenshots/1-office.png) | ![](docs/screenshots/2-document.png) | ![](docs/screenshots/3-interview.png) |
+| **Case Board** | **Kết quả** | **Giảng viên thẩm định** |
+| ![](docs/screenshots/4-board.png) | ![](docs/screenshots/5-results.png) | ![](docs/screenshots/6-teacher-review.png) |
+
 ## Chạy trên máy phát triển
 
 Yêu cầu Node.js 22, Java 21.

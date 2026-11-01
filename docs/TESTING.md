@@ -22,6 +22,19 @@ npm run build && npm run test:e2e
 
 AI giả lập (`FakeAiProvider`) dùng cho kiểm thử tự động; **kiểm thử với Gemini thật** làm thủ công trên môi trường dev (mục cuối).
 
+## Kết quả gần nhất (01/11/2026)
+
+| Bộ kiểm thử | Kết quả |
+|---|---|
+| Game Engine + nội dung 6 vụ việc | 44/44 |
+| AI guards/prompts | 8/8 |
+| API unit | 4/4 |
+| Web unit (bảng, tách câu, đếm từ, tự lưu, i18n) | 33/33 |
+| API integration (emulators) | 51/51 |
+| Firestore Rules | 4/4 |
+| E2E Playwright (desktop + mobile) | 6/6 |
+| **Tổng** | **150/150** |
+
 ## Ánh xạ yêu cầu đặc tả (GĐ 6)
 
 | Yêu cầu | Kiểm thử |

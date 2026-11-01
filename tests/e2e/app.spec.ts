@@ -47,9 +47,11 @@ test('student solves CASE01 end to end', async ({ page }) => {
     await expect(page.getByTestId(`doc-item-${h.documentId}`)).toHaveAttribute('data-locked', 'false');
     const toggle = page.getByTestId('select-mode-toggle');
     if ((await toggle.getAttribute('aria-pressed')) !== 'true') await toggle.click();
+    // Select mode: tap the sentence, then save it as evidence.
     const chip = page.getByTestId('sentence-chip').filter({ hasText: h.text.replace(/\.$/, '').slice(0, 40) }).first();
-    const r = waitApi(page, '/highlights');
     await chip.click();
+    const r = waitApi(page, '/highlights');
+    await page.getByTestId('save-evidence').click();
     await r;
   }
 
@@ -57,14 +59,14 @@ test('student solves CASE01 end to end', async ({ page }) => {
   await page.getByTestId('tab-questions').click();
   for (const q of CASE01.questions) {
     const box = page.getByTestId(`question-${q.id}`);
+    if (!(await page.getByTestId(`question-submit-${q.id}`).isVisible().catch(() => false))) continue; // already answered (resumed session)
     const value = (CASE01.sampleSolution.answers as Record<string, string | number>)[q.id]!;
     if (q.type === 'mcq') await box.getByRole('radio').nth(value as number).check();
-    else if (q.type === 'tfng') await box.getByRole('button', { name: new RegExp(`^${String(value).replace('_', ' ')}$`, 'i') }).click();
+    else if (q.type === 'tfng') await box.getByRole('radio').nth(['true', 'false', 'not_given'].indexOf(String(value))).click();
     else await box.locator('input, textarea').first().fill(String(value));
     const r = waitApi(page, '/answers');
     await page.getByTestId(`question-submit-${q.id}`).click();
-    const confirm = page.getByRole('button', { name: /xác nhận|confirm/i });
-    if (await confirm.isVisible().catch(() => false)) await confirm.click();
+    await page.getByTestId('question-confirm').click();
     await r;
   }
 

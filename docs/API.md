@@ -50,6 +50,8 @@ Same as Game 1: `/admin/users` (+ `/import`), `/admin/courses`, `/admin/settings
 
 ## LMS-AI9 / AI English Learning Portfolio
 
+`GET /lms/v1/learners/:uid/evidence?limit=` returns one learner's evidence (newest first) to a school_admin **or** to the VSTEP Quest service account (`vstep-api`, Google ID token with audience `k26-lms` + header `X-K26-Tenant`; read-only, this endpoint only; allowed accounts in `LMS_SERVICE_ACCOUNTS`).
+
 `GET /lms/v1/results?courseId=&since=&limit=` and `GET /lms/v1/evidence/:sessionId` (school_admin) return the **common K26
 format** `k26-evidence-1.0` (also used by English City Simulator):
 

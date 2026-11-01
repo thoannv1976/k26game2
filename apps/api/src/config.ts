@@ -14,6 +14,9 @@ export interface AppConfig {
   logLevel: string;
   /** Requests per minute per user (rate limit). */
   rateLimitPerMinute: number;
+  /** D4: service accounts (e.g. vstep-api@…) allowed to read learner evidence; empty = disabled. */
+  lmsServiceAccounts: string[];
+  lmsServiceAudience: string;
 }
 
 function str(name: string, def: string): string {
@@ -37,6 +40,8 @@ export function loadConfig(overrides: Partial<AppConfig> = {}): AppConfig {
     aiMaxRetries: Number(str('AI_MAX_RETRIES', '2')),
     logLevel: str('LOG_LEVEL', prod ? 'info' : 'debug'),
     rateLimitPerMinute: Number(str('RATE_LIMIT_PER_MINUTE', '240')),
+    lmsServiceAccounts: str('LMS_SERVICE_ACCOUNTS', '').split(',').map((x) => x.trim()).filter(Boolean),
+    lmsServiceAudience: str('LMS_SERVICE_AUDIENCE', 'k26-lms'),
     ...overrides,
   };
   assertSafeConfig(cfg);

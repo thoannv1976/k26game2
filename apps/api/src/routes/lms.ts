@@ -10,6 +10,7 @@ import { listApprovedCases } from '../tenants.js';
 import { applyReview } from '../services/grading.js';
 import type { AssessmentDoc, SessionDoc } from '../types.js';
 import { assessmentsForStudents, usersByIds } from './teacher.js';
+import { authenticateService, isServiceRequest } from '../serviceAuth.js';
 
 /**
  * Integration API for LMS-AI9 and the AI English Learning Portfolio.
@@ -75,5 +76,31 @@ export async function lmsRoutes(app: FastifyInstance, deps: Deps) {
     if (!a) throw notFound('Evidence');
     const [s, users, cases] = await Promise.all([p.session(m.tenantId, id).get(), usersByIds(deps, m.tenantId, [a.uid]), listApprovedCases(deps, m.tenantId)]);
     return toEvidence(a, users[0], cases.find((c) => c.dossier.id === a.caseId)?.dossier.title.en ?? a.caseId, s.data() as SessionDoc | undefined);
+  });
+
+  /**
+   * One learner's evidence, newest first. Callers: a school admin (Firebase token) or, for the K26 four-skill
+   * profile (VSTEP Quest), an allowed service account with X-K26-Tenant (read-only).
+   */
+  app.get('/api/lms/v1/learners/:uid/evidence', async (req) => {
+    const { uid } = req.params as { uid: string };
+    const q = parseBody(z.object({ limit: z.coerce.number().int().min(1).max(200).default(50) }), req.query);
+    let tenantId: string;
+    if (isServiceRequest(req)) {
+      const s = await authenticateService(deps, req);
+      if (!(await p.tenant(s.tenantId).get()).exists) throw notFound('School');
+      tenantId = s.tenantId;
+      req.log.info({ caller: s.email, tenantId, uid }, 'lms.service_evidence_read');
+    } else {
+      tenantId = requireTenantMember(req.authUser, ['school_admin']).tenantId;
+    }
+    const snap = await p.assessments(tenantId).where('uid', '==', uid).limit(300).get();
+    const list = snap.docs.map((d) => d.data() as AssessmentDoc).sort((a, b) => b.createdAt.localeCompare(a.createdAt)).slice(0, q.limit);
+    const [users, cases] = await Promise.all([usersByIds(deps, tenantId, [uid]), listApprovedCases(deps, tenantId)]);
+    return {
+      schema: EVIDENCE_SCHEMA,
+      count: list.length,
+      items: list.map((a) => toEvidence(a, users[0], cases.find((c) => c.dossier.id === a.caseId)?.dossier.title.en ?? a.caseId)),
+    };
   });
 }

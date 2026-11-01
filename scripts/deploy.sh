@@ -30,7 +30,7 @@ gcloud run deploy detective-api --project "${PROJECT_ID}" --region "${REGION}" -
   --service-account "${RUNTIME_SA}" --allow-unauthenticated \
   --memory 1Gi --cpu 1 --concurrency 40 --timeout 300 \
   --min-instances "${MIN_INSTANCES:-0}" --max-instances "${MAX_INSTANCES:-10}" \
-  --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},FIRESTORE_DATABASE=detective,VERTEX_LOCATION=${VERTEX_LOCATION},GEMINI_MODEL=${GEMINI_MODEL},LOG_LEVEL=info"
+  --set-env-vars "NODE_ENV=production,GCP_PROJECT_ID=${PROJECT_ID},FIRESTORE_DATABASE=detective,VERTEX_LOCATION=${VERTEX_LOCATION},GEMINI_MODEL=${GEMINI_MODEL},LMS_SERVICE_ACCOUNTS=${LMS_SERVICE_ACCOUNTS:-vstep-api@${PROJECT_ID}.iam.gserviceaccount.com},LOG_LEVEL=info"
 
 # Hosting calls Cloud Run without a Google identity; if the organisation blocks allUsers, disable the invoker IAM check
 # (the API verifies Firebase ID tokens on every endpoint).

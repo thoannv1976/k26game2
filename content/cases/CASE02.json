@@ -1,0 +1,958 @@
+{
+  "id": "CASE02",
+  "level": "B1",
+  "title": {
+    "en": "The Lost University Laptop",
+    "vi": "Chiếc laptop thất lạc ở trường đại học"
+  },
+  "summary": {
+    "en": "A lecturer's laptop with the final exam files disappears from a seminar room. Was it stolen, or did something else happen?",
+    "vi": "Chiếc laptop chứa đề thi cuối kỳ của một giảng viên biến mất khỏi phòng học. Nó bị đánh cắp hay đã có chuyện gì khác xảy ra?"
+  },
+  "role": "Student Detective",
+  "setting": "Riverside University",
+  "topic": "Campus life, notices and schedules",
+  "estimatedMinutes": 25,
+  "xpReward": 120,
+  "briefing": {
+    "en": "It is Thursday 14 October 2027. On Tuesday, Dr. Helen Park, a lecturer at Riverside University, lost her laptop after teaching in Room B204. The laptop contains the files for next week's final exam. Some students say the cleaner stole it, but nobody has any proof. Dr. Park has asked the English Detective Agency to find out what really happened. Read the notices, the schedule and the logs, interview the people involved and work out where the laptop is now. Then write an email to Dr. Park with your findings.",
+    "vi": "Hôm nay là thứ Năm, ngày 14 tháng 10 năm 2027. Hôm thứ Ba, TS. Helen Park, giảng viên Trường Đại học Riverside, bị mất laptop sau buổi dạy ở phòng B204. Chiếc laptop chứa các tệp đề thi cuối kỳ của tuần sau. Một số sinh viên cho rằng cô lao công đã lấy trộm, nhưng không ai có bằng chứng. TS. Park đã nhờ English Detective Agency tìm ra sự thật. Hãy đọc các thông báo, lịch đặt phòng và nhật ký, phỏng vấn những người liên quan và xác định chiếc laptop hiện đang ở đâu. Sau đó viết email gửi TS. Park trình bày kết quả điều tra."
+  },
+  "objectives": [
+    {
+      "en": "Read the notices and compare the times in the schedule and the logs.",
+      "vi": "Đọc các thông báo và đối chiếu thời gian trong lịch đặt phòng và nhật ký."
+    },
+    {
+      "en": "Find evidence that shows where the laptop went after the class.",
+      "vi": "Tìm bằng chứng cho thấy chiếc laptop đã đi đâu sau buổi học."
+    },
+    {
+      "en": "Interview Dr. Park, Lucas Nguyen and the Security Office.",
+      "vi": "Phỏng vấn TS. Park, Lucas Nguyen và Phòng Bảo vệ."
+    },
+    {
+      "en": "Write an email to Dr. Park explaining what happened and what she should do.",
+      "vi": "Viết email cho TS. Park giải thích chuyện đã xảy ra và cô nên làm gì."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_park_email",
+      "type": "email",
+      "title": "Missing laptop – Room B204",
+      "meta": {
+        "From": "Dr. Helen Park <h.park@riverside.edu>",
+        "To": "Building B staff and students <buildingb-all@riverside.edu>",
+        "Date": "Tuesday, 12 October 2027, 15:10",
+        "Subject": "Missing laptop – Room B204"
+      },
+      "body": "Dear colleagues and students,\n\nMy laptop has gone missing from Room B204. It is a silver Novatek AirBook 14. It has a small staff label on the bottom with the number RU-STAFF-0457.\n\nThis morning I taught Academic English 2 in Room B204 from 09:00 to 11:00. At 11:05 I left the room quickly because I had a faculty meeting in Room A101. I think I left my laptop on the front table next to the projector.\n\nWhen I came back at 13:50, the room was empty and my laptop was not there. I went to the Security Office at 14:00. They had a silver laptop from Room B204, but it was not mine because it had a robotics club sticker on it.\n\nThe laptop contains the files for the final exam on Monday 25 October. I am sure nobody can open the files without my password.\n\nIf you have any information, please contact me or the Security Office (Room A005).\n\nThank you,\nDr. Helen Park\nSchool of Languages",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "faculty meeting",
+          "definition": "a meeting for the teachers of a university department",
+          "vi": "cuộc họp khoa"
+        },
+        {
+          "term": "label",
+          "definition": "a small piece of paper or plastic with information on it",
+          "vi": "nhãn"
+        },
+        {
+          "term": "sticker",
+          "definition": "a picture or label with glue on the back",
+          "vi": "miếng dán, hình dán"
+        }
+      ]
+    },
+    {
+      "id": "d_room_schedule",
+      "type": "table",
+      "title": "Room Booking Schedule – Room B204, Tuesday 12 October 2027",
+      "meta": {
+        "Source": "Riverside University Room Booking System",
+        "Building": "Building B, second floor"
+      },
+      "body": "ROOM B204 – BOOKINGS FOR TUESDAY 12 OCTOBER 2027\n\n| Time | Booking | Booked by |\n|---|---|---|\n| 07:30–08:00 | Morning cleaning | Facilities Team |\n| 09:00–11:00 | Academic English 2 (Group E3) | Dr. H. Park |\n| 11:15–13:00 | Business Statistics – group presentations (Group S1) | Mr. K. Osei |\n| 13:15–13:45 | Afternoon cleaning | Facilities Team |\n| 14:00–16:00 | Film Club meeting (cancelled) | Student Union |\n\nNotes:\n- Building B, second floor: rooms are numbered B201 to B212.\n- Each room has one projector and a front table for the lecturer or presenters.\n- Please do not leave personal items in the room after your booking ends.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "booking",
+          "definition": "an arrangement to use a room or place at a certain time",
+          "vi": "lượt đặt phòng/đặt chỗ"
+        },
+        {
+          "term": "presenter",
+          "definition": "a person who gives a talk to a group",
+          "vi": "người thuyết trình"
+        }
+      ]
+    },
+    {
+      "id": "d_cleaning_log",
+      "type": "table",
+      "title": "Building B Cleaning and Security Log – 12 October 2027",
+      "meta": {
+        "Prepared by": "Facilities Team, Building B",
+        "Date": "Tuesday, 12 October 2027"
+      },
+      "body": "BUILDING B – DAILY LOG (TUESDAY 12 OCTOBER 2027)\n\n| Time | Room | Staff | Note |\n|---|---|---|---|\n| 07:35 | B204 | R. Tan | Morning cleaning. Room empty. |\n| 12:40 | B210 | R. Tan | Window does not close. Reported to Maintenance. |\n| 13:20 | B204 | R. Tan | Afternoon cleaning. One silver laptop found on the front table. No owner in the room. |\n| 13:35 | A005 | R. Tan | Laptop from B204 handed in to the Security Office. Receipt LF-117. |\n| 14:10 | B206 | R. Tan | Afternoon cleaning. Nothing found. |\n| 18:00 | Building B | O. Hassan | All doors locked. Alarm on. |\n\nRule for all staff: items found in rooms must be taken to the Security Office (Room A005) within one hour.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "log",
+          "definition": "an official written record of events, in time order",
+          "vi": "nhật ký (ghi chép)"
+        },
+        {
+          "term": "hand in",
+          "definition": "to give something to a person in charge",
+          "vi": "nộp lại, giao nộp"
+        },
+        {
+          "term": "receipt",
+          "definition": "a paper that shows something was given or paid",
+          "vi": "biên nhận"
+        }
+      ]
+    },
+    {
+      "id": "d_student_chat",
+      "type": "chat",
+      "title": "Group chat: Academic English 2 – Group E3",
+      "meta": {
+        "App": "CampusTalk",
+        "Dates": "Tuesday 12 – Wednesday 13 October 2027"
+      },
+      "body": "Kim (Tue 16:02): Did you all see Dr. Park's email? Her laptop is missing!\n\nBao (Tue 16:05): Oh no. The final exam files are on it.\n\nKim (Tue 16:07): I bet the cleaner stole it. She was the last person in the room.\n\nLinh (Tue 16:10): We don't know that. My friend Jun is in the stats class after ours. He said there were two silver laptops on the front table during the presentations.\n\nBao (Tue 16:12): My cousin saw a silver laptop for sale on Campus Market last night. Maybe it's the same one.\n\nLinh (Tue 16:15): Lots of students have silver laptops, Bao.\n\nKim (Wed 09:30): By the way, the coffee machine on the second floor is broken again.\n\nLinh (Wed 09:32): Has anyone checked the lost-and-found list? Security puts it up on Wednesday afternoons.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "I bet",
+          "definition": "I am almost sure (used for a personal guess)",
+          "vi": "tôi cá là, chắc chắn là (phỏng đoán)"
+        },
+        {
+          "term": "for sale",
+          "definition": "available for people to buy",
+          "vi": "đang được rao bán"
+        }
+      ]
+    },
+    {
+      "id": "d_lost_found",
+      "type": "notice",
+      "title": "Lost and Found – Items at the Security Office",
+      "meta": {
+        "Posted by": "Campus Security, Room A005",
+        "Date": "Wednesday, 13 October 2027, 14:00"
+      },
+      "body": "LOST AND FOUND – SECURITY OFFICE (ROOM A005)\n\nThe following items were handed in between 11 and 13 October 2027.\n\n| Item no. | Item | Found in | Handed in | Status |\n|---|---|---|---|---|\n| LF-115 | Black umbrella | Room A110 | Mon 11 Oct, 10:20 | Not collected |\n| LF-116 | Student ID card (name hidden) | Library, 1st floor | Mon 11 Oct, 16:45 | Collected |\n| LF-117 | Silver Novatek AirBook 14 laptop | Room B204 | Tue 12 Oct, 13:35, by cleaning staff | Collected by owner (student), Wed 13 Oct, 08:15 |\n| LF-118 | Silver Novatek AirBook 14 laptop | Room B240 | Wed 13 Oct, 08:10, by a student | Not collected |\n| LF-119 | Blue water bottle | Sports Hall | Wed 13 Oct, 11:00 | Not collected |\n\nTo collect an item, come to Room A005 with your photo ID card. Office hours: Monday to Friday, 08:00–18:00.\n\nStaff members who lost university equipment must also bring the asset number of the item.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "collect",
+          "definition": "to go and get something",
+          "vi": "nhận lại, đến lấy"
+        },
+        {
+          "term": "asset number",
+          "definition": "an official number that a company or university gives to its equipment",
+          "vi": "mã số tài sản"
+        },
+        {
+          "term": "equipment",
+          "definition": "things such as computers or tools that are used for work",
+          "vi": "thiết bị"
+        }
+      ]
+    },
+    {
+      "id": "d_cctv_summary",
+      "type": "report",
+      "title": "Security Camera Summary – Corridor B2 and Security Office",
+      "meta": {
+        "Prepared by": "Omar Hassan, Campus Security",
+        "Date": "Wednesday, 13 October 2027",
+        "Cameras": "B2-03 (corridor outside B204), A0-01 (Security Office desk)"
+      },
+      "body": "Summary of camera recordings. To protect privacy, faces and names are not included in this summary.\n\nTuesday 12 October 2027 (camera B2-03):\n- 11:06 – A woman with a staff card leaves B204 with a handbag and some papers. She is not carrying a laptop.\n- 11:10 – About twenty students enter B204 for the 11:15 class.\n- 13:03 – A male student with a red backpack leaves B204. He is carrying a silver laptop under his arm.\n- 13:05 – The last students leave B204. No other person enters B204 between 13:05 and 13:20.\n- 13:20 – A cleaner with a cleaning trolley enters B204.\n- 13:31 – The cleaner leaves B204 with one silver laptop and walks towards the Security Office.\n\nWednesday 13 October 2027 (camera A0-01):\n- 08:10 – The same male student with the red backpack hands in a silver laptop at the Security Office desk.\n- 08:15 – He shows his student ID card and collects item LF-117.\n\nNote: the doors of B204 were not damaged, and the alarm did not ring on either day.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_omar_cctv"
+      },
+      "glossary": [
+        {
+          "term": "corridor",
+          "definition": "a long passage inside a building with rooms on each side",
+          "vi": "hành lang"
+        },
+        {
+          "term": "privacy",
+          "definition": "the right to keep personal information secret",
+          "vi": "quyền riêng tư"
+        },
+        {
+          "term": "trolley",
+          "definition": "a small cart with wheels for carrying things",
+          "vi": "xe đẩy"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_left_time",
+      "type": "short",
+      "documentIds": [
+        "d_park_email"
+      ],
+      "prompt": "At what time did Dr. Park leave Room B204 for her meeting? (maximum 3 words)",
+      "acceptable": [
+        "11:05",
+        "11.05",
+        "five past eleven"
+      ],
+      "maxWords": 3,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_next_class",
+      "type": "mcq",
+      "documentIds": [
+        "d_room_schedule"
+      ],
+      "prompt": "Which booking used Room B204 directly after Dr. Park's class?",
+      "options": [
+        "Morning cleaning",
+        "Business Statistics – group presentations",
+        "Film Club meeting",
+        "Afternoon cleaning"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_cleaner_kept",
+      "type": "tfng",
+      "documentIds": [
+        "d_cleaning_log"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the cleaning and security log.",
+      "statement": "The cleaner kept the laptop that she found in Room B204.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_lf118_room",
+      "type": "tfng",
+      "documentIds": [
+        "d_lost_found"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the lost-and-found notice.",
+      "statement": "Item LF-118 was found in Room B204.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_jun_photo",
+      "type": "tfng",
+      "documentIds": [
+        "d_student_chat"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the group chat.",
+      "statement": "Jun took a photo of the two laptops on the front table.",
+      "answer": "not_given",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_collect",
+      "type": "mcq",
+      "documentIds": [
+        "d_lost_found"
+      ],
+      "prompt": "What must a staff member bring to collect lost university equipment?",
+      "options": [
+        "Only the receipt from the cleaning staff",
+        "Their photo ID card and the asset number of the item",
+        "A letter from the Head of School",
+        "A copy of the room booking schedule"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_room_number",
+      "type": "explain",
+      "documentIds": [
+        "d_lost_found",
+        "d_room_schedule"
+      ],
+      "prompt": "The notice says that LF-118 was found in Room B240. Why might LF-118 still be Dr. Park's laptop? Answer in 1–3 sentences.",
+      "keyPoints": [
+        "There is no Room B240: rooms on the second floor of Building B are numbered B201 to B212.",
+        "B240 is probably a writing mistake for B204 (the same numbers in a different order).",
+        "LF-118 is the same model as Dr. Park's laptop (a silver Novatek AirBook 14) and was handed in the morning after it disappeared."
+      ],
+      "sampleAnswer": "Room B240 does not exist, because the rooms on the second floor are numbered B201 to B212, so it is probably a mistake for B204. Also, LF-118 is a silver Novatek AirBook 14, the same model as Dr. Park's laptop, and it was handed in the next morning.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_cleaner_claim",
+      "type": "explain",
+      "documentIds": [
+        "d_cleaning_log",
+        "d_student_chat"
+      ],
+      "prompt": "Kim thinks that the cleaner stole the laptop. Do the documents support this idea? Explain in 1–3 sentences.",
+      "keyPoints": [
+        "No: the log shows that the cleaner handed the laptop she found to the Security Office (receipt LF-117).",
+        "Kim's message is only a guess; she gives no evidence.",
+        "The cleaner followed the rule that found items must go to the Security Office within one hour."
+      ],
+      "sampleAnswer": "No. The log shows that the cleaner found one laptop and handed it in to the Security Office at 13:35 with receipt LF-117. Kim's message is only a guess with no evidence.",
+      "points": 3,
+      "required": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_asset_label",
+      "documentId": "d_park_email",
+      "excerpt": "It has a small staff label on the bottom with the number RU-STAFF-0457",
+      "label": "Dr. Park's laptop has asset label RU-STAFF-0457",
+      "category": "verified",
+      "key": false,
+      "explanation": "The asset number is an official way to identify the laptop and is needed to collect it."
+    },
+    {
+      "id": "ev_park_left",
+      "documentId": "d_park_email",
+      "excerpt": "I think I left my laptop on the front table next to the projector",
+      "label": "Dr. Park thinks she left the laptop on the front table",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Dr. Park is not completely sure ('I think'); the camera summary later supports it."
+    },
+    {
+      "id": "ev_exam_date",
+      "documentId": "d_park_email",
+      "excerpt": "the files for the final exam on Monday 25 October",
+      "label": "The final exam is on 25 October",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The exam date explains why the laptop is important, but it does not show where the laptop went."
+    },
+    {
+      "id": "ev_next_class",
+      "documentId": "d_room_schedule",
+      "excerpt": "11:15–13:00 | Business Statistics – group presentations (Group S1)",
+      "label": "A statistics class with presentations used B204 next",
+      "category": "verified",
+      "key": true,
+      "explanation": "Students used the front table for presentations right after Dr. Park left her laptop there."
+    },
+    {
+      "id": "ev_no_b240",
+      "documentId": "d_room_schedule",
+      "excerpt": "Building B, second floor: rooms are numbered B201 to B212",
+      "label": "There is no Room B240 on the second floor",
+      "category": "verified",
+      "key": true,
+      "explanation": "Shows that 'Room B240' on the lost-and-found notice must be a mistake, most likely for B204."
+    },
+    {
+      "id": "ev_film_club",
+      "documentId": "d_room_schedule",
+      "excerpt": "Film Club meeting (cancelled)",
+      "label": "The Film Club meeting was cancelled",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The cancelled meeting was after the laptop had already left the room."
+    },
+    {
+      "id": "ev_cleaner_handed",
+      "documentId": "d_cleaning_log",
+      "excerpt": "Laptop from B204 handed in to the Security Office. Receipt LF-117",
+      "label": "The cleaner handed in a laptop from B204 (LF-117)",
+      "category": "verified",
+      "key": true,
+      "explanation": "The cleaner did not keep the laptop she found; this contradicts the claim that she stole it."
+    },
+    {
+      "id": "ev_cleaner_claim",
+      "documentId": "d_student_chat",
+      "excerpt": "I bet the cleaner stole it. She was the last person in the room",
+      "label": "Kim says the cleaner stole the laptop",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Only a guess. The log and the cameras show the cleaner took the laptop she found to Security."
+    },
+    {
+      "id": "ev_two_laptops",
+      "documentId": "d_student_chat",
+      "excerpt": "there were two silver laptops on the front table during the presentations",
+      "label": "Jun said there were two silver laptops on the table",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Second-hand information from a friend; it fits the other evidence but is not confirmed by an official record."
+    },
+    {
+      "id": "ev_campus_market",
+      "documentId": "d_student_chat",
+      "excerpt": "My cousin saw a silver laptop for sale on Campus Market last night",
+      "label": "Bao's cousin saw a silver laptop for sale",
+      "category": "unverified",
+      "key": false,
+      "explanation": "A rumour. 'Last night' was Monday night, before the laptop went missing, and many students have silver laptops."
+    },
+    {
+      "id": "ev_coffee",
+      "documentId": "d_student_chat",
+      "excerpt": "the coffee machine on the second floor is broken again",
+      "label": "The coffee machine is broken",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Has nothing to do with the missing laptop."
+    },
+    {
+      "id": "ev_lf118",
+      "documentId": "d_lost_found",
+      "excerpt": "LF-118 | Silver Novatek AirBook 14 laptop | Room B240 | Wed 13 Oct, 08:10, by a student | Not collected",
+      "label": "LF-118: same model, handed in by a student, not collected",
+      "category": "verified",
+      "key": true,
+      "explanation": "A laptop of the same model as Dr. Park's is waiting at the Security Office; only the room number looks wrong."
+    },
+    {
+      "id": "ev_lf117",
+      "documentId": "d_lost_found",
+      "excerpt": "LF-117 | Silver Novatek AirBook 14 laptop | Room B204 | Tue 12 Oct, 13:35, by cleaning staff",
+      "label": "LF-117: laptop from B204 handed in by the cleaner",
+      "category": "verified",
+      "key": false,
+      "explanation": "This is the student's laptop with the robotics sticker that Dr. Park saw; a student collected it the next morning."
+    },
+    {
+      "id": "ev_asset_rule",
+      "documentId": "d_lost_found",
+      "excerpt": "Staff members who lost university equipment must also bring the asset number of the item",
+      "label": "Staff need the asset number to collect equipment",
+      "category": "verified",
+      "key": false,
+      "explanation": "Tells Dr. Park what she needs to bring to get her laptop back."
+    },
+    {
+      "id": "ev_cctv_park",
+      "documentId": "d_cctv_summary",
+      "excerpt": "She is not carrying a laptop",
+      "label": "Camera: the lecturer left B204 without a laptop",
+      "category": "verified",
+      "key": false,
+      "explanation": "Confirms that Dr. Park left the laptop in the room at 11:06."
+    },
+    {
+      "id": "ev_cctv_student",
+      "documentId": "d_cctv_summary",
+      "excerpt": "A male student with a red backpack leaves B204. He is carrying a silver laptop under his arm",
+      "label": "Camera: a student left B204 with a silver laptop at 13:03",
+      "category": "verified",
+      "key": true,
+      "explanation": "A student from the statistics class carried a silver laptop out of the room after the presentations."
+    },
+    {
+      "id": "ev_no_one_else",
+      "documentId": "d_cctv_summary",
+      "excerpt": "No other person enters B204 between 13:05 and 13:20",
+      "label": "Camera: nobody entered B204 between 13:05 and 13:20",
+      "category": "verified",
+      "key": false,
+      "explanation": "There was no unknown visitor or thief in the room after the class."
+    },
+    {
+      "id": "ev_cctv_return",
+      "documentId": "d_cctv_summary",
+      "excerpt": "The same male student with the red backpack hands in a silver laptop at the Security Office desk",
+      "label": "Camera: the same student handed in a laptop on Wednesday at 08:10",
+      "category": "verified",
+      "key": true,
+      "explanation": "The student returned the laptop he took; this is item LF-118 on the lost-and-found notice."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_lf118",
+      "b": "ev_no_b240",
+      "relation": "Room B240 does not exist, so LF-118 probably came from B204."
+    },
+    {
+      "a": "ev_cctv_return",
+      "b": "ev_lf118",
+      "relation": "The laptop the student handed in at 08:10 is item LF-118."
+    },
+    {
+      "a": "ev_cctv_student",
+      "b": "ev_next_class",
+      "relation": "The student who left with a laptop was in the class after Dr. Park's."
+    },
+    {
+      "a": "ev_cleaner_handed",
+      "b": "ev_lf117",
+      "relation": "The laptop the cleaner found is LF-117, the student's laptop."
+    }
+  ],
+  "characters": [
+    {
+      "id": "park",
+      "name": "Dr. Helen Park",
+      "role": "Lecturer in Academic English, School of Languages",
+      "avatar": "expert_f",
+      "personality": "Busy, kind and a little stressed; speaks quickly but clearly and is worried about the exam files.",
+      "background": "Dr. Park has taught at Riverside University for eight years. She taught in Room B204 on Tuesday morning and then hurried to a faculty meeting.",
+      "greeting": "Hello, thank you for helping me. I really need that laptop back before the exam. What would you like to know?",
+      "facts": [
+        {
+          "id": "f_park_left",
+          "text": "Dr. Park left Room B204 in a hurry at 11:05 for a faculty meeting, and she thinks she left her laptop on the front table.",
+          "keywords": [
+            "leave",
+            "left",
+            "meeting",
+            "forgot",
+            "hurry"
+          ]
+        },
+        {
+          "id": "f_park_label",
+          "text": "Dr. Park's laptop has a staff label with the number RU-STAFF-0457 on the bottom, and it has no stickers on it.",
+          "keywords": [
+            "label",
+            "asset",
+            "sticker",
+            "stickers",
+            "recognise",
+            "recognize",
+            "identify"
+          ]
+        },
+        {
+          "id": "f_park_notice",
+          "text": "Dr. Park read the lost-and-found notice on Wednesday, but she only looked for Room B204. She thought LF-117 was the student laptop with the robotics sticker.",
+          "keywords": [
+            "notice",
+            "lost and found",
+            "list",
+            "b240",
+            "lf-118"
+          ]
+        },
+        {
+          "id": "f_park_files",
+          "text": "The exam files are protected by a password, and Dr. Park also keeps a copy on the university cloud drive.",
+          "keywords": [
+            "exam",
+            "files",
+            "password",
+            "copy",
+            "backup"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "The content of the final exam",
+          "forbiddenPhrases": [
+            "the exam questions are",
+            "the first question is"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucas",
+      "name": "Lucas Nguyen",
+      "role": "Second-year student in the Business Statistics class (Group S1)",
+      "avatar": "student_m",
+      "personality": "Honest, shy and a bit embarrassed; gives short answers and apologises often.",
+      "background": "Lucas is a member of the university robotics club. He gave a group presentation in Room B204 on Tuesday from 11:15 to 13:00.",
+      "greeting": "Hi... I'm Lucas. I heard people are talking about a missing laptop. I'll try to help.",
+      "facts": [
+        {
+          "id": "f_lucas_presentation",
+          "text": "Lucas put his laptop on the front table in Room B204 at about 11:20 for his group presentation. Another silver laptop was already on the table.",
+          "keywords": [
+            "presentation",
+            "present",
+            "table",
+            "front"
+          ]
+        },
+        {
+          "id": "f_lucas_same_model",
+          "text": "Lucas's own laptop is also a silver Novatek AirBook 14, and it has a robotics club sticker on the top.",
+          "keywords": [
+            "model",
+            "same",
+            "brand",
+            "novatek",
+            "type"
+          ]
+        },
+        {
+          "id": "f_lucas_password",
+          "text": "At home on Tuesday evening, Lucas's password did not work on the laptop in his bag, and there was no robotics sticker on it. He realised he had taken the wrong laptop.",
+          "keywords": [
+            "password",
+            "home",
+            "realise",
+            "realize",
+            "wrong",
+            "mistake"
+          ]
+        },
+        {
+          "id": "f_lucas_returned",
+          "text": "On Wednesday at 08:10, Lucas gave the laptop to the Security Office and collected his own laptop. He did not open any files and did not know whose laptop it was.",
+          "keywords": [
+            "return",
+            "returned",
+            "security",
+            "hand",
+            "handed",
+            "gave",
+            "give"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Other students' personal information",
+          "forbiddenPhrases": [
+            "jun's phone number",
+            "jun's address"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "omar",
+      "name": "Mr. Omar Hassan",
+      "role": "Campus Security Officer, Security Office (Room A005)",
+      "avatar": "officer_m",
+      "personality": "Calm, careful and friendly; likes facts and clear times, and protects people's privacy.",
+      "background": "Omar has worked in Campus Security for five years. He looks after the lost-and-found items and checks the security cameras when something goes missing.",
+      "greeting": "Good morning. Omar Hassan, Campus Security. I can tell you what our records show.",
+      "facts": [
+        {
+          "id": "f_omar_cctv",
+          "text": "Omar checked the camera recordings from the corridor outside Room B204 and from the Security Office desk, and he wrote a camera summary on Wednesday.",
+          "keywords": [
+            "camera",
+            "cameras",
+            "cctv",
+            "video",
+            "footage",
+            "recording",
+            "recordings"
+          ],
+          "unlocksDocumentId": "d_cctv_summary"
+        },
+        {
+          "id": "f_omar_lf118",
+          "text": "Item LF-118 is still in the Security Office safe. It has a staff label on the bottom with the number RU-STAFF-0457.",
+          "keywords": [
+            "lf-118",
+            "safe",
+            "label",
+            "asset",
+            "item"
+          ]
+        },
+        {
+          "id": "f_omar_form",
+          "text": "Omar wrote the handover form for LF-118 himself at a busy time on Wednesday morning, and he may have written the room number wrongly.",
+          "keywords": [
+            "form",
+            "room number",
+            "b240",
+            "mistake",
+            "wrongly",
+            "typo"
+          ]
+        },
+        {
+          "id": "f_omar_collect",
+          "text": "To collect a university laptop, a staff member must show a staff card and give the asset number of the laptop.",
+          "keywords": [
+            "collect",
+            "pick up",
+            "back",
+            "bring",
+            "need"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Students' personal data",
+          "forbiddenPhrases": [
+            "his student id number",
+            "the student's phone number"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "What most probably happened to Dr. Park's laptop?",
+    "options": [
+      {
+        "id": "c_mistake",
+        "text": "A student from the next class took it by mistake because his laptop is the same model. He handed it in to Security, and it is now item LF-118."
+      },
+      {
+        "id": "c_cleaner",
+        "text": "The cleaner stole the laptop when she cleaned Room B204."
+      },
+      {
+        "id": "c_stranger",
+        "text": "An unknown person entered Room B204 after the class and stole the laptop."
+      },
+      {
+        "id": "c_sold",
+        "text": "Someone took the laptop and sold it on Campus Market."
+      }
+    ],
+    "correctOptionId": "c_mistake",
+    "requiredEvidenceIds": [
+      "ev_cctv_student",
+      "ev_cctv_return",
+      "ev_lf118",
+      "ev_no_b240"
+    ],
+    "minSupporting": 4,
+    "unsupportedClaims": [
+      "The cleaner stole the laptop (the log and the cameras show she handed in the laptop she found).",
+      "The laptop was sold on Campus Market (the post was from the night before it went missing).",
+      "The student wanted to steal the exam files (he returned the laptop the next morning and did not know whose it was).",
+      "Someone broke into Room B204 (the doors were not damaged and nobody entered between 13:05 and 13:20)."
+    ]
+  },
+  "writingTask": {
+    "type": "email",
+    "prompt": "Write an email to Dr. Helen Park. Tell her what most probably happened to her laptop, describe the evidence you found, explain where the laptop is now and tell her what she should do next. Use a polite and clear email style.",
+    "audience": "Dr. Helen Park, School of Languages, Riverside University",
+    "minWords": 150,
+    "maxWords": 200,
+    "sections": [
+      "Greeting and purpose",
+      "What happened",
+      "Evidence",
+      "Where the laptop is now",
+      "Next steps"
+    ],
+    "keyPoints": [
+      "Explains that the laptop was not stolen but taken by mistake by a student from the next class with the same model.",
+      "Uses the camera summary: the student left B204 with a silver laptop at 13:03 and handed in a laptop on Wednesday at 08:10.",
+      "Identifies the laptop as item LF-118 and explains that 'Room B240' is a mistake, because rooms are numbered B201 to B212.",
+      "Shows that the claim about the cleaner is not supported (she handed in LF-117).",
+      "Tells Dr. Park to collect the laptop at Room A005 with her staff card and asset number RU-STAFF-0457."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Start with Dr. Park's email and the room booking schedule.",
+      "Compare the times in the schedule, the cleaning log and the lost-and-found notice.",
+      "Look carefully at the room numbers on the lost-and-found notice. Do all these rooms really exist?"
+    ],
+    "evidence": [
+      "Highlight times, room numbers and descriptions of laptops.",
+      "Some messages in the group chat are only guesses or rumours, and one message is about something else.",
+      "Match each laptop on the lost-and-found list with the person who handed it in."
+    ],
+    "interviews": [
+      "Ask the Security Office whether anyone has checked the cameras.",
+      "Ask Lucas about his presentation and about his own laptop.",
+      "Ask Dr. Park how she read the lost-and-found notice."
+    ],
+    "analysis": [
+      "Verified evidence comes from logs, schedules, notices and camera records; guesses in the chat are unverified.",
+      "Follow the laptop: who carried it out of the room, and where did it go next?",
+      "Check whether any evidence really shows that someone wanted to steal it."
+    ],
+    "report": [
+      "Organise your email: greeting and purpose, what happened, evidence, where the laptop is now, next steps.",
+      "Use polite phrases such as 'I am writing to…', 'I would suggest…' and 'Kind regards'.",
+      "Tell Dr. Park exactly where to go and what to bring."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 10,
+    "minEvidenceToSubmit": 5,
+    "timeMinutes": 45
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_park_email",
+        "text": "It has a small staff label on the bottom with the number RU-STAFF-0457.",
+        "evidenceId": "ev_asset_label"
+      },
+      {
+        "documentId": "d_room_schedule",
+        "text": "11:15–13:00 | Business Statistics – group presentations (Group S1)",
+        "evidenceId": "ev_next_class"
+      },
+      {
+        "documentId": "d_room_schedule",
+        "text": "Building B, second floor: rooms are numbered B201 to B212.",
+        "evidenceId": "ev_no_b240"
+      },
+      {
+        "documentId": "d_cleaning_log",
+        "text": "Laptop from B204 handed in to the Security Office. Receipt LF-117",
+        "evidenceId": "ev_cleaner_handed"
+      },
+      {
+        "documentId": "d_student_chat",
+        "text": "I bet the cleaner stole it. She was the last person in the room.",
+        "evidenceId": "ev_cleaner_claim"
+      },
+      {
+        "documentId": "d_student_chat",
+        "text": "there were two silver laptops on the front table during the presentations",
+        "evidenceId": "ev_two_laptops"
+      },
+      {
+        "documentId": "d_student_chat",
+        "text": "the coffee machine on the second floor is broken again",
+        "evidenceId": "ev_coffee"
+      },
+      {
+        "documentId": "d_lost_found",
+        "text": "LF-118 | Silver Novatek AirBook 14 laptop | Room B240 | Wed 13 Oct, 08:10, by a student | Not collected",
+        "evidenceId": "ev_lf118"
+      },
+      {
+        "documentId": "d_lost_found",
+        "text": "LF-117 | Silver Novatek AirBook 14 laptop | Room B204 | Tue 12 Oct, 13:35, by cleaning staff",
+        "evidenceId": "ev_lf117"
+      },
+      {
+        "documentId": "d_cctv_summary",
+        "text": "A male student with a red backpack leaves B204. He is carrying a silver laptop under his arm.",
+        "evidenceId": "ev_cctv_student"
+      },
+      {
+        "documentId": "d_cctv_summary",
+        "text": "The same male student with the red backpack hands in a silver laptop at the Security Office desk.",
+        "evidenceId": "ev_cctv_return"
+      }
+    ],
+    "answers": {
+      "q_left_time": "11:05",
+      "q_next_class": 1,
+      "q_cleaner_kept": "false",
+      "q_lf118_room": "false",
+      "q_jun_photo": "not_given",
+      "q_collect": 1,
+      "q_room_number": "There is no Room B240, because the rooms on the second floor are numbered B201 to B212, so it is probably a mistake for B204. LF-118 is also the same model as Dr. Park's laptop.",
+      "q_cleaner_claim": "No. The log shows that the cleaner handed the laptop she found to the Security Office with receipt LF-117. Kim is only guessing."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "park",
+        "question": "What happened when you left the room for your meeting?",
+        "expectFactIds": [
+          "f_park_left"
+        ]
+      },
+      {
+        "characterId": "omar",
+        "question": "Did Security check the cameras near Room B204?",
+        "expectFactIds": [
+          "f_omar_cctv"
+        ]
+      },
+      {
+        "characterId": "omar",
+        "question": "Is item LF-118 still in the safe?",
+        "expectFactIds": [
+          "f_omar_lf118"
+        ]
+      },
+      {
+        "characterId": "lucas",
+        "question": "Is your laptop the same model, and where did you put it during the presentation?",
+        "expectFactIds": [
+          "f_lucas_same_model",
+          "f_lucas_presentation"
+        ]
+      },
+      {
+        "characterId": "lucas",
+        "question": "Did you return anything to the Security Office?",
+        "expectFactIds": [
+          "f_lucas_returned"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_lf118",
+        "b": "ev_no_b240"
+      },
+      {
+        "a": "ev_cctv_return",
+        "b": "ev_lf118"
+      },
+      {
+        "a": "ev_cctv_student",
+        "b": "ev_next_class"
+      },
+      {
+        "a": "ev_cleaner_handed",
+        "b": "ev_lf117"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_mistake",
+      "supportingEvidenceIds": [
+        "ev_cctv_student",
+        "ev_cctv_return",
+        "ev_lf118",
+        "ev_no_b240",
+        "ev_next_class",
+        "ev_cleaner_handed"
+      ],
+      "justification": "A student from the next class left B204 with a silver laptop and handed in a laptop at Security the next morning. That laptop is LF-118, the same model as Dr. Park's. Its room number, B240, does not exist, so it is a mistake for B204."
+    },
+    "report": "Dear Dr. Park,\n\nI am writing to tell you the results of my investigation into your missing laptop. The good news is that it was not stolen.\n\nOn 12 October, the Business Statistics class used Room B204 after your class. One student in that class has the same silver Novatek AirBook 14. During the presentations both laptops were on the front table, and the cameras show him leaving the room with a silver laptop at 13:03. He took yours by mistake.\n\nThe cleaner found his laptop and handed it in to Security as LF-117, so the claim that she stole your laptop is not true. On Wednesday at 08:10, the same student handed in your laptop and collected his own. On the lost-and-found notice it is item LF-118, but the room is written as B240. There is no Room B240 on the second floor, so this is probably a writing mistake.\n\nPlease go to the Security Office in Room A005 with your staff card and the asset number RU-STAFF-0457 to collect it.\n\nKind regards,\nStudent Detective"
+  }
+}

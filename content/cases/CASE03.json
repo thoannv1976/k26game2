@@ -1,0 +1,962 @@
+{
+  "id": "CASE03",
+  "level": "B1",
+  "title": {
+    "en": "The Mysterious Hotel Booking",
+    "vi": "Vụ đặt phòng khách sạn bí ẩn"
+  },
+  "summary": {
+    "en": "A student group's hotel booking for a conference shows the wrong dates, the wrong room and a higher price. Is the hotel cheating them?",
+    "vi": "Đơn đặt phòng khách sạn của một nhóm sinh viên đi dự hội nghị bị sai ngày, sai loại phòng và giá cao hơn dự kiến. Có phải khách sạn đang lừa họ?"
+  },
+  "role": "Student Detective",
+  "setting": "Lakeside University and a hotel in Da Nang",
+  "topic": "Travel, bookings and customer service",
+  "estimatedMinutes": 25,
+  "xpReward": 120,
+  "briefing": {
+    "en": "It is Monday 15 February 2027. Thao Le, a student at Lakeside University, has booked a hotel in Da Nang for four students who will attend the Young Researchers Conference in March. The booking confirmation shows different dates, a different room type and a much higher price. Some people online say the hotel cheats students. Thao's supervisor, Ms. Rachel Vo, has asked the English Detective Agency to find out what went wrong. Read the booking documents carefully, find the information that does not match, interview the people involved and write a report with your conclusion and recommendations.",
+    "vi": "Hôm nay là thứ Hai, ngày 15 tháng 2 năm 2027. Thao Le, sinh viên Trường Đại học Lakeside, đã đặt khách sạn ở Đà Nẵng cho bốn sinh viên sẽ tham dự Hội nghị Nhà nghiên cứu trẻ vào tháng 3. Tuy nhiên, xác nhận đặt phòng lại ghi ngày khác, loại phòng khác và giá cao hơn nhiều. Một số người trên mạng nói khách sạn này lừa sinh viên. Cô Rachel Vo, giảng viên hướng dẫn của Thao, đã nhờ English Detective Agency tìm ra nguyên nhân. Hãy đọc kỹ các tài liệu đặt phòng, tìm những thông tin không khớp, phỏng vấn những người liên quan và viết báo cáo nêu kết luận cùng khuyến nghị."
+  },
+  "objectives": [
+    {
+      "en": "Compare Thao's request with the booking confirmation and the receipt.",
+      "vi": "Đối chiếu yêu cầu của Thao với xác nhận đặt phòng và biên lai thanh toán."
+    },
+    {
+      "en": "Find the information that is wrong or does not match.",
+      "vi": "Tìm những thông tin bị sai hoặc không khớp nhau."
+    },
+    {
+      "en": "Interview Thao, the hotel receptionist and the booking platform agent.",
+      "vi": "Phỏng vấn Thao, nhân viên lễ tân khách sạn và nhân viên nền tảng đặt phòng."
+    },
+    {
+      "en": "Write a report that explains the cause and gives recommendations.",
+      "vi": "Viết báo cáo giải thích nguyên nhân và đưa ra khuyến nghị."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_request_email",
+      "type": "email",
+      "title": "Hotel plan for the Young Researchers Conference",
+      "meta": {
+        "From": "Thao Le <thao.le@student.lakeside.edu>",
+        "To": "Ms. Rachel Vo <rachel.vo@lakeside.edu>",
+        "Cc": "Minh, Lan, Quoc (Media Club)",
+        "Date": "Friday, 12 February 2027, 10:15",
+        "Subject": "Hotel plan for the Young Researchers Conference"
+      },
+      "body": "Dear Ms. Vo,\n\nHere is my plan for our hotel in Da Nang. The Young Researchers Conference takes place from Thursday 4 March to Saturday 6 March 2027 at the Da Nang Convention Centre.\n\nThere are four of us: Minh, Lan, Quoc and me. I would like to book two twin rooms at the Seabreeze Hotel for three nights. We will check in on Thursday 4 March and check out on Sunday 7 March.\n\nThe hotel website says a twin room costs 800,000 VND per night, so the total price should be 4,800,000 VND. This is within our faculty budget of 5,000,000 VND.\n\nI will book tonight on TripNest, because the faculty always uses TripNest and pays with the university travel card.\n\nBest wishes,\nThao Le\nMedia Club, Faculty of Communication",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "twin room",
+          "definition": "a hotel room with two single beds",
+          "vi": "phòng hai giường đơn"
+        },
+        {
+          "term": "check in",
+          "definition": "to arrive at a hotel and get your room key",
+          "vi": "nhận phòng"
+        },
+        {
+          "term": "budget",
+          "definition": "the amount of money you can spend",
+          "vi": "ngân sách"
+        }
+      ]
+    },
+    {
+      "id": "d_confirmation",
+      "type": "email",
+      "title": "Your booking is confirmed – TN-58217",
+      "meta": {
+        "From": "TripNest Bookings <no-reply@tripnest-travel.com>",
+        "To": "thao.le@student.lakeside.edu",
+        "Date": "Friday, 12 February 2027, 21:48",
+        "Subject": "Your booking is confirmed – TN-58217"
+      },
+      "body": "Hi Thao,\n\nThank you for booking with TripNest! Your stay is confirmed.\n\nBooking reference: TN-58217\nHotel: Seabreeze Hotel, Da Nang\nGuests: 4 adults\n\nCheck-in: Saturday, 3 April 2027 (from 14:00)\nCheck-out: Tuesday, 6 April 2027 (until 12:00)\nLength of stay: 3 nights\n\nRoom: 1 x Family Room (up to 4 guests)\nTotal price: 6,300,000 VND (paid)\n\nImportant: Your selected room type was not available on your dates, so we chose a similar room for you.\n\nFree cancellation until 7 days before check-in. After that, the full price will be charged.\n\nHave a great trip!\nThe TripNest Team",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "booking reference",
+          "definition": "a code that identifies your booking",
+          "vi": "mã đặt phòng"
+        },
+        {
+          "term": "free cancellation",
+          "definition": "you can cancel and get all your money back",
+          "vi": "hủy miễn phí"
+        }
+      ]
+    },
+    {
+      "id": "d_hotel_policy",
+      "type": "webpage",
+      "title": "Seabreeze Hotel Da Nang – Rooms, prices and policies",
+      "meta": {
+        "URL": "https://www.seabreezehotel-danang.com/rooms-and-policies"
+      },
+      "body": "SEABREEZE HOTEL DA NANG – ROOMS AND PRICES 2027\n\nPrices are per room, per night, and include breakfast.\n\n| Room type | Guests | 1 January – 31 March | 1 April – 31 August |\n|---|---|---|---|\n| Standard Double | 2 | 700,000 VND | 950,000 VND |\n| Twin Room | 2 | 800,000 VND | 1,100,000 VND |\n| Family Room | 4 | 1,500,000 VND | 2,100,000 VND |\n\nAvailability: Twin Rooms are fully booked from 1 to 10 April 2027 because of the Da Nang Fireworks Festival.\n\nBookings through travel websites: If you book through a travel website, the website manages your booking and your payment. The hotel only receives the dates and room type that the website sends us. To change these bookings, please contact the website.\n\nCheck-in is from 14:00. Check-out is until 12:00.\n\nOur rooftop swimming pool is open every day from 06:00 to 21:00.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "fully booked",
+          "definition": "with no free rooms or places left",
+          "vi": "hết phòng"
+        },
+        {
+          "term": "policy",
+          "definition": "a set of rules that an organisation follows",
+          "vi": "chính sách, quy định"
+        },
+        {
+          "term": "manage",
+          "definition": "to control and be responsible for something",
+          "vi": "quản lý"
+        }
+      ]
+    },
+    {
+      "id": "d_receipt",
+      "type": "receipt",
+      "title": "TripNest Payment Receipt – Booking TN-58217",
+      "meta": {
+        "Receipt no.": "TNR-230991",
+        "Date": "12 February 2027, 21:47"
+      },
+      "body": "PAYMENT RECEIPT\n\nPaid by: Lakeside University Travel Card (card ending 3308)\nPaid to: TripNest Travel Ltd.\nBooking: TN-58217 – Seabreeze Hotel, Da Nang\nStay: 03 Apr 2027 – 06 Apr 2027 (3 nights)\nAmount: 6,300,000 VND\nStatus: Successful\n\nTripNest pays the hotel after the guest checks out. Please keep this receipt for your records.\n\nQuestions about this payment? Contact TripNest Customer Support at support@tripnest-travel.com or chat with us in the app, 24 hours a day.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "receipt",
+          "definition": "a document that shows you have paid",
+          "vi": "biên lai"
+        },
+        {
+          "term": "records",
+          "definition": "documents you keep as information about what happened",
+          "vi": "hồ sơ lưu trữ"
+        }
+      ]
+    },
+    {
+      "id": "d_reviews",
+      "type": "review",
+      "title": "Guest reviews – Seabreeze Hotel Da Nang",
+      "meta": {
+        "URL": "https://www.tripnest-travel.com/hotels/seabreeze-da-nang/reviews",
+        "Average rating": "4.3 / 5 (212 reviews)"
+      },
+      "body": "★★★★★ \"Lovely breakfast\" – Mai, Hanoi (January 2027)\nThe breakfast buffet was excellent and the Vietnamese coffee was amazing. Friendly staff.\n\n★☆☆☆☆ \"Dishonest hotel!\" – Kevin (February 2027)\nThis hotel cheats students! They changed my room and took extra money. Never trust them.\n\n★★☆☆☆ \"Check your dates!\" – Sophie, London (January 2027)\nI typed 05/06 for 5 June, but TripNest booked my room for 6 May. It was not the hotel's mistake. The receptionist helped me to contact TripNest and fix it.\n\n★☆☆☆☆ \"Price changed\" – Tuan (February 2027)\nI think this hotel raises its prices for students on purpose. My friend paid less last year.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "dishonest",
+          "definition": "not telling the truth; trying to cheat people",
+          "vi": "không trung thực"
+        },
+        {
+          "term": "on purpose",
+          "definition": "deliberately; not by accident",
+          "vi": "cố ý"
+        }
+      ]
+    },
+    {
+      "id": "d_booking_record",
+      "type": "form",
+      "title": "TripNest Booking Record – TN-58217 (customer input)",
+      "meta": {
+        "Shared by": "Leo Santos, TripNest Customer Support",
+        "Date": "Monday, 15 February 2027"
+      },
+      "body": "BOOKING RECORD TN-58217\n\nCreated: 12 February 2027, 21:45 (TripNest website, Vietnam)\nCustomer: Thao Le\n\nCustomer input:\n- Check-in date (format MM/DD/YYYY): 04/03/2027\n- Number of nights: 3\n- Rooms: 2 x Twin Room\n- Guests: 4 adults\n\nSystem result:\n- Check-in date read as: 3 April 2027\n- Twin Room availability (3–6 April): not available\n- Automatic change: 1 x Family Room (4 guests), 3 nights x 2,100,000 VND = 6,300,000 VND\n\nAccount security: no changes to the booking after 21:48 on 12 February. No new device or login from another country.\n\nSupport note (15 February): The date box on our booking form shows the format MM/DD/YYYY only in small grey letters. We have received 14 similar complaints this month.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_leo_record"
+      },
+      "glossary": [
+        {
+          "term": "input",
+          "definition": "information that a person types into a computer system",
+          "vi": "dữ liệu nhập vào"
+        },
+        {
+          "term": "format",
+          "definition": "the way something is arranged, e.g. day/month or month/day",
+          "vi": "định dạng"
+        },
+        {
+          "term": "complaint",
+          "definition": "a statement that something is wrong or not good enough",
+          "vi": "lời phàn nàn, khiếu nại"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_rooms_requested",
+      "type": "mcq",
+      "documentIds": [
+        "d_request_email"
+      ],
+      "prompt": "What kind of rooms did Thao want to book?",
+      "options": [
+        "One family room",
+        "Two twin rooms",
+        "Two standard double rooms",
+        "Four single rooms"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_expected_total",
+      "type": "short",
+      "documentIds": [
+        "d_request_email"
+      ],
+      "prompt": "What total price did Thao expect to pay for the hotel? (maximum 3 words)",
+      "acceptable": [
+        "4,800,000 VND",
+        "4,800,000",
+        "4800000",
+        "4.8 million"
+      ],
+      "maxWords": 3,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_checkin_confirmed",
+      "type": "mcq",
+      "documentIds": [
+        "d_confirmation"
+      ],
+      "prompt": "According to the booking confirmation, when is check-in?",
+      "options": [
+        "Thursday, 4 March 2027",
+        "Saturday, 3 April 2027",
+        "Sunday, 7 March 2027",
+        "Tuesday, 6 April 2027"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_twin_april",
+      "type": "tfng",
+      "documentIds": [
+        "d_hotel_policy"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the hotel website.",
+      "statement": "Guests can book a twin room at the Seabreeze Hotel for 3 April 2027.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_paid_hotel",
+      "type": "tfng",
+      "documentIds": [
+        "d_receipt"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the payment receipt.",
+      "statement": "The money was paid directly to the Seabreeze Hotel.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_sophie_refund",
+      "type": "tfng",
+      "documentIds": [
+        "d_reviews"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the reviews.",
+      "statement": "Sophie received some money back from TripNest.",
+      "answer": "not_given",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_price_higher",
+      "type": "explain",
+      "documentIds": [
+        "d_confirmation",
+        "d_hotel_policy",
+        "d_request_email"
+      ],
+      "prompt": "Why is the total price in the confirmation (6,300,000 VND) higher than the price Thao expected? Answer in 1–3 sentences.",
+      "keyPoints": [
+        "The booking is for April, when the hotel uses higher prices (1 April – 31 August).",
+        "The room is one Family Room, not two twin rooms.",
+        "3 nights x 2,100,000 VND (Family Room in April) = 6,300,000 VND."
+      ],
+      "sampleAnswer": "The booking is for 3–6 April, and from 1 April the hotel prices are higher. Also, the room is a Family Room at 2,100,000 VND per night, so three nights cost 6,300,000 VND instead of 4,800,000 VND for two twin rooms in March.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_mismatch",
+      "type": "explain",
+      "documentIds": [
+        "d_request_email",
+        "d_confirmation"
+      ],
+      "prompt": "Which details in the booking confirmation do not match Thao's plan? Give two examples in 1–3 sentences.",
+      "keyPoints": [
+        "The dates: Thao wanted 4–7 March, but the confirmation says 3–6 April.",
+        "The room type: Thao wanted two twin rooms, but the confirmation shows one Family Room.",
+        "The price: Thao expected 4,800,000 VND, but she paid 6,300,000 VND."
+      ],
+      "sampleAnswer": "Thao wanted to stay from 4 to 7 March, but the confirmation says 3 to 6 April. She also wanted two twin rooms, but the confirmation shows one Family Room for 6,300,000 VND.",
+      "points": 3,
+      "required": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_requested_dates",
+      "documentId": "d_request_email",
+      "excerpt": "We will check in on Thursday 4 March and check out on Sunday 7 March",
+      "label": "Thao planned to stay from 4 to 7 March",
+      "category": "verified",
+      "key": true,
+      "explanation": "The dates the group really needs; they match the conference dates (4–6 March)."
+    },
+    {
+      "id": "ev_expected_total",
+      "documentId": "d_request_email",
+      "excerpt": "the total price should be 4,800,000 VND",
+      "label": "Thao expected to pay 4,800,000 VND",
+      "category": "verified",
+      "key": false,
+      "explanation": "Two twin rooms x 3 nights x 800,000 VND in March; the confirmed price is much higher."
+    },
+    {
+      "id": "ev_budget",
+      "documentId": "d_request_email",
+      "excerpt": "This is within our faculty budget of 5,000,000 VND",
+      "label": "The faculty budget is 5,000,000 VND",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The budget does not help explain why the booking is wrong."
+    },
+    {
+      "id": "ev_confirm_dates",
+      "documentId": "d_confirmation",
+      "excerpt": "Check-in: Saturday, 3 April 2027 (from 14:00)",
+      "label": "The confirmation says check-in on 3 April",
+      "category": "verified",
+      "key": true,
+      "explanation": "The confirmed check-in is one month later than planned, and the day and month numbers are swapped (4/3 → 3/4)."
+    },
+    {
+      "id": "ev_similar_room",
+      "documentId": "d_confirmation",
+      "excerpt": "Your selected room type was not available on your dates, so we chose a similar room for you",
+      "label": "TripNest changed the room type because of availability",
+      "category": "verified",
+      "key": false,
+      "explanation": "The room type was changed by the platform, not by the hotel."
+    },
+    {
+      "id": "ev_total_price",
+      "documentId": "d_confirmation",
+      "excerpt": "Total price: 6,300,000 VND (paid)",
+      "label": "The total price paid is 6,300,000 VND",
+      "category": "verified",
+      "key": false,
+      "explanation": "Higher than expected, but it is the correct April price for a Family Room for 3 nights."
+    },
+    {
+      "id": "ev_twin_booked",
+      "documentId": "d_hotel_policy",
+      "excerpt": "Twin Rooms are fully booked from 1 to 10 April 2027",
+      "label": "No twin rooms are free from 1 to 10 April",
+      "category": "verified",
+      "key": true,
+      "explanation": "Explains why the system replaced the twin rooms with a Family Room for the April dates."
+    },
+    {
+      "id": "ev_family_price",
+      "documentId": "d_hotel_policy",
+      "excerpt": "Family Room | 4 | 1,500,000 VND | 2,100,000 VND",
+      "label": "Family Room price: 2,100,000 VND per night from April",
+      "category": "verified",
+      "key": false,
+      "explanation": "3 nights x 2,100,000 VND = 6,300,000 VND, so the hotel's normal price was used, not an extra charge."
+    },
+    {
+      "id": "ev_website_manages",
+      "documentId": "d_hotel_policy",
+      "excerpt": "The hotel only receives the dates and room type that the website sends us",
+      "label": "The hotel only receives what the booking website sends",
+      "category": "verified",
+      "key": false,
+      "explanation": "The hotel did not choose the dates or the room; it received them from TripNest."
+    },
+    {
+      "id": "ev_pool",
+      "documentId": "d_hotel_policy",
+      "excerpt": "Our rooftop swimming pool is open every day",
+      "label": "The hotel has a rooftop pool",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Hotel facilities have nothing to do with the booking problem."
+    },
+    {
+      "id": "ev_paid_to",
+      "documentId": "d_receipt",
+      "excerpt": "Paid to: TripNest Travel Ltd.",
+      "label": "The money was paid to TripNest, not to the hotel",
+      "category": "verified",
+      "key": true,
+      "explanation": "The hotel has not received the money, so it could not take extra money from the students."
+    },
+    {
+      "id": "ev_pays_after",
+      "documentId": "d_receipt",
+      "excerpt": "TripNest pays the hotel after the guest checks out",
+      "label": "The hotel is paid only after check-out",
+      "category": "verified",
+      "key": false,
+      "explanation": "Confirms that the hotel has not been paid yet."
+    },
+    {
+      "id": "ev_breakfast",
+      "documentId": "d_reviews",
+      "excerpt": "The breakfast buffet was excellent and the Vietnamese coffee was amazing",
+      "label": "A guest liked the breakfast",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "An opinion about food; it does not explain the booking."
+    },
+    {
+      "id": "ev_kevin",
+      "documentId": "d_reviews",
+      "excerpt": "This hotel cheats students! They changed my room and took extra money",
+      "label": "Kevin says the hotel cheats students",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An angry review with no details or proof; it may describe a platform change, not the hotel."
+    },
+    {
+      "id": "ev_sophie",
+      "documentId": "d_reviews",
+      "excerpt": "I typed 05/06 for 5 June, but TripNest booked my room for 6 May",
+      "label": "Sophie had the same day/month problem on TripNest",
+      "category": "unverified",
+      "key": false,
+      "explanation": "A similar experience from another guest; it fits the evidence but is only one person's review."
+    },
+    {
+      "id": "ev_tuan",
+      "documentId": "d_reviews",
+      "excerpt": "I think this hotel raises its prices for students on purpose",
+      "label": "Tuan thinks the hotel raises prices for students",
+      "category": "unverified",
+      "key": false,
+      "explanation": "A personal opinion. The website shows normal seasonal prices for all guests."
+    },
+    {
+      "id": "ev_entered_date",
+      "documentId": "d_booking_record",
+      "excerpt": "Check-in date (format MM/DD/YYYY): 04/03/2027",
+      "label": "Thao typed 04/03/2027 in a month-first date box",
+      "category": "verified",
+      "key": true,
+      "explanation": "In Vietnam 04/03 means 4 March, but this form expects the month first."
+    },
+    {
+      "id": "ev_read_as",
+      "documentId": "d_booking_record",
+      "excerpt": "Check-in date read as: 3 April 2027",
+      "label": "The system read the date as 3 April",
+      "category": "verified",
+      "key": true,
+      "explanation": "Proves that the wrong dates came from the date format, not from the hotel."
+    },
+    {
+      "id": "ev_no_hack",
+      "documentId": "d_booking_record",
+      "excerpt": "No new device or login from another country",
+      "label": "No sign that the account was hacked",
+      "category": "verified",
+      "key": false,
+      "explanation": "Nobody else changed the booking."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_requested_dates",
+      "b": "ev_confirm_dates",
+      "relation": "The confirmed dates are one month later than the dates Thao planned."
+    },
+    {
+      "a": "ev_entered_date",
+      "b": "ev_read_as",
+      "relation": "04/03 was read month-first as 3 April instead of 4 March."
+    },
+    {
+      "a": "ev_twin_booked",
+      "b": "ev_similar_room",
+      "relation": "Twin rooms were full in April, so the system chose a Family Room."
+    },
+    {
+      "a": "ev_family_price",
+      "b": "ev_total_price",
+      "relation": "3 nights x 2,100,000 VND (April price) = 6,300,000 VND."
+    }
+  ],
+  "characters": [
+    {
+      "id": "thao",
+      "name": "Thao Le",
+      "role": "Third-year communication student and trip organiser",
+      "avatar": "student_f",
+      "personality": "Organised and responsible, but upset and embarrassed about the booking; speaks politely and wants to fix the problem quickly.",
+      "background": "Thao is the leader of the Media Club. She organised the trip to the Young Researchers Conference and booked the hotel on TripNest on the evening of 12 February.",
+      "greeting": "Hi, I'm Thao. I booked everything carefully, I promise! I don't understand why the booking is so different.",
+      "facts": [
+        {
+          "id": "f_thao_typed",
+          "text": "Thao typed the check-in date as 04/03/2027, because in Vietnam this means 4 March.",
+          "keywords": [
+            "typed",
+            "type",
+            "enter",
+            "entered",
+            "wrote",
+            "write"
+          ]
+        },
+        {
+          "id": "f_thao_twin",
+          "text": "On the TripNest form, Thao selected two twin rooms for four guests. She did not choose a family room.",
+          "keywords": [
+            "twin",
+            "choose",
+            "chose",
+            "select",
+            "selected",
+            "family"
+          ]
+        },
+        {
+          "id": "f_thao_noticed",
+          "text": "Thao paid at 21:47 on 12 February, but she read the confirmation email carefully only on 14 February.",
+          "keywords": [
+            "notice",
+            "noticed",
+            "read",
+            "confirmation",
+            "realise",
+            "realize"
+          ]
+        },
+        {
+          "id": "f_thao_grey",
+          "text": "Thao did not see any date format on the form; she only remembers an empty date box with some small grey text.",
+          "keywords": [
+            "grey",
+            "gray",
+            "box",
+            "remember",
+            "screen",
+            "format"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "The university travel card details",
+          "forbiddenPhrases": [
+            "the card number is",
+            "the full card number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hana",
+      "name": "Ms. Hana Vu",
+      "role": "Receptionist, Seabreeze Hotel Da Nang",
+      "avatar": "clerk_f",
+      "personality": "Warm, patient and professional; explains hotel rules clearly and politely.",
+      "background": "Hana has worked at the front desk of the Seabreeze Hotel for three years. She manages the bookings that travel websites send to the hotel.",
+      "greeting": "Good morning, Seabreeze Hotel, Hana speaking. How can I help you today?",
+      "facts": [
+        {
+          "id": "f_hana_received",
+          "text": "The hotel received booking TN-58217 from TripNest for one Family Room from 3 to 6 April 2027, and the hotel did not change it.",
+          "keywords": [
+            "receive",
+            "received",
+            "change",
+            "changed",
+            "sent",
+            "send"
+          ]
+        },
+        {
+          "id": "f_hana_no_money",
+          "text": "The hotel has not received any money for booking TN-58217; TripNest pays the hotel after the guests check out.",
+          "keywords": [
+            "money",
+            "pay",
+            "paid",
+            "payment",
+            "charge"
+          ]
+        },
+        {
+          "id": "f_hana_march",
+          "text": "The hotel still has two twin rooms free from 4 to 7 March 2027, at 800,000 VND per room per night.",
+          "keywords": [
+            "march",
+            "available",
+            "free",
+            "twin",
+            "space"
+          ]
+        },
+        {
+          "id": "f_hana_fix",
+          "text": "The hotel cannot change a TripNest booking itself; TripNest must cancel or change it.",
+          "keywords": [
+            "cancel",
+            "fix",
+            "correct",
+            "help",
+            "solve"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Other guests' personal details",
+          "forbiddenPhrases": [
+            "kevin's room",
+            "the guest's phone number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leo",
+      "name": "Mr. Leo Santos",
+      "role": "Customer Support Agent, TripNest",
+      "avatar": "clerk_m",
+      "personality": "Polite, efficient and a little formal; follows company rules and checks the system before he answers.",
+      "background": "Leo works in TripNest's customer support team for Southeast Asia. He can look at booking records and explain how the TripNest system works.",
+      "greeting": "Hello, this is Leo from TripNest Customer Support. Could you give me the booking reference, please?",
+      "facts": [
+        {
+          "id": "f_leo_record",
+          "text": "Leo checked booking TN-58217 in the TripNest system and can share the booking record that shows what the customer typed.",
+          "keywords": [
+            "record",
+            "check",
+            "system",
+            "data",
+            "input",
+            "log"
+          ],
+          "unlocksDocumentId": "d_booking_record"
+        },
+        {
+          "id": "f_leo_format",
+          "text": "The TripNest booking form uses the month-first date format MM/DD/YYYY for customers in every country.",
+          "keywords": [
+            "format",
+            "month",
+            "mm/dd",
+            "american"
+          ]
+        },
+        {
+          "id": "f_leo_auto",
+          "text": "When the chosen room type is not available, the TripNest system can automatically choose a similar room at the same or a higher price.",
+          "keywords": [
+            "automatic",
+            "automatically",
+            "similar",
+            "family",
+            "room type"
+          ]
+        },
+        {
+          "id": "f_leo_cancel",
+          "text": "Booking TN-58217 can be cancelled for free until 27 March 2027, which is 7 days before check-in.",
+          "keywords": [
+            "cancel",
+            "cancellation",
+            "refund",
+            "money back"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Other customers' bookings",
+          "forbiddenPhrases": [
+            "sophie's booking",
+            "kevin's booking"
+          ]
+        },
+        {
+          "topic": "Promises of compensation",
+          "forbiddenPhrases": [
+            "we will pay you extra",
+            "you will get compensation"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "What is the most likely cause of the wrong hotel booking?",
+    "options": [
+      {
+        "id": "c_date_format",
+        "text": "The booking platform read 04/03/2027 month-first as 3 April, so it booked the wrong dates and then automatically changed the room and the price. The hotel did not cheat."
+      },
+      {
+        "id": "c_hotel_fraud",
+        "text": "The hotel changed the booking on purpose to get more money from the students."
+      },
+      {
+        "id": "c_thao_family",
+        "text": "Thao chose a Family Room in April by herself, and there was no problem with the booking system."
+      },
+      {
+        "id": "c_hacked",
+        "text": "Someone hacked Thao's TripNest account and changed the booking."
+      }
+    ],
+    "correctOptionId": "c_date_format",
+    "requiredEvidenceIds": [
+      "ev_requested_dates",
+      "ev_confirm_dates",
+      "ev_entered_date",
+      "ev_read_as"
+    ],
+    "minSupporting": 4,
+    "unsupportedClaims": [
+      "The hotel cheats students (only angry reviews say this; the hotel has not received any money).",
+      "The hotel raises prices for students (the website shows normal seasonal prices for everyone).",
+      "Thao chose the Family Room (the booking record shows she selected two twin rooms).",
+      "Thao's account was hacked (there was no new device or login from another country)."
+    ]
+  },
+  "writingTask": {
+    "type": "report",
+    "prompt": "Write an incident report to Ms. Rachel Vo about the hotel booking for the conference trip. Include: a short summary, the information that is wrong in the booking, the evidence you found, the cause of the problem and your recommendations.",
+    "audience": "Ms. Rachel Vo, Faculty of Communication, Lakeside University",
+    "minWords": 150,
+    "maxWords": 200,
+    "sections": [
+      "Summary",
+      "Problems found",
+      "Evidence",
+      "Cause",
+      "Recommendations"
+    ],
+    "keyPoints": [
+      "Identifies the wrong information: dates (3–6 April instead of 4–7 March), room type (one Family Room instead of two twin rooms) and price (6,300,000 instead of 4,800,000 VND).",
+      "Explains the cause: TripNest's form uses MM/DD/YYYY, so 04/03/2027 was read as 3 April.",
+      "Explains that twin rooms were full in April, so the system automatically chose a Family Room at the high-season price.",
+      "States that there is no evidence of fraud by the hotel (the money went to TripNest; the hotel only received what TripNest sent).",
+      "Recommends cancelling for free before 27 March, rebooking twin rooms for 4–7 March and checking date formats in future."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Start with Thao's email and the booking confirmation. Put them side by side.",
+      "Compare the dates, the room type and the price in each document.",
+      "Look at the numbers in the dates: what happens if you swap the day and the month?"
+    ],
+    "evidence": [
+      "Highlight dates, room types and prices that do not match.",
+      "Reviews are opinions from other guests; some are not about the booking at all.",
+      "Find out who received the money and who made the changes."
+    ],
+    "interviews": [
+      "Ask the TripNest agent to check the booking record in the system.",
+      "Ask Thao how she typed the dates on the website.",
+      "Ask the hotel receptionist whether the hotel has received any payment."
+    ],
+    "analysis": [
+      "Official records, receipts and the hotel website are verified; angry reviews are unverified.",
+      "Link the date Thao typed with the date the system read.",
+      "Ask yourself: is there any real evidence that the hotel wanted to cheat?"
+    ],
+    "report": [
+      "Use the five sections: summary, problems found, evidence, cause, recommendations.",
+      "Use comparing language such as 'instead of', 'however' and 'but'.",
+      "Give practical recommendations for Thao, the faculty and TripNest."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 10,
+    "minEvidenceToSubmit": 5,
+    "timeMinutes": 45
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_request_email",
+        "text": "We will check in on Thursday 4 March and check out on Sunday 7 March.",
+        "evidenceId": "ev_requested_dates"
+      },
+      {
+        "documentId": "d_confirmation",
+        "text": "Check-in: Saturday, 3 April 2027 (from 14:00)",
+        "evidenceId": "ev_confirm_dates"
+      },
+      {
+        "documentId": "d_confirmation",
+        "text": "Your selected room type was not available on your dates, so we chose a similar room for you.",
+        "evidenceId": "ev_similar_room"
+      },
+      {
+        "documentId": "d_confirmation",
+        "text": "Total price: 6,300,000 VND (paid)",
+        "evidenceId": "ev_total_price"
+      },
+      {
+        "documentId": "d_hotel_policy",
+        "text": "Twin Rooms are fully booked from 1 to 10 April 2027",
+        "evidenceId": "ev_twin_booked"
+      },
+      {
+        "documentId": "d_hotel_policy",
+        "text": "Family Room | 4 | 1,500,000 VND | 2,100,000 VND",
+        "evidenceId": "ev_family_price"
+      },
+      {
+        "documentId": "d_receipt",
+        "text": "Paid to: TripNest Travel Ltd.",
+        "evidenceId": "ev_paid_to"
+      },
+      {
+        "documentId": "d_reviews",
+        "text": "This hotel cheats students! They changed my room and took extra money.",
+        "evidenceId": "ev_kevin"
+      },
+      {
+        "documentId": "d_reviews",
+        "text": "The breakfast buffet was excellent and the Vietnamese coffee was amazing.",
+        "evidenceId": "ev_breakfast"
+      },
+      {
+        "documentId": "d_booking_record",
+        "text": "Check-in date (format MM/DD/YYYY): 04/03/2027",
+        "evidenceId": "ev_entered_date"
+      },
+      {
+        "documentId": "d_booking_record",
+        "text": "Check-in date read as: 3 April 2027",
+        "evidenceId": "ev_read_as"
+      }
+    ],
+    "answers": {
+      "q_rooms_requested": 1,
+      "q_expected_total": "4,800,000 VND",
+      "q_checkin_confirmed": 1,
+      "q_twin_april": "false",
+      "q_paid_hotel": "false",
+      "q_sophie_refund": "not_given",
+      "q_price_higher": "The booking is in April, when the hotel prices are higher. The room is also a Family Room at 2,100,000 VND per night, so three nights cost 6,300,000 VND.",
+      "q_mismatch": "Thao wanted 4 to 7 March, but the confirmation says 3 to 6 April. She wanted two twin rooms, but she got one Family Room."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "leo",
+        "question": "Can you check the booking record in your system?",
+        "expectFactIds": [
+          "f_leo_record"
+        ]
+      },
+      {
+        "characterId": "leo",
+        "question": "What date format does the TripNest form use?",
+        "expectFactIds": [
+          "f_leo_format"
+        ]
+      },
+      {
+        "characterId": "thao",
+        "question": "How did you type the check-in date on TripNest?",
+        "expectFactIds": [
+          "f_thao_typed"
+        ]
+      },
+      {
+        "characterId": "hana",
+        "question": "Has the hotel received any payment for this booking?",
+        "expectFactIds": [
+          "f_hana_no_money",
+          "f_hana_received"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_requested_dates",
+        "b": "ev_confirm_dates"
+      },
+      {
+        "a": "ev_entered_date",
+        "b": "ev_read_as"
+      },
+      {
+        "a": "ev_twin_booked",
+        "b": "ev_similar_room"
+      },
+      {
+        "a": "ev_family_price",
+        "b": "ev_total_price"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_date_format",
+      "supportingEvidenceIds": [
+        "ev_requested_dates",
+        "ev_confirm_dates",
+        "ev_entered_date",
+        "ev_read_as",
+        "ev_twin_booked",
+        "ev_paid_to"
+      ],
+      "justification": "Thao planned 4–7 March, but she typed 04/03/2027 into a month-first date box, so TripNest read it as 3 April. Twin rooms were full in April, so the system chose a Family Room. The money went to TripNest, not to the hotel."
+    },
+    "report": "Summary: On 12 February 2027, Thao Le booked a hotel on TripNest for our trip to the Young Researchers Conference in Da Nang. The confirmation shows the wrong dates, the wrong room type and a higher price.\n\nProblems found: Thao planned to stay in two twin rooms from 4 to 7 March. However, the confirmation shows one Family Room from 3 to 6 April, and the total price is 6,300,000 VND instead of 4,800,000 VND.\n\nEvidence: The TripNest booking record shows that the date box uses the format MM/DD/YYYY. Thao entered 04/03/2027, which means 4 March in Vietnam, but the system read it as 3 April. Twin rooms are fully booked in early April, so the system automatically chose a Family Room at the higher April price.\n\nCause: This was a date format problem on the booking platform, not fraud by the hotel. The money was paid to TripNest, and the hotel only received the booking that TripNest sent.\n\nRecommendations: Thao should cancel the booking for free before 27 March and book two twin rooms for 4–7 March. TripNest should show the date format clearly."
+  }
+}

@@ -1,0 +1,905 @@
+{
+  "id": "CASE01",
+  "level": "B1",
+  "title": {
+    "en": "The Missing Scholarship",
+    "vi": "Học bổng bí ẩn"
+  },
+  "summary": {
+    "en": "A student receives a $5,000 scholarship email that asks for a fee and personal data. Is it real?",
+    "vi": "Một sinh viên nhận email báo trúng học bổng 5.000 USD nhưng bị yêu cầu nộp phí và cung cấp thông tin cá nhân. Thật hay giả?"
+  },
+  "role": "Student Detective",
+  "setting": "International University",
+  "topic": "Online safety and university administration",
+  "estimatedMinutes": 25,
+  "xpReward": 120,
+  "briefing": {
+    "en": "Emma Tran, a second-year student, has received an email saying she has won the International Excellence Scholarship worth $5,000. The email asks her to pay a processing fee and send personal information within 48 hours. Emma is not sure the email is real and has asked the English Detective Agency for help. Read the documents, interview the people involved and decide what is really happening. Then write a report with your conclusion and recommendations.",
+    "vi": "Emma Tran, sinh viên năm hai, nhận được email báo đã giành học bổng International Excellence trị giá 5.000 USD. Email yêu cầu cô nộp phí xử lý hồ sơ và gửi thông tin cá nhân trong 48 giờ. Emma không chắc email này là thật nên nhờ English Detective Agency giúp đỡ. Hãy đọc tài liệu, phỏng vấn những người liên quan và xác định điều gì đang thực sự xảy ra. Sau đó viết báo cáo nêu kết luận và khuyến nghị."
+  },
+  "objectives": [
+    {
+      "en": "Compare the scholarship email with the official university documents.",
+      "vi": "Đối chiếu email học bổng với các tài liệu chính thức của trường."
+    },
+    {
+      "en": "Find evidence that shows whether the email is genuine or not.",
+      "vi": "Tìm bằng chứng cho thấy email là thật hay giả."
+    },
+    {
+      "en": "Interview Emma, the Scholarship Office and IT Support.",
+      "vi": "Phỏng vấn Emma, Phòng Học bổng và bộ phận hỗ trợ CNTT."
+    },
+    {
+      "en": "Write a report with a conclusion and recommendations.",
+      "vi": "Viết báo cáo có kết luận và khuyến nghị."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_scam_email",
+      "type": "email",
+      "title": "Congratulations! You have won a $5,000 International Scholarship",
+      "meta": {
+        "From": "International Scholarship Office <awards@intl-univ-scholarships.com>",
+        "To": "emma.tran@student.iu.edu",
+        "Date": "Monday, 3 March 2027, 09:12",
+        "Subject": "Congratulations! You have won a $5,000 International Scholarship"
+      },
+      "body": "Dear Emma Tran,\n\nCongratulations! We are happy to inform you that you have been selected for the International Excellence Scholarship worth $5,000.\n\nTo receive your scholarship, you must pay a processing fee of $150 within 48 hours. Please send the payment by bank transfer to the account below and reply with a copy of your passport and your bank card number.\n\nBank: Global Trust Bank\nAccount name: IU Scholarship Services\nAccount number: 7782 0091 4456\n\nIf we do not receive your payment within 48 hours, the scholarship will be given to another student.\n\nThe university logo and our signature confirm that this message is official.\n\nBest regards,\nMr. David Miller\nInternational Scholarship Office\nContact: awards@intl-univ-scholarships.com",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "processing fee",
+          "definition": "money you pay so that an organisation will deal with your application",
+          "vi": "phí xử lý hồ sơ"
+        },
+        {
+          "term": "bank transfer",
+          "definition": "sending money from one bank account to another",
+          "vi": "chuyển khoản ngân hàng"
+        },
+        {
+          "term": "selected",
+          "definition": "chosen from a group",
+          "vi": "được chọn"
+        }
+      ]
+    },
+    {
+      "id": "d_official_notice",
+      "type": "notice",
+      "title": "Official Announcement: International Excellence Scholarship 2027",
+      "meta": {
+        "Published by": "Scholarship Office, International University",
+        "Date": "15 January 2027"
+      },
+      "body": "INTERNATIONAL UNIVERSITY – SCHOLARSHIP OFFICE\n\nThe International Excellence Scholarship provides $5,000 to ten undergraduate students for the 2027–2028 academic year.\n\nApplication period: 1 February – 28 February 2027.\n\nResults: Successful students will be informed through the Student Portal on 20 March 2027. Results are not sent by private email.\n\nImportant: The university never asks students to pay any fee to apply for or receive a scholarship. All official emails come from addresses ending in @iu.edu.\n\nQuestions? Visit Room 204, Building A, or email scholarships@iu.edu.\n\nMr. David Miller\nHead of the Scholarship Office",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "undergraduate",
+          "definition": "a university student who is studying for a first degree",
+          "vi": "sinh viên đại học (hệ cử nhân)"
+        },
+        {
+          "term": "Student Portal",
+          "definition": "the university website where students log in to see their information",
+          "vi": "cổng thông tin sinh viên"
+        }
+      ]
+    },
+    {
+      "id": "d_email_thread",
+      "type": "email",
+      "title": "RE: Congratulations! You have won a $5,000 International Scholarship",
+      "meta": {
+        "Between": "Emma Tran and awards@intl-univ-scholarships.com",
+        "Date": "3 March 2027"
+      },
+      "body": "From: Emma Tran <emma.tran@student.iu.edu> – 18:20\n\nHello, thank you for your email. I applied for the scholarship in February. Can I pay the fee after I receive the money? Also, why do you need my bank card number?\n\nFrom: International Scholarship Office <awards@intl-univ-scholarships.com> – 18:45\n\nDear Emma, the fee must be paid first. This is the normal process for all international scholarships. We need your card number to send the money quickly. Please do not tell other students about this award because the list is confidential. You have 46 hours left.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "confidential",
+          "definition": "secret; not to be shared with other people",
+          "vi": "bảo mật, bí mật"
+        }
+      ]
+    },
+    {
+      "id": "d_it_webpage",
+      "type": "webpage",
+      "title": "Student IT Help – Staying safe online",
+      "meta": {
+        "URL": "https://help.iu.edu/security/phishing"
+      },
+      "body": "Phishing emails try to steal your money or personal information. Be careful if an email:\n\n- comes from an address that does not end in @iu.edu,\n- asks you to pay money or send your bank details,\n- says you must act within a very short time,\n- asks you to keep the message secret.\n\nIf you receive a suspicious email, do not reply. Forward it to security@iu.edu and delete it.\n\nThe IT Help Desk is open Monday to Friday, 8:00–17:00, in the library.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "phishing",
+          "definition": "a trick in which criminals send messages that look real to steal money or information",
+          "vi": "lừa đảo trực tuyến (giả mạo)"
+        },
+        {
+          "term": "suspicious",
+          "definition": "making you feel that something is wrong or dishonest",
+          "vi": "đáng ngờ"
+        }
+      ]
+    },
+    {
+      "id": "d_guidelines",
+      "type": "form",
+      "title": "Scholarship Application Guidelines 2027",
+      "meta": {
+        "Source": "Student Portal → Scholarships → How to apply"
+      },
+      "body": "1. Complete the online form on the Student Portal before 28 February.\n\n2. Upload your transcript and one recommendation letter.\n\n3. The Scholarship Committee meets on 15 March to choose the winners.\n\n4. Winners must sign the scholarship agreement in Room 204 with their student ID card.\n\n5. The money is paid directly into the student's tuition account in September.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "transcript",
+          "definition": "an official list of a student's courses and marks",
+          "vi": "bảng điểm"
+        },
+        {
+          "term": "tuition account",
+          "definition": "the student's account used to pay university fees",
+          "vi": "tài khoản học phí"
+        }
+      ]
+    },
+    {
+      "id": "d_it_report",
+      "type": "report",
+      "title": "Email Security Check – Ticket #4471",
+      "meta": {
+        "Requested by": "Emma Tran",
+        "Checked by": "Anna Lee, IT Support",
+        "Date": "4 March 2027"
+      },
+      "body": "Summary of the check:\n\nThe message was sent from a server outside the university network. The domain intl-univ-scholarships.com was registered on 1 March 2027, two days before the email was sent. The bank account in the message does not belong to International University.\n\nRecommendation: Do not pay. Block the sender and report the message to the Scholarship Office.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_anna_checked"
+      },
+      "glossary": [
+        {
+          "term": "domain",
+          "definition": "the part of an email or web address after the @ or www, e.g. iu.edu",
+          "vi": "tên miền"
+        },
+        {
+          "term": "registered",
+          "definition": "officially recorded or created",
+          "vi": "được đăng ký"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_value",
+      "type": "mcq",
+      "documentIds": [
+        "d_scam_email"
+      ],
+      "prompt": "What is the value of the scholarship in the email?",
+      "options": [
+        "$150",
+        "$5,000",
+        "$7,782",
+        "$48"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_info_requested",
+      "type": "mcq",
+      "documentIds": [
+        "d_scam_email"
+      ],
+      "prompt": "What personal information does the sender ask Emma to send?",
+      "options": [
+        "Her student ID card and her transcript",
+        "A copy of her passport and her bank card number",
+        "Her home address and her phone number",
+        "Her Student Portal password"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_private_email",
+      "type": "tfng",
+      "documentIds": [
+        "d_official_notice"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the official announcement.",
+      "statement": "The university sends scholarship results to students by private email.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_applicants",
+      "type": "tfng",
+      "documentIds": [
+        "d_official_notice"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the official announcement.",
+      "statement": "The announcement says how many students applied for the scholarship.",
+      "answer": "not_given",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_results_date",
+      "type": "short",
+      "documentIds": [
+        "d_official_notice"
+      ],
+      "prompt": "On what date will successful students be informed through the Student Portal? (maximum 4 words)",
+      "acceptable": [
+        "20 March 2027",
+        "20 March",
+        "March 20",
+        "March 20 2027",
+        "20/3/2027",
+        "20/3"
+      ],
+      "maxWords": 4,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_money_paid",
+      "type": "tfng",
+      "documentIds": [
+        "d_guidelines"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the application guidelines.",
+      "statement": "Winners receive the scholarship money on their bank card.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_inconsistent",
+      "type": "explain",
+      "documentIds": [
+        "d_scam_email",
+        "d_official_notice"
+      ],
+      "prompt": "Which details in the scholarship email are inconsistent with the official announcement? Give two examples in 1–3 sentences.",
+      "keyPoints": [
+        "The email asks for a processing fee, but the university never asks students to pay a fee.",
+        "The sender's address does not end in @iu.edu.",
+        "Results should come through the Student Portal on 20 March, not by private email on 3 March."
+      ],
+      "sampleAnswer": "The email asks Emma to pay a $150 fee, but the official announcement says the university never asks students to pay any fee. Also, the email comes from an address that does not end in @iu.edu, and results are only published on the Student Portal on 20 March.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_check_before",
+      "type": "explain",
+      "documentIds": [
+        "d_it_webpage",
+        "d_scam_email"
+      ],
+      "prompt": "What should Emma check before she makes a decision, and why? Answer in 1–3 sentences.",
+      "keyPoints": [
+        "She should check the sender's email address/domain because official emails end in @iu.edu.",
+        "She should check with the Scholarship Office or the Student Portal whether she really won.",
+        "She should not pay or send personal data; report it to IT/security."
+      ],
+      "sampleAnswer": "Emma should check the sender's email address, because official emails always end in @iu.edu. She should also contact the Scholarship Office or check the Student Portal before paying anything or sending her personal data.",
+      "points": 3,
+      "required": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_fee",
+      "documentId": "d_scam_email",
+      "excerpt": "you must pay a processing fee of $150 within 48 hours",
+      "label": "Email demands a $150 fee within 48 hours",
+      "category": "verified",
+      "key": true,
+      "explanation": "The email clearly requests a payment and creates time pressure – a typical sign of a scam."
+    },
+    {
+      "id": "ev_personal_data",
+      "documentId": "d_scam_email",
+      "excerpt": "reply with a copy of your passport and your bank card number",
+      "label": "Email asks for passport and bank card number",
+      "category": "verified",
+      "key": false,
+      "explanation": "Asking for passport and card details is a phishing sign; the real process never needs a bank card."
+    },
+    {
+      "id": "ev_sender_domain",
+      "documentId": "d_scam_email",
+      "excerpt": "Contact: awards@intl-univ-scholarships.com",
+      "label": "Sender address is not an @iu.edu address",
+      "category": "verified",
+      "key": true,
+      "explanation": "The sender uses an outside domain, while official emails always end in @iu.edu."
+    },
+    {
+      "id": "ev_logo_claim",
+      "documentId": "d_scam_email",
+      "excerpt": "The university logo and our signature confirm that this message is official",
+      "label": "Sender claims the logo proves the email is official",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Logos and signatures can be copied easily; the claim is not proof."
+    },
+    {
+      "id": "ev_amount",
+      "documentId": "d_scam_email",
+      "excerpt": "International Excellence Scholarship worth $5,000",
+      "label": "The scholarship is worth $5,000",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The amount matches the real scholarship, so it does not help decide whether the email is genuine (scammers copy real details)."
+    },
+    {
+      "id": "ev_no_fee",
+      "documentId": "d_official_notice",
+      "excerpt": "The university never asks students to pay any fee to apply for or receive a scholarship",
+      "label": "Official policy: no fees for scholarships",
+      "category": "verified",
+      "key": true,
+      "explanation": "Directly contradicts the fee request in the email."
+    },
+    {
+      "id": "ev_official_domain",
+      "documentId": "d_official_notice",
+      "excerpt": "All official emails come from addresses ending in @iu.edu",
+      "label": "Official emails end in @iu.edu",
+      "category": "verified",
+      "key": true,
+      "explanation": "Shows that the sender's address is not an official university address."
+    },
+    {
+      "id": "ev_results_date",
+      "documentId": "d_official_notice",
+      "excerpt": "Successful students will be informed through the Student Portal on 20 March 2027",
+      "label": "Results come via the Student Portal on 20 March",
+      "category": "verified",
+      "key": true,
+      "explanation": "The email arrived on 3 March, before results exist, and by private email instead of the portal."
+    },
+    {
+      "id": "ev_ten_students",
+      "documentId": "d_official_notice",
+      "excerpt": "provides $5,000 to ten undergraduate students",
+      "label": "Ten students receive the scholarship",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The number of winners does not show whether this email is genuine."
+    },
+    {
+      "id": "ev_applied",
+      "documentId": "d_email_thread",
+      "excerpt": "I applied for the scholarship in February",
+      "label": "Emma says she applied in February",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Emma's own statement; it can be confirmed by the Scholarship Office but does not prove the email is real."
+    },
+    {
+      "id": "ev_normal_process",
+      "documentId": "d_email_thread",
+      "excerpt": "This is the normal process for all international scholarships",
+      "label": "Sender claims paying first is normal",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An unsupported claim by the sender, contradicted by the official policy."
+    },
+    {
+      "id": "ev_secrecy",
+      "documentId": "d_email_thread",
+      "excerpt": "Please do not tell other students about this award because the list is confidential",
+      "label": "Sender asks Emma to keep it secret",
+      "category": "verified",
+      "key": false,
+      "explanation": "Requests for secrecy are a listed sign of phishing."
+    },
+    {
+      "id": "ev_short_time",
+      "documentId": "d_it_webpage",
+      "excerpt": "says you must act within a very short time",
+      "label": "IT warning: short deadlines are a phishing sign",
+      "category": "verified",
+      "key": false,
+      "explanation": "Matches the 48-hour deadline in the email."
+    },
+    {
+      "id": "ev_helpdesk_hours",
+      "documentId": "d_it_webpage",
+      "excerpt": "The IT Help Desk is open Monday to Friday",
+      "label": "IT Help Desk opening days",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Opening hours are not relevant to whether the email is genuine."
+    },
+    {
+      "id": "ev_committee_date",
+      "documentId": "d_guidelines",
+      "excerpt": "The Scholarship Committee meets on 15 March to choose the winners",
+      "label": "Winners are chosen on 15 March",
+      "category": "verified",
+      "key": false,
+      "explanation": "On 3 March no winners had been chosen yet."
+    },
+    {
+      "id": "ev_paid_to_tuition",
+      "documentId": "d_guidelines",
+      "excerpt": "The money is paid directly into the student's tuition account in September",
+      "label": "Money goes to the tuition account in September",
+      "category": "verified",
+      "key": false,
+      "explanation": "The real process never needs a bank card number."
+    },
+    {
+      "id": "ev_domain_registered",
+      "documentId": "d_it_report",
+      "excerpt": "The domain intl-univ-scholarships.com was registered on 1 March 2027, two days before the email was sent",
+      "label": "Sender domain created two days before the email",
+      "category": "verified",
+      "key": true,
+      "explanation": "A newly created outside domain strongly indicates a fake sender."
+    },
+    {
+      "id": "ev_bank_not_iu",
+      "documentId": "d_it_report",
+      "excerpt": "The bank account in the message does not belong to International University",
+      "label": "Bank account is not the university's",
+      "category": "verified",
+      "key": false,
+      "explanation": "The payment would go to someone else, not the university."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_fee",
+      "b": "ev_no_fee",
+      "relation": "The fee request contradicts the official no-fee policy."
+    },
+    {
+      "a": "ev_sender_domain",
+      "b": "ev_official_domain",
+      "relation": "The sender's address does not match official addresses."
+    },
+    {
+      "a": "ev_sender_domain",
+      "b": "ev_domain_registered",
+      "relation": "The sender's domain was created just before the email."
+    },
+    {
+      "a": "ev_results_date",
+      "b": "ev_committee_date",
+      "relation": "No winners existed when the email was sent."
+    }
+  ],
+  "characters": [
+    {
+      "id": "emma",
+      "name": "Emma Tran",
+      "role": "Second-year business student who received the email",
+      "avatar": "student_f",
+      "personality": "Friendly but worried and a little nervous; answers in simple sentences and wants to know if she will lose the money.",
+      "background": "Emma is a second-year business student. She hopes to win a scholarship to help pay her tuition. She received the email on 3 March and asked the agency for help.",
+      "greeting": "Hi, I'm Emma. Thank you for helping me. I really hope this scholarship is real, but something feels strange.",
+      "facts": [
+        {
+          "id": "f_emma_applied",
+          "text": "Emma applied for the International Excellence Scholarship on the Student Portal on 20 February 2027.",
+          "keywords": [
+            "apply",
+            "applied",
+            "application",
+            "portal",
+            "when"
+          ]
+        },
+        {
+          "id": "f_emma_not_paid",
+          "text": "Emma has not paid any money and has not sent her passport or bank card number yet.",
+          "keywords": [
+            "pay",
+            "paid",
+            "money",
+            "passport",
+            "card",
+            "sent"
+          ]
+        },
+        {
+          "id": "f_emma_address",
+          "text": "Emma noticed that the sender's email address does not end in @iu.edu, which looked strange to her.",
+          "keywords": [
+            "address",
+            "sender",
+            "domain",
+            "strange",
+            "notice"
+          ]
+        },
+        {
+          "id": "f_emma_forwarded",
+          "text": "Emma forwarded the email to IT Support on 3 March, and Anna Lee from IT opened a ticket to check it.",
+          "keywords": [
+            "it",
+            "help",
+            "forward",
+            "ticket",
+            "security",
+            "anyone",
+            "told"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Emma's login details",
+          "forbiddenPhrases": [
+            "my password is",
+            "my portal password"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "david",
+      "name": "Mr. David Miller",
+      "role": "Head of the Scholarship Office",
+      "avatar": "officer_m",
+      "personality": "Polite, careful and formal; speaks clearly and only confirms what the office officially knows.",
+      "background": "Mr. Miller manages all scholarships at International University. His name and title appear on the official announcement.",
+      "greeting": "Good afternoon. I'm David Miller from the Scholarship Office. How can I help with your investigation?",
+      "facts": [
+        {
+          "id": "f_david_no_fee",
+          "text": "The Scholarship Office never charges a processing fee for any scholarship.",
+          "keywords": [
+            "fee",
+            "pay",
+            "payment",
+            "charge",
+            "cost",
+            "money"
+          ]
+        },
+        {
+          "id": "f_david_no_results",
+          "text": "The office has not sent any results yet; the committee decides on 15 March and results appear on the Student Portal on 20 March.",
+          "keywords": [
+            "results",
+            "sent",
+            "decide",
+            "decision",
+            "announce",
+            "when",
+            "committee"
+          ]
+        },
+        {
+          "id": "f_david_official_email",
+          "text": "Official scholarship emails come only from scholarships@iu.edu.",
+          "keywords": [
+            "email",
+            "address",
+            "official",
+            "domain",
+            "contact"
+          ]
+        },
+        {
+          "id": "f_david_not_author",
+          "text": "Mr. Miller did not write the email, even though it uses his name.",
+          "keywords": [
+            "wrote",
+            "write",
+            "signature",
+            "sign",
+            "name",
+            "author"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Other students' applications and results",
+          "forbiddenPhrases": [
+            "the winners are",
+            "emma has won",
+            "emma has been selected",
+            "emma is on the list"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anna",
+      "name": "Ms. Anna Lee",
+      "role": "IT Support specialist",
+      "avatar": "it_f",
+      "personality": "Practical and patient; explains technical ideas with simple words.",
+      "background": "Anna works at the IT Help Desk and checks suspicious emails that students forward to security@iu.edu.",
+      "greeting": "Hello! Anna from IT Support here. I look at suspicious emails every day. What would you like to know?",
+      "facts": [
+        {
+          "id": "f_anna_signs",
+          "text": "The email shows typical phishing signs: an outside address, a payment request, a short deadline and a request for secrecy.",
+          "keywords": [
+            "phishing",
+            "signs",
+            "suspicious",
+            "safe",
+            "scam",
+            "fake",
+            "real",
+            "genuine"
+          ]
+        },
+        {
+          "id": "f_anna_checked",
+          "text": "Anna checked the email for Emma in ticket #4471 and wrote a security report about the sender's domain and the bank account.",
+          "keywords": [
+            "check",
+            "checked",
+            "report",
+            "ticket",
+            "server",
+            "investigate",
+            "result",
+            "found"
+          ],
+          "unlocksDocumentId": "d_it_report"
+        },
+        {
+          "id": "f_anna_advice",
+          "text": "Students should not reply to suspicious emails; they should forward them to security@iu.edu and delete them.",
+          "keywords": [
+            "should",
+            "advice",
+            "reply",
+            "next",
+            "recommend",
+            "do"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Emma's personal data",
+          "forbiddenPhrases": [
+            "emma's password",
+            "her card number is"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "What is the most reasonable conclusion about the scholarship email?",
+    "options": [
+      {
+        "id": "c_phishing",
+        "text": "The email is a phishing scam that pretends to come from the Scholarship Office."
+      },
+      {
+        "id": "c_genuine",
+        "text": "The email is genuine, and Emma should pay the fee quickly to keep the scholarship."
+      },
+      {
+        "id": "c_early",
+        "text": "The email is genuine but was sent early by mistake."
+      },
+      {
+        "id": "c_partner",
+        "text": "The email was sent by the university's partner bank."
+      }
+    ],
+    "correctOptionId": "c_phishing",
+    "requiredEvidenceIds": [
+      "ev_fee",
+      "ev_no_fee",
+      "ev_sender_domain"
+    ],
+    "minSupporting": 3,
+    "unsupportedClaims": [
+      "Mr. David Miller himself tried to steal money (his name was used by someone else).",
+      "Other students have already paid the fee (no document shows this).",
+      "Emma's university account has been hacked (there is no evidence of this)."
+    ]
+  },
+  "writingTask": {
+    "type": "report",
+    "prompt": "Write an investigation report to the Head of Student Affairs about the scholarship email Emma received. Include: a summary of the case, the evidence you collected, your analysis, your conclusion and your recommendations.",
+    "audience": "Head of Student Affairs, International University",
+    "minWords": 150,
+    "maxWords": 200,
+    "sections": [
+      "Summary",
+      "Evidence collected",
+      "Analysis",
+      "Conclusion",
+      "Recommendations"
+    ],
+    "keyPoints": [
+      "States that the email is a phishing scam / not from the university.",
+      "Uses the contradiction between the fee request and the official no-fee policy.",
+      "Uses the sender's non-@iu.edu address (and/or the newly registered domain).",
+      "Notes that the email came before the official results date and not through the Student Portal.",
+      "Recommends not paying or sharing data, reporting to security@iu.edu and warning other students."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Start with the scholarship email and the official announcement.",
+      "Compare how and when the university really announces results.",
+      "Look for money, dates and email addresses that do not match."
+    ],
+    "evidence": [
+      "Highlight sentences about money, deadlines and email addresses.",
+      "Some details are true but do not help you decide – for example, the amount of the scholarship.",
+      "Pair each detail in the email with the official rule it breaks."
+    ],
+    "interviews": [
+      "Ask the Scholarship Office about fees and results.",
+      "Ask IT Support whether anyone has checked the email.",
+      "Ask Emma what she has already done."
+    ],
+    "analysis": [
+      "Verified evidence comes from official documents or checks; claims by the sender are unverified.",
+      "Support your conclusion with evidence from both the email and official sources.",
+      "Avoid conclusions that no document can prove."
+    ],
+    "report": [
+      "Follow the five sections: summary, evidence, analysis, conclusion, recommendations.",
+      "Use linking words such as 'however', 'in addition' and 'therefore'.",
+      "Give practical recommendations for Emma and for other students."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 10,
+    "minEvidenceToSubmit": 5,
+    "timeMinutes": 45
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_scam_email",
+        "text": "you must pay a processing fee of $150 within 48 hours",
+        "evidenceId": "ev_fee"
+      },
+      {
+        "documentId": "d_scam_email",
+        "text": "Contact: awards@intl-univ-scholarships.com",
+        "evidenceId": "ev_sender_domain"
+      },
+      {
+        "documentId": "d_scam_email",
+        "text": "The university logo and our signature confirm that this message is official",
+        "evidenceId": "ev_logo_claim"
+      },
+      {
+        "documentId": "d_official_notice",
+        "text": "The university never asks students to pay any fee to apply for or receive a scholarship.",
+        "evidenceId": "ev_no_fee"
+      },
+      {
+        "documentId": "d_official_notice",
+        "text": "All official emails come from addresses ending in @iu.edu",
+        "evidenceId": "ev_official_domain"
+      },
+      {
+        "documentId": "d_official_notice",
+        "text": "Successful students will be informed through the Student Portal on 20 March 2027",
+        "evidenceId": "ev_results_date"
+      },
+      {
+        "documentId": "d_guidelines",
+        "text": "The Scholarship Committee meets on 15 March to choose the winners",
+        "evidenceId": "ev_committee_date"
+      },
+      {
+        "documentId": "d_it_report",
+        "text": "The domain intl-univ-scholarships.com was registered on 1 March 2027, two days before the email was sent",
+        "evidenceId": "ev_domain_registered"
+      }
+    ],
+    "answers": {
+      "q_value": 1,
+      "q_info_requested": 1,
+      "q_private_email": "false",
+      "q_applicants": "not_given",
+      "q_results_date": "20 March 2027",
+      "q_money_paid": "false",
+      "q_inconsistent": "The email asks Emma to pay a $150 fee, but the official announcement says the university never asks students to pay any fee. Also, the sender's address does not end in @iu.edu.",
+      "q_check_before": "She should check the sender's address because official emails end in @iu.edu, and she should ask the Scholarship Office before paying."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "david",
+        "question": "Does the Scholarship Office charge a fee for scholarships?",
+        "expectFactIds": [
+          "f_david_no_fee"
+        ]
+      },
+      {
+        "characterId": "anna",
+        "question": "Has anyone checked this email? What did your report find?",
+        "expectFactIds": [
+          "f_anna_checked"
+        ]
+      },
+      {
+        "characterId": "emma",
+        "question": "When did you apply, and have you paid any money?",
+        "expectFactIds": [
+          "f_emma_applied",
+          "f_emma_not_paid"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_fee",
+        "b": "ev_no_fee"
+      },
+      {
+        "a": "ev_sender_domain",
+        "b": "ev_official_domain"
+      },
+      {
+        "a": "ev_sender_domain",
+        "b": "ev_domain_registered"
+      },
+      {
+        "a": "ev_results_date",
+        "b": "ev_committee_date"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_phishing",
+      "supportingEvidenceIds": [
+        "ev_fee",
+        "ev_no_fee",
+        "ev_sender_domain",
+        "ev_official_domain",
+        "ev_domain_registered"
+      ],
+      "justification": "The email asks for a fee, but the official policy says the university never charges fees. The sender's address is not an @iu.edu address and the domain was registered only two days before the email."
+    },
+    "report": "Summary: On 3 March 2027, Emma Tran received an email saying she had won a $5,000 scholarship. The sender asked her to pay a $150 processing fee within 48 hours and to send her passport and bank card number.\n\nEvidence collected: The official announcement says the university never asks students to pay any fee and that official emails end in @iu.edu. However, the email came from awards@intl-univ-scholarships.com. The IT report shows that this domain was registered on 1 March, only two days before the email. In addition, results are published on the Student Portal on 20 March, not by private email.\n\nAnalysis: The email copies real details, such as the amount and Mr. Miller's name, but it breaks several official rules.\n\nConclusion: The email is a phishing scam.\n\nRecommendations: Emma should not pay or send any personal data. She should forward the email to security@iu.edu. The university should also warn all students about this scam."
+  }
+}

@@ -1,0 +1,1163 @@
+{
+  "id": "CASE06",
+  "level": "B2",
+  "title": {
+    "en": "The Environmental Investigation",
+    "vi": "Cuộc điều tra môi trường"
+  },
+  "summary": {
+    "en": "Hundreds of fish die in a river near a university town. A newspaper blames the textile factory – but what do the data really show?",
+    "vi": "Hàng trăm con cá chết trên con sông gần một thị trấn đại học. Một tờ báo đổ lỗi cho nhà máy dệt – nhưng dữ liệu thực sự cho thấy điều gì?"
+  },
+  "role": "Environmental Investigator",
+  "setting": "Hollin Vale, a university town on the Corran River",
+  "topic": "Environment, water quality and evaluating evidence",
+  "estimatedMinutes": 40,
+  "xpReward": 200,
+  "briefing": {
+    "en": "On 15 July 2027, in the middle of a record heatwave, hundreds of dead fish were found in the Corran River near Mill Bridge in the university town of Hollin Vale. The local newspaper and many residents blame Brightweave Textiles, a factory 1 km upstream of the bridge. The Town Council's Environment Committee has asked the English Detective Agency for an independent, evidence-based report. Study the news article, the water-quality data, the factory's permit and records, the weather report and a viral social media post. Interview an environmental scientist, the factory's environmental manager and a local fisherman. Separate facts from opinions, decide what really caused the fish deaths and write a balanced report with recommendations.",
+    "vi": "Ngày 15/7/2027, giữa đợt nắng nóng kỷ lục, người ta phát hiện hàng trăm con cá chết trên sông Corran, gần cầu Mill, thuộc thị trấn đại học Hollin Vale. Tờ báo địa phương và nhiều cư dân đổ lỗi cho Brightweave Textiles – một nhà máy dệt nằm cách cây cầu 1 km về phía thượng nguồn. Ủy ban Môi trường của Hội đồng thị trấn đề nghị English Detective Agency viết một báo cáo độc lập, dựa trên bằng chứng. Hãy nghiên cứu bài báo, số liệu chất lượng nước, giấy phép và hồ sơ xả thải của nhà máy, bản tin thời tiết và một bài đăng mạng xã hội đang lan truyền. Phỏng vấn một giảng viên khoa học môi trường, trưởng phòng môi trường của nhà máy và một ngư dân địa phương. Hãy phân biệt sự thật với ý kiến, xác định nguyên nhân thực sự khiến cá chết và viết một báo cáo khách quan kèm khuyến nghị."
+  },
+  "objectives": [
+    {
+      "en": "Read the monitoring data and compare the points upstream and downstream of the factory.",
+      "vi": "Đọc bảng số liệu quan trắc và so sánh các điểm ở thượng nguồn và hạ nguồn nhà máy."
+    },
+    {
+      "en": "Check the factory's permit against its discharge log.",
+      "vi": "Đối chiếu giấy phép môi trường của nhà máy với sổ ghi chép xả thải."
+    },
+    {
+      "en": "Separate verified facts from opinions and unverified claims in the news and on social media.",
+      "vi": "Phân biệt sự thật đã được kiểm chứng với ý kiến và thông tin chưa kiểm chứng trên báo chí và mạng xã hội."
+    },
+    {
+      "en": "Interview the scientist, the factory manager and the fisherman.",
+      "vi": "Phỏng vấn nhà khoa học, trưởng phòng môi trường của nhà máy và người ngư dân."
+    },
+    {
+      "en": "Write a balanced report (180–250 words) with a conclusion and recommendations.",
+      "vi": "Viết một báo cáo khách quan (180–250 từ) có kết luận và khuyến nghị."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_news",
+      "type": "news",
+      "title": "Hundreds of Fish Die in Corran River – Factory Blamed",
+      "meta": {
+        "Publication": "Hollin Vale Herald",
+        "Author": "Rosa Kemp",
+        "Date": "16 July 2027"
+      },
+      "body": "Hundreds of dead fish were found floating in the Corran River near Mill Bridge early yesterday morning, and many residents are pointing the finger at Brightweave Textiles, the factory on the riverbank 1 km upstream of the bridge.\n\nLocal fisherman Owen Hale discovered the fish shortly after dawn on 15 July. \"I have fished here for decades and I have never seen anything like it,\" he said.\n\nBrightweave releases treated wastewater into the river under a permit from the Regional Environment Agency. Several residents told the Herald that the factory has polluted the river for years, although they did not provide any records to support this.\n\n\"It's obvious that the factory poisoned the river with dye chemicals,\" said one resident, who asked not to be named.\n\nBrightweave's environmental manager, Victor Lam, said the company \"takes its permit very seriously\" and is cooperating with the Agency.\n\nThe fish deaths come in the middle of a severe heatwave. Air temperatures in Hollin Vale have been above 35°C for most of the past week.\n\nBrightweave employs around 420 people and is one of the largest employers in Hollin Vale. The town's River Festival, planned for 24 July, may be postponed.\n\nThe Environment Agency and Hollin Vale University have both started investigations.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "point the finger at",
+          "definition": "to blame someone for something",
+          "vi": "đổ lỗi cho"
+        },
+        {
+          "term": "wastewater",
+          "definition": "water that has been used in a factory or home and contains waste",
+          "vi": "nước thải"
+        },
+        {
+          "term": "permit",
+          "definition": "an official document that allows someone to do something",
+          "vi": "giấy phép"
+        },
+        {
+          "term": "heatwave",
+          "definition": "a period of unusually hot weather",
+          "vi": "đợt nắng nóng"
+        }
+      ]
+    },
+    {
+      "id": "d_monitoring",
+      "type": "table",
+      "title": "Corran River Water-Quality Monitoring, 8–16 July 2027",
+      "meta": {
+        "Source": "Regional Environment Agency – automatic monitoring stations",
+        "Published": "18 July 2027"
+      },
+      "body": "Monitoring points: P1 = Ferrow Weir, 2 km upstream of Brightweave Textiles. P2 = 50 m downstream of the Brightweave outlet pipe. P3 = Mill Bridge, 1 km downstream of the factory.\n\nSamples are taken automatically at 05:00 every day, when oxygen levels in a river are normally at their lowest.\n\n| Date | Point | Dissolved oxygen (mg/L) | Water temperature (°C) | COD (mg/L) |\n|---|---|---|---|---|\n| 8 July | P1 | 7.8 | 21.0 | 12 |\n| 8 July | P2 | 7.5 | 21.2 | 20 |\n| 8 July | P3 | 7.6 | 21.1 | 16 |\n| 12 July | P1 | 6.0 | 25.5 | 13 |\n| 12 July | P2 | 5.6 | 25.8 | 24 |\n| 12 July | P3 | 5.8 | 25.6 | 18 |\n| 14 July | P1 | 5.0 | 27.9 | 14 |\n| 14 July | P2 | 4.6 | 28.1 | 25 |\n| 14 July | P3 | 4.8 | 28.0 | 19 |\n| 15 July | P1 | 4.7 | 28.6 | 14 |\n| 15 July | P2 | 1.6 | 28.9 | 142 |\n| 15 July | P3 | 2.1 | 28.7 | 96 |\n| 16 July | P1 | 4.6 | 28.8 | 13 |\n| 16 July | P2 | 4.1 | 29.0 | 27 |\n| 16 July | P3 | 4.3 | 28.9 | 21 |\n\nGuide values for river fish: 6 mg/L or more = healthy; 3–6 mg/L = fish under stress; below 3 mg/L = dangerous, fish may die.\n\nCOD (chemical oxygen demand) shows how much organic waste is in the water. A higher COD means that bacteria will use up more oxygen as they break the waste down.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "dissolved oxygen",
+          "definition": "oxygen gas mixed into water, which fish need to breathe",
+          "vi": "oxy hòa tan"
+        },
+        {
+          "term": "upstream / downstream",
+          "definition": "nearer to / further from the place where a river starts",
+          "vi": "thượng nguồn / hạ nguồn"
+        },
+        {
+          "term": "COD (chemical oxygen demand)",
+          "definition": "a measure of how much oxygen is needed to break down the waste in water",
+          "vi": "nhu cầu oxy hóa học (COD)"
+        },
+        {
+          "term": "outlet pipe",
+          "definition": "the pipe through which water leaves a factory",
+          "vi": "ống xả"
+        },
+        {
+          "term": "weir",
+          "definition": "a low wall built across a river to control the flow of water",
+          "vi": "đập tràn nhỏ"
+        }
+      ]
+    },
+    {
+      "id": "d_permit",
+      "type": "contract",
+      "title": "Environmental Permit EP-2219: Brightweave Textiles Ltd",
+      "meta": {
+        "Issued by": "Regional Environment Agency",
+        "Valid": "1 January 2026 – 31 December 2028"
+      },
+      "body": "Permit holder: Brightweave Textiles Ltd, Riverside Road, Hollin Vale.\n\nCondition 1 – Discharge hours: Treated wastewater may be discharged into the Corran River only between 08:00 and 18:00. No discharge is permitted at night.\n\nCondition 2 – Volume: The total discharge must not exceed 400 m³ per day.\n\nCondition 3 – Quality: All wastewater must pass through the on-site treatment plant. The COD of the discharged water must not exceed 100 mg/L.\n\nCondition 4 – Low river flow: When the river flow at the Hollin Vale gauge falls below 50% of the seasonal average, the permit holder must reduce its daily discharge by at least half and inform the Agency in writing.\n\nCondition 5 – Incidents: Any discharge that does not meet these conditions must be reported to the Agency within 24 hours.\n\nCondition 6 – Records: The permit holder must keep a discharge log and show it to the Agency or to an official investigation on request.\n\nThe annual permit fee is €2,800 and is paid every January.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "discharge",
+          "definition": "to let a liquid flow out; (noun) the liquid that flows out",
+          "vi": "xả thải; lượng nước thải xả ra"
+        },
+        {
+          "term": "treatment plant",
+          "definition": "a system that cleans wastewater before it is released",
+          "vi": "hệ thống xử lý nước thải"
+        },
+        {
+          "term": "gauge",
+          "definition": "an instrument that measures the level or flow of a river",
+          "vi": "trạm đo (mực nước, lưu lượng)"
+        },
+        {
+          "term": "seasonal average",
+          "definition": "the normal value for that time of year",
+          "vi": "mức trung bình theo mùa"
+        }
+      ]
+    },
+    {
+      "id": "d_discharge_log",
+      "type": "table",
+      "title": "Brightweave Textiles – Wastewater Discharge Log, 8–16 July 2027",
+      "meta": {
+        "Prepared by": "Victor Lam, Environmental Manager",
+        "Shared with the investigation": "19 July 2027"
+      },
+      "body": "| Date | Time | Volume (m³) | COD of discharge (mg/L) | Notes |\n|---|---|---|---|---|\n| 8 July | 08:10–17:50 | 380 | 78 | Normal operation |\n| 9 July | 08:00–17:45 | 375 | 81 | Normal operation |\n| 10 July | 08:05–17:55 | 370 | 77 | Normal operation |\n| 11 July | 08:05–17:40 | 190 | 74 | Volume halved because of low river flow (Condition 4); Agency informed by email |\n| 12 July | 08:00–17:30 | 185 | 76 | Low-flow reduction continues |\n| 13 July | 08:15–17:20 | 180 | 80 | Low-flow reduction continues |\n| 14 July | 08:00–17:45 | 175 | 79 | Low-flow reduction continues |\n| 14–15 July | 23:40–01:50 | 160 | 610 | Night shift: dye-rinse storage tank emptied directly into the river, by-passing the treatment plant |\n| 15 July | – | 0 | – | All discharge stopped after fish deaths were reported |\n| 16 July | – | 0 | – | All discharge stopped; Agency inspection |\n\nComment by V. Lam, 19 July: The night release on 14–15 July was not authorised by management. The night-shift team has been retrained. The release was reported to the Agency on 16 July at 10:00.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_lam_log"
+      },
+      "glossary": [
+        {
+          "term": "log",
+          "definition": "an official written record of events, in time order",
+          "vi": "sổ ghi chép, nhật ký"
+        },
+        {
+          "term": "by-pass",
+          "definition": "to go around something instead of through it",
+          "vi": "đi vòng qua, bỏ qua"
+        },
+        {
+          "term": "authorised",
+          "definition": "officially allowed by a person in charge",
+          "vi": "được cho phép"
+        },
+        {
+          "term": "rinse",
+          "definition": "water used to wash something, here dyed cloth",
+          "vi": "nước xả, nước giũ"
+        }
+      ]
+    },
+    {
+      "id": "d_weather",
+      "type": "report",
+      "title": "Hollin Vale Weather Station – July 2027 Heatwave Summary",
+      "meta": {
+        "Source": "Hollin Vale Weather Station and Regional Hydrology Service",
+        "Date": "17 July 2027"
+      },
+      "body": "A heatwave affected the region from 9 to 17 July 2027. The highest air temperature, 38.4°C, was recorded on 14 July. Night temperatures did not fall below 26°C between 12 and 16 July.\n\nNo rain has fallen in Hollin Vale since 21 June. As a result, the flow of the Corran River at the Hollin Vale gauge fell to 45% of the July average on 11 July and to 38% on 15 July, the lowest July flow since records began in 1974.\n\nWind speeds were very low (under 5 km/h) for most of the week, so there was little mixing at the water surface.\n\nHealth advice: older people should stay indoors between 11:00 and 16:00 and drink plenty of water.\n\nForecast: thunderstorms are expected on 18 July, with 20–30 mm of rain. Temperatures should return to normal by 20 July.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "flow",
+          "definition": "the amount of water that moves along a river in a certain time",
+          "vi": "lưu lượng dòng chảy"
+        },
+        {
+          "term": "records began",
+          "definition": "the time when people started measuring and writing down the data",
+          "vi": "kể từ khi bắt đầu có số liệu ghi chép"
+        },
+        {
+          "term": "mixing",
+          "definition": "combining; here, air (oxygen) entering the water",
+          "vi": "sự hòa trộn"
+        }
+      ]
+    },
+    {
+      "id": "d_social",
+      "type": "webpage",
+      "title": "ValeTalk community page – post by Dana Pryce",
+      "meta": {
+        "Platform": "ValeTalk – Hollin Vale community page",
+        "Posted": "15 July 2027, 21:14"
+      },
+      "body": "Dana Pryce\n\nI am SO angry!!! Hundreds of dead fish at Mill Bridge this morning and we all know who did it. Brightweave has been dumping poison into OUR river every single night for years!!!\n\nMy neighbour says the tap water smells strange now. DON'T DRINK THE WATER – the whole city's water is contaminated!! Share this with everyone!!!\n\nI walked my dog past the factory last night at about midnight and saw grey foam coming out of the big pipe. I've got no photo because my phone battery was dead, but I know what I saw.\n\nThe council only cares about money. Boycott Brightweave!!!\n\n312 comments · 1.4K shares",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "dump",
+          "definition": "to get rid of something in a careless or illegal way",
+          "vi": "đổ (bỏ) bừa bãi"
+        },
+        {
+          "term": "contaminated",
+          "definition": "made dirty or dangerous by a harmful substance",
+          "vi": "bị ô nhiễm, nhiễm bẩn"
+        },
+        {
+          "term": "boycott",
+          "definition": "to refuse to buy from or deal with a company as a protest",
+          "vi": "tẩy chay"
+        }
+      ]
+    },
+    {
+      "id": "d_lab_report",
+      "type": "report",
+      "title": "Laboratory Report: Corran River Fish Deaths, 15 July 2027",
+      "meta": {
+        "Prepared by": "Dr. Helen Okafor, Environmental Science Laboratory, Hollin Vale University",
+        "Date": "19 July 2027"
+      },
+      "body": "Samples: 40 dead fish (mainly roach and bream) and six water samples, collected at Mill Bridge (P3) and Ferrow Weir (P1) between 06:30 and 08:00 on 15 July 2027.\n\nFindings:\n\n1. The gills of the dead fish showed clear signs of oxygen shortage (hypoxia).\n\n2. No toxic levels of heavy metals, dyes or other harmful chemicals were found in the fish tissue or in the water samples.\n\n3. Water at Mill Bridge contained a high level of organic waste and cotton fibres from textile processing. Bacteria breaking down this waste use oxygen from the water.\n\n4. At Ferrow Weir, upstream of the factory, oxygen was low but above the danger level, and no dead fish were found.\n\nInterpretation: Oxygen levels were already falling along the whole river because of high water temperatures and very low flow. The fish at Mill Bridge died when an additional load of organic waste reduced oxygen below 3 mg/L for several hours. Under normal summer conditions, a release of this size would probably have stressed the fish but not killed them in large numbers.\n\nNote on drinking water: Hollin Vale's tap water comes from Ashby Reservoir, 14 km north of the town, not from the Corran River. Our results give no reason to think that tap water is unsafe.\n\nLimitations: We could not test fish from other parts of the river, and we do not know exactly how long oxygen stayed below 3 mg/L.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_okafor_lab"
+      },
+      "glossary": [
+        {
+          "term": "gills",
+          "definition": "the parts of a fish's body that take oxygen from water",
+          "vi": "mang cá"
+        },
+        {
+          "term": "hypoxia",
+          "definition": "a lack of oxygen",
+          "vi": "tình trạng thiếu oxy"
+        },
+        {
+          "term": "toxic",
+          "definition": "poisonous",
+          "vi": "độc hại"
+        },
+        {
+          "term": "reservoir",
+          "definition": "a large lake used to store water for a town",
+          "vi": "hồ chứa nước"
+        },
+        {
+          "term": "limitations",
+          "definition": "things a study could not do or check",
+          "vi": "hạn chế (của nghiên cứu)"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_p3_oxygen",
+      "type": "short",
+      "documentIds": [
+        "d_monitoring"
+      ],
+      "prompt": "According to the monitoring table, what was the dissolved oxygen level at Mill Bridge (P3) on 15 July? Give the number and the unit. (maximum 3 words)",
+      "acceptable": [
+        "2.1",
+        "2.1 mg/L",
+        "2.1 mg per litre"
+      ],
+      "maxWords": 3,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_temp_rise",
+      "type": "short",
+      "documentIds": [
+        "d_monitoring"
+      ],
+      "prompt": "By how many degrees did the water temperature at Ferrow Weir (P1) rise between 8 July and 15 July? (maximum 3 words)",
+      "acceptable": [
+        "7.6",
+        "7.6 degrees",
+        "7.6°C"
+      ],
+      "maxWords": 3,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_upstream_trend",
+      "type": "mcq",
+      "documentIds": [
+        "d_monitoring"
+      ],
+      "prompt": "What does the table show about Ferrow Weir (P1), upstream of the factory, between 8 and 16 July?",
+      "options": [
+        "Oxygen stayed at a healthy level because P1 was not affected by the heatwave.",
+        "COD rose sharply on 15 July, in the same way as at P2 and P3.",
+        "Oxygen fell from 7.8 to 4.6 mg/L, while COD stayed almost the same.",
+        "The water temperature fell as the river flow decreased."
+      ],
+      "correctIndex": 2,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_cod_times",
+      "type": "short",
+      "documentIds": [
+        "d_discharge_log",
+        "d_permit"
+      ],
+      "prompt": "The permit sets a COD limit for discharged water. How many times higher than this limit was the COD of the night release recorded in the discharge log? (maximum 3 words)",
+      "acceptable": [
+        "6.1",
+        "6.1 times",
+        "about 6 times",
+        "six times",
+        "6 times"
+      ],
+      "maxWords": 3,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_tfng_lowflow",
+      "type": "tfng",
+      "documentIds": [
+        "d_permit"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the environmental permit.",
+      "statement": "When river flow falls below 50% of the seasonal average, the factory must cut its daily discharge by at least half.",
+      "answer": "true",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_tfng_reported",
+      "type": "tfng",
+      "documentIds": [
+        "d_discharge_log",
+        "d_permit"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the permit and the discharge log.",
+      "statement": "The night release on 14–15 July was reported to the Agency within the time required by the permit.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_tfng_cause",
+      "type": "tfng",
+      "documentIds": [
+        "d_weather"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the weather report.",
+      "statement": "The weather report states that the July heatwave was caused by climate change.",
+      "answer": "not_given",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_fact_opinion",
+      "type": "mcq",
+      "documentIds": [
+        "d_news",
+        "d_social",
+        "d_weather"
+      ],
+      "prompt": "Which of these statements is a verifiable fact rather than an opinion or an unsupported claim?",
+      "options": [
+        "\"It's obvious that the factory poisoned the river with dye chemicals.\" (resident in the news article)",
+        "\"The council only cares about money.\" (social media post)",
+        "\"The highest air temperature, 38.4°C, was recorded on 14 July.\" (weather report)",
+        "\"Brightweave has been dumping poison into OUR river every single night for years.\" (social media post)"
+      ],
+      "correctIndex": 2,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_explain_upstream",
+      "type": "explain",
+      "documentIds": [
+        "d_monitoring",
+        "d_weather"
+      ],
+      "prompt": "Why is the data from Ferrow Weir (P1), upstream of the factory, important when you decide what caused the fish deaths? Answer in 2–3 sentences.",
+      "keyPoints": [
+        "P1 is upstream, so the factory cannot affect it; it shows the effect of the weather alone.",
+        "Oxygen at P1 fell from 7.8 to about 4.6–4.7 mg/L as the water became warmer and the flow fell, so the heatwave lowered oxygen everywhere.",
+        "P1 stayed above the 3 mg/L danger level and its COD stayed low, while P2/P3 crashed on 15 July, so something extra happened below the factory."
+      ],
+      "sampleAnswer": "Ferrow Weir is upstream of the factory, so it shows what the heatwave and low flow did on their own. Oxygen there fell from 7.8 to 4.7 mg/L, which is stressful but not deadly, and COD stayed low. Because oxygen below the factory fell much further on 15 July, the factory's waste must have added to the problem.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_explain_claim",
+      "type": "explain",
+      "documentIds": [
+        "d_social",
+        "d_lab_report"
+      ],
+      "prompt": "Choose one claim in Dana Pryce's post that is not supported by the evidence. Explain which document challenges it and why. Answer in 2–3 sentences.",
+      "keyPoints": [
+        "The claim that the whole city's water is contaminated is not supported: tap water comes from Ashby Reservoir, not the Corran River.",
+        "The claim that Brightweave dumps poison every night is not supported: the lab found no toxic chemicals and the data/log show only one night release.",
+        "The post relies on a neighbour's opinion or an eyewitness without a photo, so it is unverified."
+      ],
+      "sampleAnswer": "Dana says the whole city's water is contaminated, but the lab report explains that Hollin Vale's tap water comes from Ashby Reservoir, not from the river. The lab also found no toxic chemicals, so her claim is based on rumour, not evidence.",
+      "points": 3,
+      "required": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_news_obvious",
+      "documentId": "d_news",
+      "excerpt": "It's obvious that the factory poisoned the river with dye chemicals",
+      "label": "Anonymous resident says the factory poisoned the river",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An opinion from an unnamed resident with no data; the lab later found no toxic chemicals."
+    },
+    {
+      "id": "ev_news_years",
+      "documentId": "d_news",
+      "excerpt": "the factory has polluted the river for years, although they did not provide any records to support this",
+      "label": "Residents claim long-term pollution without records",
+      "category": "unverified",
+      "key": false,
+      "explanation": "The article itself says no records were provided, so the claim cannot be checked."
+    },
+    {
+      "id": "ev_news_employer",
+      "documentId": "d_news",
+      "excerpt": "Brightweave employs around 420 people and is one of the largest employers in Hollin Vale",
+      "label": "The factory is a large local employer",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The number of workers says nothing about what caused the fish deaths."
+    },
+    {
+      "id": "ev_p1_15",
+      "documentId": "d_monitoring",
+      "excerpt": "| 15 July | P1 | 4.7 | 28.6 | 14 |",
+      "label": "Upstream (P1), 15 July: oxygen 4.7 mg/L, 28.6°C, low COD",
+      "category": "verified",
+      "key": true,
+      "explanation": "Upstream of the factory, oxygen fell from 7.8 to stress level while COD stayed low: the heatwave and low flow lowered oxygen without any factory effect."
+    },
+    {
+      "id": "ev_p2_15",
+      "documentId": "d_monitoring",
+      "excerpt": "| 15 July | P2 | 1.6 | 28.9 | 142 |",
+      "label": "Below the outlet (P2), 15 July: oxygen 1.6 mg/L, COD 142",
+      "category": "verified",
+      "key": false,
+      "explanation": "Just below the outlet pipe, COD jumped and oxygen crashed on the morning after the night release."
+    },
+    {
+      "id": "ev_p3_15",
+      "documentId": "d_monitoring",
+      "excerpt": "| 15 July | P3 | 2.1 | 28.7 | 96 |",
+      "label": "Mill Bridge (P3), 15 July: oxygen 2.1 mg/L, COD 96",
+      "category": "verified",
+      "key": true,
+      "explanation": "Where the fish died, oxygen fell below the 3 mg/L danger level and organic waste (COD) was five times higher than the day before."
+    },
+    {
+      "id": "ev_permit_hours",
+      "documentId": "d_permit",
+      "excerpt": "Treated wastewater may be discharged into the Corran River only between 08:00 and 18:00",
+      "label": "Permit: discharges only between 08:00 and 18:00",
+      "category": "verified",
+      "key": true,
+      "explanation": "Shows that the night release recorded in the log was not allowed by the permit."
+    },
+    {
+      "id": "ev_permit_lowflow",
+      "documentId": "d_permit",
+      "excerpt": "the permit holder must reduce its daily discharge by at least half and inform the Agency in writing",
+      "label": "Permit: halve discharges when river flow is low",
+      "category": "verified",
+      "key": false,
+      "explanation": "The log shows the factory followed this rule from 11 July, so it was not breaking every condition."
+    },
+    {
+      "id": "ev_log_night",
+      "documentId": "d_discharge_log",
+      "excerpt": "| 14–15 July | 23:40–01:50 | 160 | 610 | Night shift: dye-rinse storage tank emptied directly into the river, by-passing the treatment plant |",
+      "label": "Log: untreated night release on 14–15 July (COD 610)",
+      "category": "verified",
+      "key": true,
+      "explanation": "The factory's own record shows an unpermitted, untreated night discharge with a very high organic load just hours before the fish were found."
+    },
+    {
+      "id": "ev_log_halved",
+      "documentId": "d_discharge_log",
+      "excerpt": "Volume halved because of low river flow (Condition 4); Agency informed by email",
+      "label": "Log: daily volume halved from 11 July",
+      "category": "verified",
+      "key": false,
+      "explanation": "The factory reduced its normal daytime discharges as the low-flow condition required."
+    },
+    {
+      "id": "ev_log_not_authorised",
+      "documentId": "d_discharge_log",
+      "excerpt": "The night release on 14–15 July was not authorised by management",
+      "label": "Manager says the night release was not authorised",
+      "category": "unverified",
+      "key": false,
+      "explanation": "This is the company's own statement about who decided; no independent document confirms it."
+    },
+    {
+      "id": "ev_log_late_report",
+      "documentId": "d_discharge_log",
+      "excerpt": "The release was reported to the Agency on 16 July at 10:00",
+      "label": "Night release reported on 16 July at 10:00",
+      "category": "verified",
+      "key": false,
+      "explanation": "About 32 hours after the release ended – later than the 24 hours required by the permit."
+    },
+    {
+      "id": "ev_weather_flow",
+      "documentId": "d_weather",
+      "excerpt": "the flow of the Corran River at the Hollin Vale gauge fell to 45% of the July average on 11 July and to 38% on 15 July",
+      "label": "River flow fell to 38% of the July average",
+      "category": "verified",
+      "key": true,
+      "explanation": "Very low flow plus high temperatures means less oxygen in the water and less dilution of any waste."
+    },
+    {
+      "id": "ev_weather_advice",
+      "documentId": "d_weather",
+      "excerpt": "older people should stay indoors between 11:00 and 16:00 and drink plenty of water",
+      "label": "Health advice for older people",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Advice for people during the heatwave does not help explain the fish deaths."
+    },
+    {
+      "id": "ev_social_every_night",
+      "documentId": "d_social",
+      "excerpt": "Brightweave has been dumping poison into OUR river every single night for years",
+      "label": "Post claims nightly poison dumping for years",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An emotional claim with no source; the monitoring data show only one night-time spike."
+    },
+    {
+      "id": "ev_social_city_water",
+      "documentId": "d_social",
+      "excerpt": "the whole city's water is contaminated",
+      "label": "Post claims the city's water is contaminated",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Based on a neighbour's comment; the lab report says tap water comes from Ashby Reservoir, not the river."
+    },
+    {
+      "id": "ev_social_foam",
+      "documentId": "d_social",
+      "excerpt": "saw grey foam coming out of the big pipe",
+      "label": "Resident saw grey foam at the pipe around midnight",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An eyewitness report without a photo; it matches the log's night release but cannot prove anything alone."
+    },
+    {
+      "id": "ev_lab_hypoxia",
+      "documentId": "d_lab_report",
+      "excerpt": "The gills of the dead fish showed clear signs of oxygen shortage (hypoxia)",
+      "label": "Lab: the fish died from lack of oxygen",
+      "category": "verified",
+      "key": true,
+      "explanation": "Laboratory evidence that low oxygen, not poison, was the direct cause of death."
+    },
+    {
+      "id": "ev_lab_no_toxic",
+      "documentId": "d_lab_report",
+      "excerpt": "No toxic levels of heavy metals, dyes or other harmful chemicals were found in the fish tissue or in the water samples",
+      "label": "Lab: no toxic chemicals in fish or water",
+      "category": "verified",
+      "key": true,
+      "explanation": "Contradicts the claims that the factory 'poisoned' the river."
+    },
+    {
+      "id": "ev_lab_tapwater",
+      "documentId": "d_lab_report",
+      "excerpt": "Hollin Vale's tap water comes from Ashby Reservoir, 14 km north of the town, not from the Corran River",
+      "label": "Tap water does not come from the Corran River",
+      "category": "verified",
+      "key": false,
+      "explanation": "Shows that the social media claim about contaminated city water is unsupported."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_log_night",
+      "b": "ev_permit_hours",
+      "relation": "The night release broke the permit's discharge hours."
+    },
+    {
+      "a": "ev_log_night",
+      "b": "ev_p3_15",
+      "relation": "The untreated night release came just before the oxygen crash and COD spike at Mill Bridge."
+    },
+    {
+      "a": "ev_p1_15",
+      "b": "ev_weather_flow",
+      "relation": "Upstream oxygen fell during the heatwave and low flow, without any factory effect."
+    },
+    {
+      "a": "ev_lab_hypoxia",
+      "b": "ev_p3_15",
+      "relation": "The fish died of oxygen shortage where oxygen was below the danger level."
+    },
+    {
+      "a": "ev_lab_no_toxic",
+      "b": "ev_news_obvious",
+      "relation": "The lab results contradict the claim that the river was poisoned."
+    }
+  ],
+  "characters": [
+    {
+      "id": "okafor",
+      "name": "Dr. Helen Okafor",
+      "role": "Lecturer in Environmental Science, Hollin Vale University",
+      "avatar": "expert_f",
+      "personality": "Calm, precise and scientific; explains processes clearly, uses words like 'evidence suggests' and refuses to speculate beyond the data.",
+      "background": "Dr. Okafor teaches river ecology and runs the university's environmental science laboratory. Her team went to Mill Bridge on the morning the fish were found.",
+      "greeting": "Good morning. I'm Helen Okafor. I'm happy to explain the science, but I'll only tell you what the data can support.",
+      "facts": [
+        {
+          "id": "f_okafor_oxygen",
+          "text": "Warm water can hold less dissolved oxygen than cold water, and a slow, shallow river takes in less oxygen from the air, so a heatwave with low flow lowers oxygen along a whole river.",
+          "keywords": [
+            "oxygen",
+            "warm",
+            "temperature",
+            "heatwave",
+            "heat",
+            "weather"
+          ]
+        },
+        {
+          "id": "f_okafor_threshold",
+          "text": "Most river fish become stressed when dissolved oxygen drops under 6 mg/L, and many die if it stays under 3 mg/L for several hours.",
+          "keywords": [
+            "threshold",
+            "dangerous",
+            "level",
+            "limit",
+            "stress",
+            "stressed",
+            "guide values"
+          ]
+        },
+        {
+          "id": "f_okafor_lab",
+          "text": "Dr. Okafor's team collected dead fish and water samples at Mill Bridge and Ferrow Weir on the morning of 15 July and analysed them in the university laboratory; the results are in a written lab report.",
+          "keywords": [
+            "lab",
+            "laboratory",
+            "samples",
+            "tested",
+            "analysed",
+            "analysis"
+          ],
+          "unlocksDocumentId": "d_lab_report"
+        },
+        {
+          "id": "f_okafor_cod",
+          "text": "Organic waste with a high COD is not necessarily poisonous, but bacteria use up oxygen while they break it down, so it can make oxygen levels fall quickly.",
+          "keywords": [
+            "cod",
+            "organic",
+            "bacteria",
+            "poison",
+            "poisonous",
+            "toxic"
+          ]
+        },
+        {
+          "id": "f_okafor_balance",
+          "text": "In Dr. Okafor's view, a good investigation compares upstream and downstream data before blaming any single source.",
+          "keywords": [
+            "upstream",
+            "downstream",
+            "compare",
+            "blame",
+            "responsible"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "The final verdict of the investigation",
+          "forbiddenPhrases": [
+            "the factory is guilty",
+            "the factory is to blame",
+            "the final verdict",
+            "the fish deaths were caused by"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lam",
+      "name": "Mr. Victor Lam",
+      "role": "Environmental Manager, Brightweave Textiles Ltd",
+      "avatar": "manager_m",
+      "personality": "Professional and defensive at first; chooses words carefully, stresses what the company did right, but answers honestly when asked about records.",
+      "background": "Mr. Lam has been responsible for Brightweave's wastewater treatment and its environmental permit for six years. He is under pressure from the media and the company's directors.",
+      "greeting": "Hello, I'm Victor Lam, Brightweave's environmental manager. We are cooperating fully with the Agency. What would you like to know?",
+      "facts": [
+        {
+          "id": "f_lam_permit",
+          "text": "Brightweave's permit lets the company release treated wastewater into the river only during the day, from 08:00 to 18:00.",
+          "keywords": [
+            "permit",
+            "allowed",
+            "hours",
+            "rules"
+          ]
+        },
+        {
+          "id": "f_lam_reduced",
+          "text": "Because the river was very low, Brightweave cut its daytime discharges to under 200 m³ a day from 11 July and told the Agency by email.",
+          "keywords": [
+            "reduce",
+            "reduced",
+            "volume",
+            "how much",
+            "low flow"
+          ]
+        },
+        {
+          "id": "f_lam_log",
+          "text": "Mr. Lam keeps a discharge log for every wastewater release and is willing to share the entries for 8–16 July with the investigation.",
+          "keywords": [
+            "log",
+            "records",
+            "record",
+            "release",
+            "releases"
+          ],
+          "unlocksDocumentId": "d_discharge_log"
+        },
+        {
+          "id": "f_lam_tank",
+          "text": "Mr. Lam says the night-shift team emptied a full dye-rinse tank into the river late on 14 July without asking him, because the tank was needed the next morning.",
+          "keywords": [
+            "night",
+            "midnight",
+            "tank",
+            "foam",
+            "14 july"
+          ]
+        },
+        {
+          "id": "f_lam_dyes",
+          "text": "Mr. Lam says Brightweave uses water-based dyes and that its wastewater is not toxic, although he admits the rinse water contains a lot of organic waste.",
+          "keywords": [
+            "dye",
+            "dyes",
+            "chemicals",
+            "toxic",
+            "poison"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Confidential business information",
+          "forbiddenPhrases": [
+            "our customers include",
+            "the dye formula is",
+            "our secret recipe"
+          ]
+        },
+        {
+          "topic": "Legal guilt before the official inquiry ends",
+          "forbiddenPhrases": [
+            "we broke the law",
+            "we are guilty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hale",
+      "name": "Mr. Owen Hale",
+      "role": "Local fisherman and Hollin Vale resident",
+      "avatar": "clerk_m",
+      "personality": "Direct, emotional about the river and a bit suspicious of the factory, but honest about what he did and did not see himself.",
+      "background": "Owen Hale has fished on the Corran River for over thirty years. He found the dead fish on 15 July and called the Environment Agency.",
+      "greeting": "Morning. Owen Hale. I love this river, and what I saw on Thursday broke my heart. Ask me anything.",
+      "facts": [
+        {
+          "id": "f_hale_found",
+          "text": "Owen found hundreds of dead fish near Mill Bridge, about 1 km below the factory, at around six o'clock on the morning of 15 July.",
+          "keywords": [
+            "found",
+            "dead fish",
+            "where",
+            "discover",
+            "discovered",
+            "find"
+          ]
+        },
+        {
+          "id": "f_hale_smell",
+          "text": "Owen was night fishing near the factory around midnight on 14 July and noticed a sweet, soapy smell and grey foam on the water near the outlet pipe.",
+          "keywords": [
+            "night",
+            "midnight",
+            "smell",
+            "foam",
+            "pipe",
+            "outlet"
+          ]
+        },
+        {
+          "id": "f_hale_upstream",
+          "text": "At Ferrow Weir, upstream of the factory, Owen saw fish gasping at the surface that week, but he did not see any dead ones there.",
+          "keywords": [
+            "upstream",
+            "weir",
+            "gasping",
+            "ferrow"
+          ]
+        },
+        {
+          "id": "f_hale_low",
+          "text": "Owen says the river was lower and warmer that week than at any time he can remember.",
+          "keywords": [
+            "low",
+            "water level",
+            "warmer",
+            "remember",
+            "drought"
+          ]
+        },
+        {
+          "id": "f_hale_tap",
+          "text": "Owen drinks the town's tap water every day and has had no problems; nobody has told him it is unsafe.",
+          "keywords": [
+            "tap",
+            "drink",
+            "drinking"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Rumours about named factory workers",
+          "forbiddenPhrases": [
+            "i know who did it",
+            "the worker who did it"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "What is the most reasonable, evidence-based conclusion about why the fish died at Mill Bridge?",
+    "options": [
+      {
+        "id": "c_combined",
+        "text": "The heatwave and very low river flow lowered oxygen along the whole river, and an unpermitted night release of untreated waste from Brightweave on 14–15 July pushed oxygen at Mill Bridge to a deadly level."
+      },
+      {
+        "id": "c_factory_alone",
+        "text": "Brightweave alone poisoned the river with toxic dye chemicals; the weather had nothing to do with the fish deaths."
+      },
+      {
+        "id": "c_heat_alone",
+        "text": "The heatwave alone caused the fish deaths; the factory followed its permit and had no effect on the river."
+      },
+      {
+        "id": "c_city_water",
+        "text": "Toxic waste from the factory has contaminated the whole river, and the town's tap water is now dangerous to drink."
+      },
+      {
+        "id": "c_unknown",
+        "text": "There is not enough evidence to say anything about the cause, so the fish probably died of a disease."
+      }
+    ],
+    "correctOptionId": "c_combined",
+    "requiredEvidenceIds": [
+      "ev_p1_15",
+      "ev_p3_15",
+      "ev_weather_flow",
+      "ev_log_night",
+      "ev_lab_hypoxia"
+    ],
+    "minSupporting": 5,
+    "unsupportedClaims": [
+      "The water is now dangerous to drink in the whole city (tap water comes from Ashby Reservoir, not the Corran River).",
+      "The fish were poisoned by toxic dye chemicals (the lab found no toxic levels in fish or water).",
+      "Brightweave has released waste every night for years (the data and the log show only one night release).",
+      "The factory's managers ordered the night release (no independent evidence shows who decided).",
+      "The heatwave alone would have killed the fish (upstream fish were stressed but did not die)."
+    ]
+  },
+  "writingTask": {
+    "type": "report",
+    "prompt": "Write an investigation report to the Environment Committee of Hollin Vale Town Council about the fish deaths in the Corran River. Include: a short summary of the incident, the key evidence (with data), an analysis that weighs the different causes, your conclusion, and practical recommendations. Make clear which claims are supported by evidence and which are not.",
+    "audience": "Environment Committee, Hollin Vale Town Council",
+    "minWords": 180,
+    "maxWords": 250,
+    "sections": [
+      "Summary",
+      "Evidence",
+      "Analysis",
+      "Conclusion",
+      "Recommendations"
+    ],
+    "keyPoints": [
+      "States that the fish died from a lack of oxygen, not from poisoning.",
+      "Uses data showing that the heatwave and low flow lowered oxygen everywhere, including upstream (P1).",
+      "Uses the oxygen crash at Mill Bridge on 15 July (2.1 mg/L, high COD) and links it to the untreated night release in the log.",
+      "Notes that the night release broke the permit (discharge hours, treatment, late reporting).",
+      "Rejects unsupported claims such as contaminated city tap water or nightly poison dumping.",
+      "Gives balanced recommendations for the factory, the Agency/council and residents."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Start with the news article, then check its claims against the monitoring table and the weather report.",
+      "In the table, compare the same date at P1, P2 and P3. Which point is not affected by the factory?",
+      "Look for the one date when COD suddenly rises and oxygen suddenly falls downstream."
+    ],
+    "evidence": [
+      "Highlight full table rows or sentences with numbers – data is stronger than opinions.",
+      "Statements by anonymous residents or social media users are unverified unless another source confirms them.",
+      "Some details are true but do not explain the fish deaths, for example how many people the factory employs."
+    ],
+    "interviews": [
+      "Ask the scientist how temperature affects oxygen and whether her laboratory tested any samples.",
+      "Ask the factory manager about the permit and whether he can share his discharge records.",
+      "Ask the fisherman when and where he found the fish and what he noticed the night before."
+    ],
+    "analysis": [
+      "Avoid one-sided conclusions: check what happened upstream as well as downstream.",
+      "Ask yourself: would the fish have died without the heatwave? Would they have died without the night release?",
+      "Support your conclusion with verified data from the table, the weather report, the log and the lab – not with opinions."
+    ],
+    "report": [
+      "Follow the five sections and keep a formal, objective tone.",
+      "Quote key numbers (oxygen levels, river flow, COD) and say where they come from.",
+      "Use contrast and cause language: 'however', 'whereas', 'as a result', 'this suggests that'."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 8,
+    "minEvidenceToSubmit": 7,
+    "timeMinutes": 60
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_news",
+        "text": "It's obvious that the factory poisoned the river with dye chemicals",
+        "evidenceId": "ev_news_obvious"
+      },
+      {
+        "documentId": "d_monitoring",
+        "text": "| 15 July | P1 | 4.7 | 28.6 | 14 |",
+        "evidenceId": "ev_p1_15"
+      },
+      {
+        "documentId": "d_monitoring",
+        "text": "| 15 July | P2 | 1.6 | 28.9 | 142 |",
+        "evidenceId": "ev_p2_15"
+      },
+      {
+        "documentId": "d_monitoring",
+        "text": "| 15 July | P3 | 2.1 | 28.7 | 96 |",
+        "evidenceId": "ev_p3_15"
+      },
+      {
+        "documentId": "d_permit",
+        "text": "Treated wastewater may be discharged into the Corran River only between 08:00 and 18:00",
+        "evidenceId": "ev_permit_hours"
+      },
+      {
+        "documentId": "d_discharge_log",
+        "text": "| 14–15 July | 23:40–01:50 | 160 | 610 | Night shift: dye-rinse storage tank emptied directly into the river, by-passing the treatment plant |",
+        "evidenceId": "ev_log_night"
+      },
+      {
+        "documentId": "d_discharge_log",
+        "text": "The release was reported to the Agency on 16 July at 10:00",
+        "evidenceId": "ev_log_late_report"
+      },
+      {
+        "documentId": "d_weather",
+        "text": "the flow of the Corran River at the Hollin Vale gauge fell to 45% of the July average on 11 July and to 38% on 15 July",
+        "evidenceId": "ev_weather_flow"
+      },
+      {
+        "documentId": "d_social",
+        "text": "the whole city's water is contaminated",
+        "evidenceId": "ev_social_city_water"
+      },
+      {
+        "documentId": "d_lab_report",
+        "text": "The gills of the dead fish showed clear signs of oxygen shortage (hypoxia)",
+        "evidenceId": "ev_lab_hypoxia"
+      },
+      {
+        "documentId": "d_lab_report",
+        "text": "No toxic levels of heavy metals, dyes or other harmful chemicals were found in the fish tissue or in the water samples",
+        "evidenceId": "ev_lab_no_toxic"
+      },
+      {
+        "documentId": "d_lab_report",
+        "text": "Hollin Vale's tap water comes from Ashby Reservoir, 14 km north of the town, not from the Corran River",
+        "evidenceId": "ev_lab_tapwater"
+      }
+    ],
+    "answers": {
+      "q_p3_oxygen": "2.1 mg/L",
+      "q_temp_rise": "7.6 degrees",
+      "q_upstream_trend": 2,
+      "q_cod_times": "6.1 times",
+      "q_tfng_lowflow": "true",
+      "q_tfng_reported": "false",
+      "q_tfng_cause": "not_given",
+      "q_fact_opinion": 2,
+      "q_explain_upstream": "Ferrow Weir is upstream of the factory, so it shows what the heatwave and low flow did on their own. Oxygen there fell from 7.8 to 4.7 mg/L, which is stressful but not deadly, and COD stayed low. Below the factory, oxygen fell much further on 15 July, so the factory's waste added to the problem.",
+      "q_explain_claim": "Dana says the whole city's water is contaminated, but the lab report explains that the town's tap water comes from Ashby Reservoir, not from the Corran River. The lab also found no toxic chemicals, so her claim is a rumour, not evidence."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "okafor",
+        "question": "Did your laboratory test any samples from the dead fish?",
+        "expectFactIds": [
+          "f_okafor_lab"
+        ]
+      },
+      {
+        "characterId": "okafor",
+        "question": "How does a heatwave affect the oxygen in a river?",
+        "expectFactIds": [
+          "f_okafor_oxygen"
+        ]
+      },
+      {
+        "characterId": "lam",
+        "question": "Can you share your discharge log and records for July?",
+        "expectFactIds": [
+          "f_lam_log"
+        ]
+      },
+      {
+        "characterId": "lam",
+        "question": "What hours does your permit allow, and what happened at night on 14 July?",
+        "expectFactIds": [
+          "f_lam_permit",
+          "f_lam_tank"
+        ]
+      },
+      {
+        "characterId": "hale",
+        "question": "When and where did you find the dead fish?",
+        "expectFactIds": [
+          "f_hale_found"
+        ]
+      },
+      {
+        "characterId": "hale",
+        "question": "Did you see anything at Ferrow Weir upstream?",
+        "expectFactIds": [
+          "f_hale_upstream"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_log_night",
+        "b": "ev_permit_hours"
+      },
+      {
+        "a": "ev_log_night",
+        "b": "ev_p3_15"
+      },
+      {
+        "a": "ev_p1_15",
+        "b": "ev_weather_flow"
+      },
+      {
+        "a": "ev_lab_hypoxia",
+        "b": "ev_p3_15"
+      },
+      {
+        "a": "ev_lab_no_toxic",
+        "b": "ev_news_obvious"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_combined",
+      "supportingEvidenceIds": [
+        "ev_p1_15",
+        "ev_p3_15",
+        "ev_weather_flow",
+        "ev_log_night",
+        "ev_permit_hours",
+        "ev_lab_hypoxia",
+        "ev_lab_no_toxic"
+      ],
+      "justification": "Oxygen fell even upstream at Ferrow Weir (4.7 mg/L) because river flow dropped to 38% during the heatwave, but only at Mill Bridge did it fall to 2.1 mg/L, right after an untreated night release that the permit does not allow. The lab found oxygen shortage, not poison, in the fish."
+    },
+    "report": "Summary: On 15 July 2027, hundreds of dead fish were found in the Corran River at Mill Bridge, 1 km downstream of Brightweave Textiles. A local newspaper and many residents blamed the factory for poisoning the river.\n\nEvidence: The weather report shows a heatwave from 9 to 17 July, and river flow fell to 38% of the July average on 15 July. Even at Ferrow Weir, upstream of the factory, dissolved oxygen dropped from 7.8 to 4.7 mg/L. However, on 15 July oxygen at Mill Bridge fell to 2.1 mg/L, below the danger level of 3 mg/L, while COD rose to 96 mg/L. The factory's log records a night release of 160 m³ of untreated waste, although the permit only allows discharges between 08:00 and 18:00. The university laboratory found signs of oxygen shortage in the fish but no toxic chemicals.\n\nAnalysis: The heatwave and low flow made the whole river vulnerable, but the extra organic waste pushed oxygen below a deadly level downstream. The claim that the city's tap water is unsafe is not supported, because it comes from Ashby Reservoir.\n\nConclusion: The fish died from a lack of oxygen caused by the heatwave and low flow and made worse by an unpermitted night discharge.\n\nRecommendations: The Agency should investigate the late incident report, Brightweave should control its storage tanks at night, and residents should check information before sharing it online."
+  }
+}

@@ -1,0 +1,1116 @@
+{
+  "id": "CASE04",
+  "level": "B2",
+  "title": {
+    "en": "The Suspicious Online Store",
+    "vi": "Cửa hàng trực tuyến đáng ngờ"
+  },
+  "summary": {
+    "en": "A new online store is selling laptops at 64% off. Before the Technology Club transfers more than 100 million VND, find out whether the store can be trusted.",
+    "vi": "Một cửa hàng trực tuyến mới đang bán laptop giảm giá 64%. Trước khi Câu lạc bộ Công nghệ chuyển hơn 100 triệu đồng, hãy xác minh xem cửa hàng này có đáng tin hay không."
+  },
+  "role": "Consumer Investigator",
+  "setting": "Riverside University Technology Club",
+  "topic": "E-commerce, online advertising and source reliability",
+  "estimatedMinutes": 35,
+  "xpReward": 180,
+  "briefing": {
+    "en": "The Riverside University Technology Club wants to place a group order for twelve Zentrix ProBook 14 laptops and twenty pairs of headphones from TechNova Deals, a new online store that has been advertising huge discounts on social media. Before the club treasurer, Mai Pham, transfers more than 100 million VND, the club's faculty adviser has asked the English Detective Agency to find out whether the store can be trusted. One club member, Khoa Nguyen, has already bought headphones from the store and is still waiting for them. Evaluate every source carefully, separate verified facts from marketing claims, interview the people involved and write a report with a cautious, evidence-based conclusion and practical recommendations.",
+    "vi": "Câu lạc bộ Công nghệ của Đại học Riverside muốn đặt mua chung mười hai laptop Zentrix ProBook 14 và hai mươi chiếc tai nghe từ TechNova Deals, một cửa hàng trực tuyến mới đang quảng cáo giảm giá rất mạnh trên mạng xã hội. Trước khi thủ quỹ Mai Pham chuyển khoản hơn 100 triệu đồng, cố vấn của câu lạc bộ đã nhờ English Detective Agency kiểm tra xem cửa hàng này có đáng tin cậy không. Một thành viên, Khoa Nguyen, đã mua tai nghe của cửa hàng và đến nay vẫn chưa nhận được hàng. Hãy đánh giá cẩn thận từng nguồn thông tin, tách biệt sự thật đã được xác minh với lời quảng cáo, phỏng vấn những người liên quan và viết báo cáo với kết luận thận trọng, dựa trên bằng chứng cùng các khuyến nghị thiết thực."
+  },
+  "objectives": [
+    {
+      "en": "Evaluate the reliability of each source: the store's own pages, the advertisement, the Council's alert and the independent checks.",
+      "vi": "Đánh giá độ tin cậy của từng nguồn: các trang của chính cửa hàng, quảng cáo, thông báo của Hội đồng và các kết quả kiểm tra độc lập."
+    },
+    {
+      "en": "Separate verifiable evidence from marketing claims that cannot be confirmed.",
+      "vi": "Phân biệt bằng chứng có thể kiểm chứng với những lời quảng cáo không thể xác nhận."
+    },
+    {
+      "en": "Interview Khoa, the consumer-protection officer and the e-commerce expert.",
+      "vi": "Phỏng vấn Khoa, cán bộ bảo vệ người tiêu dùng và chuyên gia thương mại điện tử."
+    },
+    {
+      "en": "Write a report with a cautious, evidence-based conclusion and practical recommendations.",
+      "vi": "Viết báo cáo với kết luận thận trọng, dựa trên bằng chứng và các khuyến nghị thiết thực."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_product_page",
+      "type": "webpage",
+      "title": "TechNova Deals – Zentrix ProBook 14 (Flash Sale)",
+      "meta": {
+        "URL": "https://technova-deals.shop/zentrix-probook-14",
+        "Viewed": "24 May 2027"
+      },
+      "body": "FLASH SALE – WAREHOUSE CLEARANCE\n\nZentrix ProBook 14 (2027 model)\n\nWas 24,990,000 VND – now only 8,990,000 VND (64% off). Only 3 left in stock! This offer ends in 02:59:41.\n\nTechNova Deals is the official authorised distributor of Zentrix laptops in Vietnam. Every laptop is brand new, sealed in its original box and covered by our 12-month warranty.\n\nRated 4.9/5 by 2,814 verified buyers.\n\nSpecifications: 14-inch Full HD screen, 16 GB RAM and a 512 GB SSD, backlit keyboard, 1.3 kg aluminium body.\n\nPayment and delivery: Flash-sale prices apply only to bank transfer orders. Cash on delivery is not available for sale items. Please transfer the full amount within 30 minutes of placing your order; otherwise your order will be cancelled automatically. Free delivery nationwide in 2–3 working days.\n\nAlso on sale: SoundMax Air wireless headphones – was 2,190,000 VND, now only 390,000 VND.\n\nQuestions? Chat with our friendly team using the live chat button.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "flash sale",
+          "definition": "a sale that lasts only a very short time",
+          "vi": "đợt giảm giá chớp nhoáng"
+        },
+        {
+          "term": "warehouse clearance",
+          "definition": "selling all the goods in a store room cheaply to empty it",
+          "vi": "thanh lý kho"
+        },
+        {
+          "term": "authorised distributor",
+          "definition": "a company officially allowed by a brand to sell its products",
+          "vi": "nhà phân phối được ủy quyền"
+        },
+        {
+          "term": "cash on delivery",
+          "definition": "paying for goods in cash when they are delivered to you",
+          "vi": "thanh toán khi nhận hàng (COD)"
+        },
+        {
+          "term": "warranty",
+          "definition": "a written promise to repair or replace a product if it breaks",
+          "vi": "bảo hành"
+        }
+      ]
+    },
+    {
+      "id": "d_reviews",
+      "type": "review",
+      "title": "Customer Reviews – Zentrix ProBook 14",
+      "meta": {
+        "URL": "https://technova-deals.shop/zentrix-probook-14/reviews",
+        "Showing": "8 of 2,814 reviews"
+      },
+      "body": "Average rating: 4.9 out of 5 (2,814 reviews)\n\n★★★★★ Hoang T. (2 May 2027, 21:04): Amazing laptop, super fast delivery, I will definitely buy again! Best shop in Vietnam.\n\n★★★★★ Minh P. (2 May 2027, 21:07): Amazing laptop, super fast delivery, I will definitely buy again! Best shop ever.\n\n★★★★★ Jenny L. (2 May 2027, 21:11): Amazing laptop, super-fast delivery. I will definitely buy again!!\n\n★★★★★ Tuan V. (14 February 2027): I have bought three laptops from TechNova Deals and every one arrived in perfect condition. Highly recommended.\n\n★★★★☆ Sarah K. (28 April 2027): Good screen and a comfortable keyboard. The battery lasts about eight hours.\n\n★☆☆☆☆ Khoa N. (22 May 2027): I paid for headphones on 3 May and I have received nothing. The live chat has stopped answering and the hotline is always switched off.\n\nReply from TechNova Deals: Dear customer, your order is delayed due to very high demand. Please be patient. We are a trusted shop with thousands of happy customers.\n\n★★★★★ Ngoc A. (2 May 2027, 21:15): Amazing laptop, super fast delivery, I will definitely buy again! 10/10.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "average rating",
+          "definition": "the typical score calculated from all the scores customers have given",
+          "vi": "điểm đánh giá trung bình"
+        },
+        {
+          "term": "hotline",
+          "definition": "a telephone number for customer questions or help",
+          "vi": "đường dây nóng"
+        },
+        {
+          "term": "high demand",
+          "definition": "a situation in which a lot of people want to buy something",
+          "vi": "nhu cầu cao"
+        }
+      ]
+    },
+    {
+      "id": "d_social_ad",
+      "type": "webpage",
+      "title": "Sponsored post on ChatterBox: TechNova Deals",
+      "meta": {
+        "Platform": "ChatterBox (social network)",
+        "Page": "TechNova Deals – Official",
+        "Posted": "1 May 2027"
+      },
+      "body": "Sponsored · TechNova Deals\n\nBIG NEWS! We are closing our old warehouse, so everything must go. Laptops from 8,990,000 VND and SoundMax headphones from just 390,000 VND. Serving over 50,000 happy customers since 2019 – you can trust us!\n\nRecommended by tech reviewer Linh Tech Talk (see photo). Tag a friend who needs a new laptop!\n\nShop now: technova-deals.shop\n\n2.3K likes · 418 comments · 1.1K shares\n\nTop comments\n\nBao Tran: Is this legit? The price looks too good to be true.\n\nTechNova Deals: Hi Bao, we are 100% legit and fully registered with the authorities. Order today before stock runs out!\n\nThu Nguyen: My cousin ordered last week and is still waiting...\n\nTechNova Deals: Hi Thu, please send us a private message so we can help.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "sponsored",
+          "definition": "paid for by a company so that more people see it; an advertisement",
+          "vi": "được tài trợ (quảng cáo trả phí)"
+        },
+        {
+          "term": "legit",
+          "definition": "informal: legal, real and honest",
+          "vi": "hợp pháp, uy tín (khẩu ngữ)"
+        },
+        {
+          "term": "too good to be true",
+          "definition": "so attractive that it is probably false or a trick",
+          "vi": "tốt đến mức khó tin"
+        }
+      ]
+    },
+    {
+      "id": "d_about",
+      "type": "webpage",
+      "title": "About Us and Returns Policy – TechNova Deals",
+      "meta": {
+        "URL": "https://technova-deals.shop/about"
+      },
+      "body": "ABOUT US\n\nTechNova Deals has been bringing the latest technology to Vietnamese customers at unbeatable prices since 2019. Our passionate team works with leading brands to offer genuine products with fast, free delivery.\n\nHead office: Ho Chi Minh City, Vietnam\nBusiness registration number: to be updated soon\nEmail: support@technova-deals.shop\nHotline: 0900 000 000 (8:00–22:00 every day)\n\nRETURNS AND REFUNDS\n\n1. You may return an item within 7 days of delivery if it is unused and in its original packaging.\n\n2. To start a return, contact our team via live chat to receive a return address. We do not accept returns sent without approval.\n\n3. The customer pays all return shipping costs.\n\n4. Refunds are given as store credit only and cannot be exchanged for cash.\n\n5. Sale items and flash-sale orders cannot be returned or refunded.\n\n6. TechNova Deals reserves the right to change this policy at any time without notice.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "business registration number",
+          "definition": "the official number a company receives when it is legally registered",
+          "vi": "mã số đăng ký kinh doanh"
+        },
+        {
+          "term": "store credit",
+          "definition": "money you can only spend in the same shop, not take as cash",
+          "vi": "tín dụng mua hàng tại cửa hàng"
+        },
+        {
+          "term": "reserves the right",
+          "definition": "keeps the power to do something whenever it wants",
+          "vi": "có quyền (đơn phương)"
+        }
+      ]
+    },
+    {
+      "id": "d_council_alert",
+      "type": "notice",
+      "title": "Consumer Alert No. 05/2027: Online Shopping Warning List",
+      "meta": {
+        "Published by": "Southern Consumer Protection Council (SCPC)",
+        "Date": "20 May 2027"
+      },
+      "body": "SOUTHERN CONSUMER PROTECTION COUNCIL – CONSUMER ALERT No. 05/2027\n\nThe Council has seen a sharp rise in complaints about new online stores that advertise electronics on social media at very low prices. Before you buy, please check the points below.\n\nWhat a legitimate online seller must provide: Every business that sells goods online must clearly display a business registration number, a physical address and its return conditions on its website. If any of these is missing, consumers should not pay in advance.\n\nCommon warning signs:\n- prices far below the normal market price, often with a countdown timer;\n- payment accepted only by bank transfer, especially to a personal account;\n- many similar five-star reviews posted within a short time;\n- a website that was created only a few weeks or months ago;\n- a seller that cannot be found in the National Business Registry.\n\nWebsites currently on the warning list (complaints received as of 19 May 2027):\n\n| Website | Complaints | Status |\n|---|---|---|\n| gadgetzone-sale.net | 31 | Referred to police |\n| technova-deals.shop | 14 | Under investigation |\n| mega-phone-outlet.com | 6 | Under investigation |\n\nBeing on this list does not mean that a seller has been found guilty. It means that the Council has received complaints and is checking them.\n\nTo report a website, call the consumer hotline 1800 0000 or visit the Council office in District 1.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "legitimate",
+          "definition": "legal and honest; following the rules",
+          "vi": "hợp pháp, chính đáng"
+        },
+        {
+          "term": "pay in advance",
+          "definition": "pay before you receive the goods",
+          "vi": "trả tiền trước"
+        },
+        {
+          "term": "countdown timer",
+          "definition": "a clock that shows how much time is left",
+          "vi": "đồng hồ đếm ngược"
+        },
+        {
+          "term": "found guilty",
+          "definition": "officially decided to have broken the law",
+          "vi": "bị kết luận có tội / vi phạm"
+        }
+      ]
+    },
+    {
+      "id": "d_receipt",
+      "type": "receipt",
+      "title": "Khoa's order confirmation and bank transfer receipt",
+      "meta": {
+        "Shared by": "Khoa Nguyen",
+        "Order date": "3 May 2027"
+      },
+      "body": "ORDER CONFIRMATION – TechNova Deals\nOrder number: TND-20270503-0871\nItem: SoundMax Air wireless headphones (black) × 1\nPrice: 390,000 VND (flash sale)\nPayment method: bank transfer (cash on delivery not available)\nEstimated delivery: 5–6 May 2027\nOrder status (checked 24 May 2027): Processing\n\nBANK TRANSFER RECEIPT – Mekong Commerce Bank mobile app\nDate and time: 3 May 2027, 20:16\nAmount: 390,000 VND\nFrom: NGUYEN MINH KHOA\nTo account: 0581 2273 9904 – Saigon Digital Bank\nAccount holder: TRAN VAN BINH (personal account)\nTransfer note: TND0871\nStatus: Successful",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "account holder",
+          "definition": "the person or company who owns a bank account",
+          "vi": "chủ tài khoản"
+        },
+        {
+          "term": "personal account",
+          "definition": "a bank account that belongs to a private person, not a company",
+          "vi": "tài khoản cá nhân"
+        },
+        {
+          "term": "transfer note",
+          "definition": "a short message sent with a bank transfer",
+          "vi": "nội dung chuyển khoản"
+        }
+      ]
+    },
+    {
+      "id": "d_registry_lookup",
+      "type": "report",
+      "title": "Domain and Business Registration Lookup – technova-deals.shop",
+      "meta": {
+        "Prepared by": "Dr. Quang Do, Faculty of Commerce, Riverside University",
+        "Requested by": "Southern Consumer Protection Council",
+        "Date": "21 May 2027"
+      },
+      "body": "1. Domain record\nThe domain technova-deals.shop was registered on 18 April 2027, about two weeks before the advertisement appeared. The owner's identity is hidden by a paid privacy service, and the website is hosted on a server outside Vietnam.\n\n2. National Business Registry\nA search of the National Business Registry for 'TechNova Deals', 'TechNova' and the website address found no registered business with these names. No business registration number is linked to the website.\n\n3. Customer reviews\nWe compared 40 reviews on the store's website with reviews on other shopping sites. 27 of them use exactly the same wording as reviews posted for different products on three other websites between 2025 and 2026, so they were most likely copied.\n\n4. Product images\nThe product photos are identical to the official images published by the manufacturer, Zentrix. This is common practice and does not show whether a seller is genuine.\n\n5. Brand authorisation\nZentrix Vietnam's public list of authorised resellers, checked on 21 May 2027, does not include TechNova Deals. We have asked Zentrix to confirm this in writing, but no reply has been received yet.\n\nSummary: the store cannot be linked to any registered business, and several of its trust signals appear to be false. The Council should continue its investigation before making a final decision.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_quang_lookup"
+      },
+      "glossary": [
+        {
+          "term": "domain",
+          "definition": "the name of a website, e.g. technova-deals.shop",
+          "vi": "tên miền"
+        },
+        {
+          "term": "privacy service",
+          "definition": "a paid service that hides the name of a website's owner",
+          "vi": "dịch vụ ẩn thông tin chủ sở hữu"
+        },
+        {
+          "term": "registry",
+          "definition": "an official list of registered companies or names",
+          "vi": "cơ sở dữ liệu đăng ký chính thức"
+        },
+        {
+          "term": "reseller",
+          "definition": "a business that buys products from a brand and sells them to customers",
+          "vi": "đại lý bán lại"
+        },
+        {
+          "term": "trust signals",
+          "definition": "details on a website that are meant to make customers feel safe",
+          "vi": "dấu hiệu tạo niềm tin"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_payment",
+      "type": "mcq",
+      "documentIds": [
+        "d_product_page"
+      ],
+      "prompt": "According to the product page, what must customers do to get the flash-sale price?",
+      "options": [
+        "Pay in cash when the laptop is delivered",
+        "Pay the full amount by bank transfer within 30 minutes of ordering",
+        "Pay a small deposit and the rest after delivery",
+        "Pay by credit card through the live chat"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_return_address",
+      "type": "tfng",
+      "documentIds": [
+        "d_about"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the About Us and Returns Policy page.",
+      "statement": "The website gives a full street address to which customers can send returned items.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_sale_returns",
+      "type": "tfng",
+      "documentIds": [
+        "d_about"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the About Us and Returns Policy page.",
+      "statement": "A laptop bought in the flash sale can be returned for a cash refund within 7 days.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_influencer_paid",
+      "type": "tfng",
+      "documentIds": [
+        "d_social_ad"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the sponsored post.",
+      "statement": "The post states that Linh Tech Talk was paid to recommend TechNova Deals.",
+      "answer": "not_given",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_reviews_infer",
+      "type": "mcq",
+      "documentIds": [
+        "d_reviews"
+      ],
+      "prompt": "What can most reasonably be inferred from the five-star reviews posted on 2 May 2027 between 21:04 and 21:15?",
+      "options": [
+        "They prove that the laptop is very popular with students.",
+        "They may not come from independent customers, because they were posted within minutes using almost identical words.",
+        "They show that the store delivers faster than other online shops.",
+        "They were written by the store's staff, as the store admits in its reply."
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_complaints",
+      "type": "short",
+      "documentIds": [
+        "d_council_alert"
+      ],
+      "prompt": "How many complaints about technova-deals.shop had the Council received by 19 May 2027? (maximum 2 words)",
+      "acceptable": [
+        "14",
+        "fourteen"
+      ],
+      "maxWords": 2,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_list_meaning",
+      "type": "mcq",
+      "documentIds": [
+        "d_council_alert"
+      ],
+      "prompt": "According to the Council, what does it mean that technova-deals.shop is on the warning list?",
+      "options": [
+        "The store has been found guilty of fraud.",
+        "The police have closed the store.",
+        "The Council has received complaints and is still checking them.",
+        "The store has paid a fine to the Council."
+      ],
+      "correctIndex": 2,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_domain_date",
+      "type": "short",
+      "documentIds": [
+        "d_registry_lookup"
+      ],
+      "prompt": "On what date was the domain technova-deals.shop registered? (maximum 4 words)",
+      "acceptable": [
+        "18 April 2027",
+        "18 April",
+        "April 18",
+        "April 18 2027",
+        "18/4/2027",
+        "18/04/2027",
+        "18/4"
+      ],
+      "maxWords": 4,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_since_2019",
+      "type": "explain",
+      "documentIds": [
+        "d_social_ad",
+        "d_registry_lookup"
+      ],
+      "prompt": "The store says it has been serving 'over 50,000 happy customers since 2019'. Evaluate how reliable this claim is, using information from at least two documents. Answer in 2–4 sentences.",
+      "keyPoints": [
+        "The claim comes from the store's own advertising and is not confirmed by any independent source.",
+        "The domain was registered only on 18 April 2027, so the website cannot have served customers since 2019.",
+        "No registered business called TechNova Deals can be found in the National Business Registry.",
+        "A review dated 14 February 2027 appears before the website existed, which also makes the store's history doubtful."
+      ],
+      "sampleAnswer": "The claim is not reliable, because it comes only from the store's own advertisement. The registry lookup shows that the domain was registered on 18 April 2027, so the website cannot have served customers since 2019, and no registered business with that name exists. A review dated 14 February 2027 also appears before the domain was created.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_unverified",
+      "type": "explain",
+      "documentIds": [
+        "d_product_page",
+        "d_social_ad",
+        "d_registry_lookup"
+      ],
+      "prompt": "Some details make TechNova Deals look trustworthy. Choose two of them and explain why they cannot be accepted as proof that the store is reliable. Answer in 2–4 sentences.",
+      "keyPoints": [
+        "The 4.9/5 rating and 'verified buyers' label come from the store itself, and many reviews were copied from other websites.",
+        "The influencer recommendation is only a photo in an advert and has not been confirmed by the reviewer.",
+        "The 'official authorised distributor' claim is not confirmed; Zentrix's public reseller list does not include the store.",
+        "Product photos are official manufacturer images that anyone can copy."
+      ],
+      "sampleAnswer": "The 4.9 rating is shown by the store itself, and the lookup found that most of the checked reviews were copied from other websites, so it proves nothing. The 'official distributor' claim is also doubtful, because Zentrix's public list of resellers does not include TechNova Deals, although Zentrix has not confirmed this in writing yet.",
+      "points": 3,
+      "required": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_price",
+      "documentId": "d_product_page",
+      "excerpt": "Was 24,990,000 VND – now only 8,990,000 VND (64% off)",
+      "label": "New laptop sold at 64% below its original price",
+      "category": "verified",
+      "key": true,
+      "explanation": "The price is visible on the store's page; such a huge discount on a new model is far below the market price, a warning sign listed by the Council."
+    },
+    {
+      "id": "ev_distributor",
+      "documentId": "d_product_page",
+      "excerpt": "TechNova Deals is the official authorised distributor of Zentrix laptops in Vietnam",
+      "label": "Store claims to be Zentrix's official distributor",
+      "category": "unverified",
+      "key": false,
+      "explanation": "A claim made by the store itself. Zentrix's public reseller list does not include the store, but Zentrix has not confirmed this in writing, so it remains unverified."
+    },
+    {
+      "id": "ev_rating",
+      "documentId": "d_product_page",
+      "excerpt": "Rated 4.9/5 by 2,814 verified buyers",
+      "label": "Store shows a 4.9/5 rating from 'verified buyers'",
+      "category": "unverified",
+      "key": false,
+      "explanation": "The rating is published by the store; nobody independent has checked the buyers, and many reviews were found to be copied."
+    },
+    {
+      "id": "ev_specs",
+      "documentId": "d_product_page",
+      "excerpt": "16 GB RAM and a 512 GB SSD",
+      "label": "Laptop has 16 GB RAM and a 512 GB SSD",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "The technical specifications say nothing about whether the seller is honest; fake shops copy real product details."
+    },
+    {
+      "id": "ev_review_burst",
+      "documentId": "d_reviews",
+      "excerpt": "Minh P. (2 May 2027, 21:07): Amazing laptop, super fast delivery, I will definitely buy again! Best shop ever",
+      "label": "Near-identical five-star reviews posted minutes apart",
+      "category": "verified",
+      "key": false,
+      "explanation": "Anyone can see that four almost identical reviews were posted within eleven minutes – a warning sign listed by the Council."
+    },
+    {
+      "id": "ev_early_review",
+      "documentId": "d_reviews",
+      "excerpt": "Tuan V. (14 February 2027): I have bought three laptops from TechNova Deals",
+      "label": "Review dated before the website existed",
+      "category": "verified",
+      "key": false,
+      "explanation": "The review is dated 14 February 2027, but the domain was only registered on 18 April 2027, so the review cannot be genuine."
+    },
+    {
+      "id": "ev_high_demand",
+      "documentId": "d_reviews",
+      "excerpt": "your order is delayed due to very high demand",
+      "label": "Store says Khoa's order is delayed by high demand",
+      "category": "unverified",
+      "key": false,
+      "explanation": "An excuse given by the store with no evidence; it does not explain why the chat and hotline stopped working."
+    },
+    {
+      "id": "ev_since_2019",
+      "documentId": "d_social_ad",
+      "excerpt": "Serving over 50,000 happy customers since 2019",
+      "label": "Store claims 50,000 customers since 2019",
+      "category": "unverified",
+      "key": false,
+      "explanation": "A marketing claim by the store, contradicted by the domain registration date in April 2027."
+    },
+    {
+      "id": "ev_influencer",
+      "documentId": "d_social_ad",
+      "excerpt": "Recommended by tech reviewer Linh Tech Talk (see photo)",
+      "label": "Advert says a tech reviewer recommends the store",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Only a photo in an advert; the reviewer has not confirmed it, and photos can be copied or edited."
+    },
+    {
+      "id": "ev_likes",
+      "documentId": "d_social_ad",
+      "excerpt": "2.3K likes · 418 comments · 1.1K shares",
+      "label": "The advert has thousands of likes and shares",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Popularity of a sponsored post shows that many people saw it, not that the store is reliable."
+    },
+    {
+      "id": "ev_no_brn",
+      "documentId": "d_about",
+      "excerpt": "Business registration number: to be updated soon",
+      "label": "No business registration number on the website",
+      "category": "verified",
+      "key": true,
+      "explanation": "The store does not display a registration number, which legitimate online sellers must show."
+    },
+    {
+      "id": "ev_no_return_address",
+      "documentId": "d_about",
+      "excerpt": "contact our team via live chat to receive a return address",
+      "label": "No return address is published",
+      "category": "verified",
+      "key": true,
+      "explanation": "Customers cannot see where to send goods back; the only contact is a live chat that stopped answering Khoa."
+    },
+    {
+      "id": "ev_no_sale_returns",
+      "documentId": "d_about",
+      "excerpt": "Sale items and flash-sale orders cannot be returned or refunded",
+      "label": "Sale items cannot be returned",
+      "category": "verified",
+      "key": false,
+      "explanation": "The club's laptops would be sale items, so the club would have no right to a refund."
+    },
+    {
+      "id": "ev_rule_display",
+      "documentId": "d_council_alert",
+      "excerpt": "must clearly display a business registration number, a physical address and its return conditions on its website",
+      "label": "Rule: online sellers must show registration number and address",
+      "category": "verified",
+      "key": false,
+      "explanation": "An official standard that TechNova Deals does not meet."
+    },
+    {
+      "id": "ev_complaints",
+      "documentId": "d_council_alert",
+      "excerpt": "technova-deals.shop | 14 | Under investigation",
+      "label": "14 complaints; store under investigation",
+      "category": "verified",
+      "key": true,
+      "explanation": "An independent authority has received 14 complaints about the store, although no final decision has been made."
+    },
+    {
+      "id": "ev_not_guilty",
+      "documentId": "d_council_alert",
+      "excerpt": "Being on this list does not mean that a seller has been found guilty",
+      "label": "Warning list is not a guilty verdict",
+      "category": "verified",
+      "key": false,
+      "explanation": "Reminds investigators to keep the conclusion cautious: the store is not officially proven to be a fraud yet."
+    },
+    {
+      "id": "ev_personal_account",
+      "documentId": "d_receipt",
+      "excerpt": "Account holder: TRAN VAN BINH (personal account)",
+      "label": "Khoa's money went to a personal account",
+      "category": "verified",
+      "key": true,
+      "explanation": "The bank receipt shows payment to a private person, not to a company – a warning sign listed by the Council."
+    },
+    {
+      "id": "ev_domain_date",
+      "documentId": "d_registry_lookup",
+      "excerpt": "The domain technova-deals.shop was registered on 18 April 2027",
+      "label": "Website created in April 2027",
+      "category": "verified",
+      "key": true,
+      "explanation": "An independent lookup shows the website is only a few weeks old, which contradicts the 'since 2019' claim."
+    },
+    {
+      "id": "ev_registry_none",
+      "documentId": "d_registry_lookup",
+      "excerpt": "found no registered business with these names",
+      "label": "No registered business found",
+      "category": "verified",
+      "key": true,
+      "explanation": "The store cannot be linked to any legally registered company."
+    },
+    {
+      "id": "ev_copied",
+      "documentId": "d_registry_lookup",
+      "excerpt": "27 of them use exactly the same wording as reviews posted for different products on three other websites",
+      "label": "Most checked reviews were copied from other websites",
+      "category": "verified",
+      "key": true,
+      "explanation": "Shows that the store's reviews and rating cannot be trusted."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_since_2019",
+      "b": "ev_domain_date",
+      "relation": "The claim of customers since 2019 is contradicted by a domain registered in April 2027."
+    },
+    {
+      "a": "ev_early_review",
+      "b": "ev_domain_date",
+      "relation": "A review is dated two months before the website existed."
+    },
+    {
+      "a": "ev_review_burst",
+      "b": "ev_copied",
+      "relation": "The near-identical reviews match the finding that reviews were copied."
+    },
+    {
+      "a": "ev_no_brn",
+      "b": "ev_rule_display",
+      "relation": "The store does not display the registration number that sellers must show."
+    },
+    {
+      "a": "ev_no_brn",
+      "b": "ev_registry_none",
+      "relation": "No registration number is shown and no registered business exists."
+    }
+  ],
+  "characters": [
+    {
+      "id": "khoa",
+      "name": "Khoa Nguyen",
+      "role": "Third-year IT student and club member who bought headphones from the store",
+      "avatar": "student_m",
+      "personality": "Embarrassed and annoyed with himself; speaks quickly and informally, and wants to get his money back and warn his friends.",
+      "background": "Khoa is a member of the Technology Club. He bought a pair of SoundMax Air headphones from TechNova Deals in early May and is still waiting for them. He shared his receipt with the agency.",
+      "greeting": "Hey. I'm Khoa. Honestly, I feel a bit stupid about this, but I'll tell you everything I know.",
+      "facts": [
+        {
+          "id": "f_khoa_paid",
+          "text": "Khoa transferred 390,000 VND on the evening of 3 May 2027 for one pair of SoundMax Air headphones, and three weeks later he still has not received them.",
+          "keywords": [
+            "pay",
+            "paid",
+            "headphones",
+            "bought",
+            "order",
+            "ordered"
+          ]
+        },
+        {
+          "id": "f_khoa_chat",
+          "text": "Since 15 May nobody has answered Khoa on the store's live chat, and the hotline number has been switched off every time he called.",
+          "keywords": [
+            "chat",
+            "hotline",
+            "contact",
+            "reply",
+            "answer",
+            "phone",
+            "called"
+          ]
+        },
+        {
+          "id": "f_khoa_ad",
+          "text": "Khoa found TechNova Deals through the sponsored ChatterBox advert that a friend shared, and he did not check whether the store was registered before paying.",
+          "keywords": [
+            "advert",
+            "advertisement",
+            "found",
+            "social media",
+            "chatterbox",
+            "friend",
+            "hear"
+          ]
+        },
+        {
+          "id": "f_khoa_cod",
+          "text": "Khoa wanted to pay cash on delivery, but the store told him that sale items could only be paid for by bank transfer.",
+          "keywords": [
+            "cash",
+            "cash on delivery",
+            "cod",
+            "payment method",
+            "transfer",
+            "bank"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Khoa's banking login details",
+          "forbiddenPhrases": [
+            "my banking password",
+            "my otp code"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ha",
+      "name": "Ms. Vo Thu Ha",
+      "role": "Complaints officer, Southern Consumer Protection Council",
+      "avatar": "officer_f",
+      "personality": "Calm, professional and careful with words; never says more than the Council can officially confirm.",
+      "background": "Ms. Ha handles online shopping complaints at the Council and helped prepare Consumer Alert No. 05/2027. She asked Dr. Do to carry out technical checks on several websites.",
+      "greeting": "Good afternoon. I'm Vo Thu Ha from the Southern Consumer Protection Council. I can share what the Council has officially recorded.",
+      "facts": [
+        {
+          "id": "f_ha_complaints",
+          "text": "By 19 May 2027 the Council had received 14 complaints about technova-deals.shop, all from buyers who paid by bank transfer and received nothing.",
+          "keywords": [
+            "complaints",
+            "complaint",
+            "complained",
+            "victims",
+            "reported"
+          ]
+        },
+        {
+          "id": "f_ha_investigation",
+          "text": "The Council's check on technova-deals.shop is still open, and no official decision about the store has been made yet.",
+          "keywords": [
+            "investigation",
+            "decision",
+            "official",
+            "status",
+            "guilty",
+            "police",
+            "finished"
+          ]
+        },
+        {
+          "id": "f_ha_rules",
+          "text": "Under consumer rules, an online seller has to show its business registration number, a physical address and its return conditions on its website.",
+          "keywords": [
+            "rules",
+            "law",
+            "legal",
+            "requirement",
+            "required",
+            "registration number"
+          ]
+        },
+        {
+          "id": "f_ha_advice",
+          "text": "People who have already paid should keep their receipts and screenshots, contact their bank quickly and file a complaint with the Council.",
+          "keywords": [
+            "advice",
+            "advise",
+            "recommend",
+            "money back",
+            "refund",
+            "what should"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Personal data of other complainants",
+          "forbiddenPhrases": [
+            "the other buyers are",
+            "the complainants' names"
+          ]
+        },
+        {
+          "topic": "A final verdict before the investigation ends",
+          "forbiddenPhrases": [
+            "technova is definitely a scam",
+            "the store has been found guilty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quang",
+      "name": "Dr. Quang Do",
+      "role": "E-commerce lecturer, Faculty of Commerce, Riverside University",
+      "avatar": "expert_m",
+      "personality": "Analytical and precise; likes to separate facts from assumptions and often says 'the data shows' or 'we cannot prove that yet'.",
+      "background": "Dr. Do teaches e-commerce and online consumer behaviour. He sometimes helps the Consumer Protection Council by carrying out technical checks on suspicious websites.",
+      "greeting": "Hello, I'm Quang Do. I look at websites the way a detective looks at fingerprints. What do you need to know?",
+      "facts": [
+        {
+          "id": "f_quang_lookup",
+          "text": "On 21 May 2027 Dr. Do carried out a domain and business-registry lookup on technova-deals.shop for the Council and wrote a short report on the results.",
+          "keywords": [
+            "lookup",
+            "check",
+            "checked",
+            "domain",
+            "registration",
+            "registry",
+            "whois",
+            "search"
+          ],
+          "unlocksDocumentId": "d_registry_lookup"
+        },
+        {
+          "id": "f_quang_price",
+          "text": "For a new laptop model, a discount of more than 60% is far below normal market prices; genuine clearance sales of new models are usually much smaller.",
+          "keywords": [
+            "price",
+            "prices",
+            "discount",
+            "cheap",
+            "market"
+          ]
+        },
+        {
+          "id": "f_quang_reviews",
+          "text": "Fake online shops often copy reviews from other websites or post many similar five-star reviews in a short time to look popular.",
+          "keywords": [
+            "review",
+            "reviews",
+            "rating",
+            "ratings",
+            "stars"
+          ]
+        },
+        {
+          "id": "f_quang_photos",
+          "text": "Official product photos can be copied by anyone from the manufacturer's website, so they say nothing about who the seller is.",
+          "keywords": [
+            "photo",
+            "photos",
+            "images",
+            "pictures"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Personal data of the domain owner",
+          "forbiddenPhrases": [
+            "the owner's name is",
+            "the registrant's phone number"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "Based on the evidence, what is the most reasonable conclusion about TechNova Deals?",
+    "options": [
+      {
+        "id": "c_unreliable",
+        "text": "The store is unreliable and very likely fraudulent: no registered business exists, its reviews are copied, its prices are unrealistic and it gives no return address. The club should not pay, although the Council has not made a final decision yet."
+      },
+      {
+        "id": "c_busy",
+        "text": "The store is a genuine business that is overloaded by high demand; Khoa's order is only delayed, so the club can safely place its order."
+      },
+      {
+        "id": "c_proven",
+        "text": "The Council has officially proven that the store is a criminal scam run by Tran Van Binh, who has stolen money from all 2,814 reviewers."
+      },
+      {
+        "id": "c_trusted",
+        "text": "The store is trustworthy because it has thousands of five-star reviews, a famous reviewer's recommendation and official distributor status."
+      }
+    ],
+    "correctOptionId": "c_unreliable",
+    "requiredEvidenceIds": [
+      "ev_registry_none",
+      "ev_copied",
+      "ev_price",
+      "ev_no_return_address"
+    ],
+    "minSupporting": 4,
+    "unsupportedClaims": [
+      "The Council has officially confirmed that TechNova Deals is a criminal scam (it is still under investigation).",
+      "Tran Van Binh is the owner of the store (the receipt only shows that he holds the bank account).",
+      "Linh Tech Talk was paid to take part in the scam (there is no evidence about the reviewer at all).",
+      "All 2,814 reviewers lost their money (the reviews themselves appear to be copied or fake).",
+      "Zentrix has officially confirmed that the store is not its distributor (Zentrix has not replied yet)."
+    ]
+  },
+  "writingTask": {
+    "type": "report",
+    "prompt": "Write an investigation report for Ms. Diep Tran, the Technology Club's faculty adviser, on whether the club should place its group order with TechNova Deals. Summarise the case, evaluate how reliable the main sources are, present the verified evidence, point out which claims are still unverified, state a cautious conclusion and give recommendations for the club and for Khoa.",
+    "audience": "Ms. Diep Tran, faculty adviser of the Riverside University Technology Club",
+    "minWords": 180,
+    "maxWords": 250,
+    "sections": [
+      "Summary",
+      "Source evaluation",
+      "Evidence",
+      "Conclusion",
+      "Recommendations"
+    ],
+    "keyPoints": [
+      "Concludes that the store is unreliable / very likely fraudulent and that the club should not pay.",
+      "Uses independent evidence: no registered business found and no registration number displayed.",
+      "Mentions copied or near-identical reviews and/or the review dated before the domain existed.",
+      "Notes the unrealistic price, the missing return address and the payment to a personal account.",
+      "Distinguishes unverified claims (influencer, 4.9 rating, official distributor, since 2019) from verified facts.",
+      "Stays cautious: the Council has received complaints but has not made a final decision.",
+      "Recommends practical steps for Khoa (receipt, bank, complaint) and for the club."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Start with the store's own pages, then compare them with independent sources such as the Council's alert.",
+      "For each document, ask who wrote it and whether that person or company benefits if you believe it.",
+      "Look closely at dates: when was the website created, and when were the reviews posted?"
+    ],
+    "evidence": [
+      "Highlight claims about the store's history, registration, reviews, payment and returns.",
+      "Laptop specifications and the number of likes are true, but they do not tell you whether the store is honest.",
+      "Pair each claim made by the store with an independent fact that confirms or contradicts it."
+    ],
+    "interviews": [
+      "Ask Khoa how he paid and whether the store still answers him.",
+      "Ask Ms. Ha about complaints and whether the Council has made a final decision.",
+      "Ask Dr. Do whether anyone has checked the domain and the business registry."
+    ],
+    "analysis": [
+      "Information that comes only from the store itself is unverified unless an independent source confirms it.",
+      "Choose a conclusion that is as strong as the evidence – but no stronger.",
+      "Being on a warning list is not the same as being found guilty, so keep your conclusion cautious."
+    ],
+    "report": [
+      "Use the five sections: summary, source evaluation, evidence, conclusion, recommendations.",
+      "Use hedging language such as 'very likely', 'appears to' and 'there is no evidence that'.",
+      "Give separate recommendations for the club, for Khoa and for other students."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 10,
+    "minEvidenceToSubmit": 7,
+    "timeMinutes": 60
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_product_page",
+        "text": "Was 24,990,000 VND – now only 8,990,000 VND (64% off)",
+        "evidenceId": "ev_price"
+      },
+      {
+        "documentId": "d_product_page",
+        "text": "TechNova Deals is the official authorised distributor of Zentrix laptops in Vietnam",
+        "evidenceId": "ev_distributor"
+      },
+      {
+        "documentId": "d_reviews",
+        "text": "Minh P. (2 May 2027, 21:07): Amazing laptop, super fast delivery, I will definitely buy again! Best shop ever",
+        "evidenceId": "ev_review_burst"
+      },
+      {
+        "documentId": "d_reviews",
+        "text": "Tuan V. (14 February 2027): I have bought three laptops from TechNova Deals",
+        "evidenceId": "ev_early_review"
+      },
+      {
+        "documentId": "d_social_ad",
+        "text": "Serving over 50,000 happy customers since 2019",
+        "evidenceId": "ev_since_2019"
+      },
+      {
+        "documentId": "d_social_ad",
+        "text": "Recommended by tech reviewer Linh Tech Talk (see photo)",
+        "evidenceId": "ev_influencer"
+      },
+      {
+        "documentId": "d_about",
+        "text": "Business registration number: to be updated soon",
+        "evidenceId": "ev_no_brn"
+      },
+      {
+        "documentId": "d_about",
+        "text": "contact our team via live chat to receive a return address",
+        "evidenceId": "ev_no_return_address"
+      },
+      {
+        "documentId": "d_council_alert",
+        "text": "must clearly display a business registration number, a physical address and its return conditions on its website",
+        "evidenceId": "ev_rule_display"
+      },
+      {
+        "documentId": "d_council_alert",
+        "text": "technova-deals.shop | 14 | Under investigation",
+        "evidenceId": "ev_complaints"
+      },
+      {
+        "documentId": "d_receipt",
+        "text": "Account holder: TRAN VAN BINH (personal account)",
+        "evidenceId": "ev_personal_account"
+      },
+      {
+        "documentId": "d_registry_lookup",
+        "text": "The domain technova-deals.shop was registered on 18 April 2027",
+        "evidenceId": "ev_domain_date"
+      },
+      {
+        "documentId": "d_registry_lookup",
+        "text": "found no registered business with these names",
+        "evidenceId": "ev_registry_none"
+      },
+      {
+        "documentId": "d_registry_lookup",
+        "text": "27 of them use exactly the same wording as reviews posted for different products on three other websites",
+        "evidenceId": "ev_copied"
+      }
+    ],
+    "answers": {
+      "q_payment": 1,
+      "q_return_address": "false",
+      "q_sale_returns": "false",
+      "q_influencer_paid": "not_given",
+      "q_reviews_infer": 1,
+      "q_complaints": "14",
+      "q_list_meaning": 2,
+      "q_domain_date": "18 April 2027",
+      "q_since_2019": "The claim is not reliable because it comes only from the store's own advert. The lookup shows that the domain was registered on 18 April 2027 and that no registered business with this name exists, so the store cannot have served customers since 2019.",
+      "q_unverified": "The 4.9 rating is published by the store itself, and most of the checked reviews were copied from other websites. The influencer recommendation is only a photo in an advert, and the reviewer has not confirmed it."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "quang",
+        "question": "Did you check the domain and the business registration of this store?",
+        "expectFactIds": [
+          "f_quang_lookup"
+        ]
+      },
+      {
+        "characterId": "quang",
+        "question": "Are the reviews and the price on the product page realistic?",
+        "expectFactIds": [
+          "f_quang_reviews",
+          "f_quang_price"
+        ]
+      },
+      {
+        "characterId": "ha",
+        "question": "How many complaints has the Council received, and is the investigation finished?",
+        "expectFactIds": [
+          "f_ha_complaints",
+          "f_ha_investigation"
+        ]
+      },
+      {
+        "characterId": "khoa",
+        "question": "When did you pay for the headphones, and did the store reply on the live chat?",
+        "expectFactIds": [
+          "f_khoa_paid",
+          "f_khoa_chat"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_since_2019",
+        "b": "ev_domain_date"
+      },
+      {
+        "a": "ev_early_review",
+        "b": "ev_domain_date"
+      },
+      {
+        "a": "ev_review_burst",
+        "b": "ev_copied"
+      },
+      {
+        "a": "ev_no_brn",
+        "b": "ev_rule_display"
+      },
+      {
+        "a": "ev_no_brn",
+        "b": "ev_registry_none"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_unreliable",
+      "supportingEvidenceIds": [
+        "ev_registry_none",
+        "ev_copied",
+        "ev_price",
+        "ev_no_return_address",
+        "ev_no_brn",
+        "ev_domain_date",
+        "ev_personal_account",
+        "ev_complaints"
+      ],
+      "justification": "Independent checks show that no registered business called TechNova Deals exists, the domain was created in April 2027 and most reviews were copied. The store shows no registration number or return address, sells new laptops at 64% off and takes payment into a personal account. The Council has 14 complaints but has not made a final decision, so the store is very likely, not officially, fraudulent."
+    },
+    "report": "Summary: The Technology Club planned to spend about 115 million VND on laptops and headphones from TechNova Deals, a new online store advertised on social media. Khoa Nguyen paid 390,000 VND on 3 May 2027 and has still not received his order.\n\nSource evaluation: Most of the positive information comes from the store itself, so it is not reliable. In contrast, the Council's alert, Dr. Do's registry lookup and Khoa's bank receipt are independent and can be verified.\n\nEvidence: The laptop is sold at 64% below its original price, which is unrealistic for a new model. The website shows no business registration number and no return address, although the Council says every online seller must display both. Moreover, the registry search found no registered business with the store's name, and the domain was only registered on 18 April 2027. In addition, 27 reviews were copied from other websites, and Khoa's money went to a personal account. The Council has received 14 complaints. However, the influencer recommendation, the 4.9 rating and the claim of 50,000 customers since 2019 remain unverified.\n\nConclusion: The store appears to be unreliable and is very likely fraudulent, although the Council has not made a final decision yet.\n\nRecommendations: The club should not transfer any money. Khoa should keep his receipt, contact his bank immediately and file a complaint with the Council. Finally, members should always check a seller's registration before paying online."
+  }
+}

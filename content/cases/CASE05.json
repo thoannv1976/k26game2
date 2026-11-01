@@ -1,0 +1,1118 @@
+{
+  "id": "CASE05",
+  "level": "B2",
+  "title": {
+    "en": "The International Business Dispute",
+    "vi": "Tranh chấp thương mại quốc tế"
+  },
+  "summary": {
+    "en": "A shipment of Vietnamese furniture reached Hamburg late and partly damaged. Use the contract, the emails and the inspection evidence to decide who is responsible for what.",
+    "vi": "Một lô hàng nội thất Việt Nam đến Hamburg trễ hạn và bị hư hỏng một phần. Hãy dùng hợp đồng, email và kết quả giám định để xác định bên nào chịu trách nhiệm về vấn đề gì."
+  },
+  "role": "Business Analyst Intern",
+  "setting": "Export department, Mekong Oak Furniture Co., Ltd.",
+  "topic": "International trade contracts, business emails and dispute analysis",
+  "estimatedMinutes": 40,
+  "xpReward": 200,
+  "briefing": {
+    "en": "Mekong Oak Furniture, an exporter in Binh Duong, sold 400 acacia dining chairs and 50 tables to Nordhaven Interiors in Hamburg for €55,000. The goods were loaded four days after the contract deadline, and when the container arrived in Germany, 86 chairs were mouldy and cracked. Nordhaven now demands a late-delivery penalty, rejects the entire shipment and wants a full refund, while Mekong Oak's sales manager insists the company is not responsible for anything. As a business analyst intern, you must analyse the contract, the email chain and the shipping and inspection evidence, interview the people involved and write an email to the Export Director explaining who is responsible for the delay and who is responsible for the damage.",
+    "vi": "Mekong Oak Furniture, một doanh nghiệp xuất khẩu ở Bình Dương, đã bán 400 ghế ăn và 50 bàn gỗ keo cho Nordhaven Interiors tại Hamburg với giá 55.000 euro. Hàng được xếp lên tàu muộn bốn ngày so với hạn trong hợp đồng, và khi container đến Đức, 86 chiếc ghế bị mốc và nứt. Nordhaven yêu cầu tiền phạt giao hàng chậm, từ chối toàn bộ lô hàng và đòi hoàn tiền đầy đủ, trong khi trưởng phòng kinh doanh của Mekong Oak khẳng định công ty không chịu trách nhiệm gì cả. Với vai trò thực tập sinh phân tích kinh doanh, bạn cần phân tích hợp đồng, chuỗi email, chứng từ vận chuyển và báo cáo giám định, phỏng vấn những người liên quan, rồi viết email gửi Giám đốc Xuất khẩu giải thích bên nào chịu trách nhiệm về việc giao hàng chậm và bên nào chịu trách nhiệm về hàng hư hỏng."
+  },
+  "objectives": [
+    {
+      "en": "Identify the contract clauses on delivery, packing, penalties, force majeure and claims.",
+      "vi": "Xác định các điều khoản hợp đồng về giao hàng, đóng gói, tiền phạt, bất khả kháng và khiếu nại."
+    },
+    {
+      "en": "Check the dates in the emails, the news report and the shipping record against the contract conditions.",
+      "vi": "Đối chiếu các mốc thời gian trong email, bản tin và chứng từ vận chuyển với các điều kiện của hợp đồng."
+    },
+    {
+      "en": "Interview the sales manager, the buyer and the packing supervisor, and obtain the inspection report.",
+      "vi": "Phỏng vấn trưởng phòng kinh doanh, đại diện bên mua và tổ trưởng đóng gói, đồng thời thu thập báo cáo giám định."
+    },
+    {
+      "en": "Write a professional email to the Export Director with a balanced, evidence-based recommendation.",
+      "vi": "Viết email chuyên nghiệp gửi Giám đốc Xuất khẩu với khuyến nghị cân bằng, dựa trên bằng chứng."
+    }
+  ],
+  "documents": [
+    {
+      "id": "d_contract",
+      "type": "contract",
+      "title": "Purchase Contract No. NH-MO-2027-014 (extract)",
+      "meta": {
+        "Parties": "Mekong Oak Furniture Co., Ltd. (Seller) – Nordhaven Interiors GmbH (Buyer)",
+        "Signed": "10 February 2027"
+      },
+      "body": "PURCHASE CONTRACT No. NH-MO-2027-014\n\nThis contract is made on 10 February 2027 between Mekong Oak Furniture Co., Ltd., Binh Duong, Vietnam (the Seller) and Nordhaven Interiors GmbH, Hamburg, Germany (the Buyer).\n\nClause 2 – Goods and price\n400 Lund acacia dining chairs at €85 each (€34,000) and 50 Lund acacia dining tables at €420 each (€21,000). Total contract value: €55,000.\n\nClause 4 – Delivery\nThe Seller shall load the goods on board the vessel booked by the Buyer's forwarder at Cat Lai Port, Ho Chi Minh City, no later than 15 May 2027. Risk passes from the Seller to the Buyer when the goods are loaded on board the vessel.\n\nClause 6 – Packing\nEach chair shall be wrapped in foam and packed individually in double-wall (5-ply) export cartons. Each table shall be packed in a 5-ply carton with corner protectors. The Seller shall place at least 20 moisture-absorber packs inside each container before it is sealed.\n\nClause 7 – Late delivery\nIf the goods are loaded after the date in Clause 4, the Seller shall pay a penalty of 0.5% of the total contract value for each day of delay, up to a maximum of 5%.\n\nClause 9 – Force majeure\nNeither Party is liable for a delay caused by events beyond its reasonable control, including typhoons, floods and the closure of ports by government authorities. The affected Party must notify the other Party in writing within three (3) working days of the start of the event and provide official evidence. In that case, the delivery date is extended by the length of the event, and no penalty under Clause 7 is payable.\n\nClause 10 – Damage and claims\nThe Seller is responsible for any loss or damage caused by packing that does not meet Clause 6, even if the damage appears after the risk has passed to the Buyer. The Buyer must send any claim within 30 days of arrival, together with a report from an independent inspection company. The Buyer may reject only the goods that are damaged; undamaged goods must be accepted and paid for.\n\nClause 11 – Payment\n30% deposit within 7 days of signing; the remaining 70% within 15 days of receiving a copy of the bill of lading.\n\nClause 12 – Disputes\nAny dispute that cannot be settled by negotiation shall be referred to the Asia-Pacific Trade Arbitration Centre in Singapore. This contract is written in English.\n\nSigned: Tran Duc Minh, Export Sales Manager, for the Seller · Katrin Bauer, Purchasing Manager, for the Buyer",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "force majeure",
+          "definition": "an unexpected event outside anyone's control, such as a storm, that stops a party from keeping a contract",
+          "vi": "bất khả kháng"
+        },
+        {
+          "term": "risk passes",
+          "definition": "the moment from which the other party carries the cost if goods are lost or damaged",
+          "vi": "rủi ro được chuyển giao"
+        },
+        {
+          "term": "penalty",
+          "definition": "an amount of money paid for breaking an agreement",
+          "vi": "tiền phạt"
+        },
+        {
+          "term": "5-ply carton",
+          "definition": "a strong cardboard box made of five layers (two walls)",
+          "vi": "thùng carton 5 lớp"
+        },
+        {
+          "term": "moisture absorber",
+          "definition": "a small pack that takes water out of the air",
+          "vi": "gói hút ẩm"
+        },
+        {
+          "term": "arbitration",
+          "definition": "a way of settling a dispute by an independent person or body instead of a court",
+          "vi": "trọng tài thương mại"
+        },
+        {
+          "term": "liable",
+          "definition": "legally responsible",
+          "vi": "chịu trách nhiệm pháp lý"
+        }
+      ]
+    },
+    {
+      "id": "d_email_chain",
+      "type": "email",
+      "title": "Email chain: Contract NH-MO-2027-014 – delay and damage",
+      "meta": {
+        "Between": "Tran Duc Minh (Mekong Oak) and Katrin Bauer (Nordhaven)",
+        "Period": "14 May – 23 June 2027"
+      },
+      "body": "14 May 2027, 10:32 – Tran Duc Minh to Katrin Bauer – Subject: Force majeure notice under Clause 9\n\nDear Ms. Bauer,\nAs required by Clause 9, we are giving you formal written notice that Cat Lai Port was closed by the Port Authority from 06:00 on 13 May 2027 because of Tropical Storm Kirra. Your goods are ready, but no vessel can be loaded until the port reopens. Please find the Port Authority's closure order attached. We will load the container on the first available vessel.\nBest regards, Minh\n\n20 May 2027, 09:15 – Katrin Bauer to Tran Duc Minh – Subject: RE: Force majeure notice under Clause 9\n\nDear Mr. Minh,\nWe were only informed about this delay today, which is very disappointing. The contract clearly says that the goods must be loaded by 15 May. Under Clause 7 we will deduct a 2% late-delivery penalty (€1,100) from the final payment.\nKind regards, Katrin Bauer\n\n20 May 2027, 14:40 – Tran Duc Minh to Katrin Bauer – Subject: RE: Force majeure notice under Clause 9\n\nDear Ms. Bauer,\nWith respect, our notice was sent to you on 14 May, one working day after the port closed, so the conditions of Clause 9 were met. The goods were loaded on 19 May, the day after the port reopened. We therefore do not agree that any penalty is payable.\nBest regards, Minh\n\n22 June 2027, 16:05 – Katrin Bauer to Tran Duc Minh – Subject: Damaged goods – formal claim\n\nDear Mr. Minh,\nThe container arrived in Hamburg on 16 June. 86 chairs are covered in mould and have cracked joints. We reject the entire shipment and require a full refund in addition to the late-delivery penalty. Our surveyor's report will follow.\nKatrin Bauer\n\n23 June 2027, 08:50 – Tran Duc Minh to Katrin Bauer – Subject: RE: Damaged goods – formal claim\n\nDear Ms. Bauer,\nWe are sorry to hear this. However, the bill of lading shows that the goods were loaded in perfect condition, and the risk passed to you at loading. The damage must have happened at sea because of rough handling by the shipping line, so Mekong Oak is not responsible.\nMinh",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "formal written notice",
+          "definition": "an official message, in writing, that tells the other party about something important",
+          "vi": "thông báo chính thức bằng văn bản"
+        },
+        {
+          "term": "deduct",
+          "definition": "take an amount away from a total",
+          "vi": "khấu trừ"
+        },
+        {
+          "term": "claim",
+          "definition": "an official request for money or compensation",
+          "vi": "yêu cầu bồi thường, khiếu nại"
+        },
+        {
+          "term": "surveyor",
+          "definition": "an expert who inspects goods and writes an official report",
+          "vi": "giám định viên"
+        }
+      ]
+    },
+    {
+      "id": "d_port_news",
+      "type": "news",
+      "title": "Cat Lai Port suspends operations as Tropical Storm Kirra approaches",
+      "meta": {
+        "Source": "Saigon Business Daily (online)",
+        "Published": "13 May 2027, updated 18 May 2027"
+      },
+      "body": "HO CHI MINH CITY – The city's Port Authority has suspended all vessel operations at Cat Lai Port from 06:00 on 13 May until further notice as Tropical Storm Kirra moves towards the southern coast. The order means that no container ships may load or unload, and several sailings have already been cancelled.\n\nThe provincial authorities have also ordered more than 2,000 fishing boats to return to shore and have closed several beaches in Vung Tau.\n\nExporters of furniture, seafood and garments said they expected delays of up to a week. 'We had containers ready to go, but there is nothing we can do until the port opens again,' said one logistics manager.\n\nUPDATE, 18 May 2027: The Port Authority announced that operations at Cat Lai Port resumed at 18:00 today after the storm weakened. In total, the port suspended all vessel operations from 06:00 on 13 May until 18:00 on 18 May. Shipping lines expect a backlog of containers for several days.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "suspend",
+          "definition": "stop something for a period of time",
+          "vi": "tạm ngừng"
+        },
+        {
+          "term": "resume",
+          "definition": "start again after a pause",
+          "vi": "hoạt động trở lại"
+        },
+        {
+          "term": "backlog",
+          "definition": "a large amount of work or goods waiting to be dealt with",
+          "vi": "lượng hàng tồn đọng"
+        }
+      ]
+    },
+    {
+      "id": "d_shipping_record",
+      "type": "table",
+      "title": "Shipping record and bill of lading summary – Container MOKU 482117-3",
+      "meta": {
+        "Prepared by": "BlueWave Logistics (freight forwarder)",
+        "Date": "17 June 2027"
+      },
+      "body": "BOOKING HISTORY\n\n| Vessel | Planned departure | Status |\n|---|---|---|\n| MV Coral Horizon | 14 May 2027 | Cancelled – port closure |\n| MV Pacific Lantern | 19 May 2027 | Sailed |\n\nBILL OF LADING SUMMARY (B/L No. BWL-HCM-27-05581)\n\nShipper: Mekong Oak Furniture Co., Ltd.\nConsignee: Nordhaven Interiors GmbH\nPort of loading: Cat Lai, Ho Chi Minh City\nPort of discharge: Hamburg, Germany\nShipped on board: 19 May 2027\nPackages: 400 cartons of chairs and 50 cartons of tables (450 cartons in total)\nGross weight: 9,870 kg\nRemarks: Clean on board – no visible damage to packages at loading\n\nARRIVAL\n\nArrival in Hamburg: 16 June 2027\nContainer seal intact on arrival: Yes\nContainer type: standard dry container (no temperature or humidity control)",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "bill of lading",
+          "definition": "the official document from a shipping company that lists the goods it has received for transport",
+          "vi": "vận đơn"
+        },
+        {
+          "term": "consignee",
+          "definition": "the person or company that receives the goods",
+          "vi": "người nhận hàng"
+        },
+        {
+          "term": "clean on board",
+          "definition": "a note showing that the goods looked undamaged when they were loaded",
+          "vi": "vận đơn sạch (hàng không có hư hỏng bên ngoài khi xếp)"
+        },
+        {
+          "term": "seal",
+          "definition": "a numbered lock that shows whether a container has been opened",
+          "vi": "niêm phong (kẹp chì)"
+        }
+      ]
+    },
+    {
+      "id": "d_packing_memo",
+      "type": "memo",
+      "title": "Internal memo: change of cartons for order NH-MO-2027-014",
+      "meta": {
+        "From": "Le Van Phuc, Warehouse and Packing Supervisor",
+        "To": "Export Sales Team",
+        "Date": "6 May 2027"
+      },
+      "body": "Subject: Packing materials for the Nordhaven order\n\nOur usual supplier of 5-ply export cartons cannot deliver until the end of May. To keep to the loading date, the 400 chairs will be packed in 3-ply single-wall cartons from Thanh Dat Packaging, which we already have in stock. The 50 tables were packed last week in 5-ply cartons with corner protectors, so they are not affected.\n\nThe 3-ply cartons are thinner and less resistant to humidity, but in my opinion they should be strong enough for a sea voyage if moisture-absorber packs are used in the container.\n\nPlease let me know if the customer needs to be informed about this change.\n\nLOADING CHECKLIST – 19 May 2027 (completed by the loading team)\n- Chairs (400 cartons): loaded\n- Tables (50 cartons): loaded\n- Moisture-absorber packs: NOT ADDED – team short of time after the port reopened\n- Container sealed: 11:20",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "single-wall",
+          "definition": "made with only one layer of strong corrugated cardboard",
+          "vi": "một lớp sóng (thùng mỏng)"
+        },
+        {
+          "term": "resistant to humidity",
+          "definition": "not easily damaged by water in the air",
+          "vi": "chống ẩm"
+        },
+        {
+          "term": "checklist",
+          "definition": "a list of tasks that you tick when they are done",
+          "vi": "danh mục kiểm tra"
+        }
+      ]
+    },
+    {
+      "id": "d_forwarder_chat",
+      "type": "chat",
+      "title": "Chat: BlueWave Logistics and Mekong Oak",
+      "meta": {
+        "Participants": "Hoa Dang (BlueWave Logistics) and Tran Duc Minh (Mekong Oak)",
+        "Dates": "13 May – 24 June 2027"
+      },
+      "body": "13 May, 07:45 – Hoa (BlueWave): Morning Minh. Bad news: Cat Lai has been closed since 06:00 today because of the storm. Coral Horizon will not sail tomorrow. I'll rebook you on the first vessel after the port reopens.\n\n13 May, 07:52 – Minh: Understood. Can you send me the Port Authority's order? I need it for our force majeure notice to the buyer.\n\n13 May, 08:10 – Hoa: Sent to your email.\n\n18 May, 19:05 – Hoa: The port reopened at 18:00. You're on Pacific Lantern, loading tomorrow morning. Please have the truck at the terminal by 07:00.\n\n24 June, 10:30 – Minh: Hoa, the buyer says 86 chairs arrived with mould. Did anything happen to the container during the voyage?\n\n24 June, 11:15 – Hoa: I checked with the shipping line. They said the captain reported no cargo incidents during the voyage, but I haven't seen the ship's log myself. The weather was hot and humid for most of the trip, which is normal at this time of year.\n\n24 June, 11:20 – Minh: Could the crew have dropped the container?\n\n24 June, 11:24 – Hoa: I can't say. Nobody has reported anything like that.",
+      "unlock": {
+        "type": "start"
+      },
+      "glossary": [
+        {
+          "term": "rebook",
+          "definition": "make a new booking after the first one was cancelled",
+          "vi": "đặt chỗ lại"
+        },
+        {
+          "term": "ship's log",
+          "definition": "the official daily record of events on a ship",
+          "vi": "nhật ký hàng hải"
+        },
+        {
+          "term": "cargo incident",
+          "definition": "an accident or problem involving the goods carried on a ship",
+          "vi": "sự cố hàng hóa"
+        }
+      ]
+    },
+    {
+      "id": "d_inspection",
+      "type": "report",
+      "title": "Independent Cargo Inspection Report No. HCS-27-0618",
+      "meta": {
+        "Inspector": "Hanseatic Cargo Survey GmbH",
+        "Inspection date": "18 June 2027",
+        "Report issued": "21 June 2027",
+        "Requested by": "Nordhaven Interiors GmbH"
+      },
+      "body": "1. Scope\nWe inspected container MOKU 482117-3 and all 450 cartons at Nordhaven's warehouse in Hamburg on 18 June 2027.\n\n2. Container condition\nThe container seal was intact and matched the bill of lading. The container walls, roof and floor showed no holes, dents or signs of water entering from outside. No moisture-absorber packs were found anywhere in the container.\n\n3. Packaging\nThe chairs were packed in single-wall 3-ply cartons, not the 5-ply cartons required by the contract specification. Many chair cartons were soft and stained by moisture. All 50 tables, packed in 5-ply cartons with corner protectors, arrived in good condition.\n\n4. Damage found\n86 of the 400 chairs show mould on the surface and cracked or loose joints. The remaining 314 chairs are in saleable condition. No chair or carton shows crushing, puncture marks or other impact damage.\n\n5. Cause of damage\nIn our professional opinion, the damage pattern is consistent with condensation inside the cartons rather than impact or rough handling. Without moisture absorbers, humid air inside the container condensed during the long, hot voyage, and the thin 3-ply cartons absorbed the water and passed it to the wood.\n\n6. Estimated loss\nReplacement value of the damaged chairs: 86 × €85 = €7,310, plus inspection costs of €650.",
+      "unlock": {
+        "type": "fact",
+        "factId": "f_katrin_survey"
+      },
+      "glossary": [
+        {
+          "term": "intact",
+          "definition": "complete and not damaged or opened",
+          "vi": "còn nguyên vẹn"
+        },
+        {
+          "term": "condensation",
+          "definition": "drops of water that form when warm, humid air becomes cooler",
+          "vi": "hiện tượng ngưng tụ hơi nước"
+        },
+        {
+          "term": "saleable",
+          "definition": "in good enough condition to be sold",
+          "vi": "có thể bán được"
+        },
+        {
+          "term": "impact damage",
+          "definition": "damage caused by something hitting or dropping the goods",
+          "vi": "hư hỏng do va đập"
+        },
+        {
+          "term": "consistent with",
+          "definition": "matching or agreeing with an explanation",
+          "vi": "phù hợp với"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_risk",
+      "type": "mcq",
+      "documentIds": [
+        "d_contract"
+      ],
+      "prompt": "According to Clause 4, when does the risk of loss or damage pass from the Seller to the Buyer?",
+      "options": [
+        "When the contract is signed",
+        "When the goods are loaded on board the vessel at Cat Lai Port",
+        "When the container arrives in Hamburg",
+        "When the Buyer pays the remaining 70%"
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_max_penalty",
+      "type": "short",
+      "documentIds": [
+        "d_contract"
+      ],
+      "prompt": "What is the maximum late-delivery penalty under Clause 7, as a percentage of the total contract value? (maximum 2 words)",
+      "acceptable": [
+        "5%",
+        "5 %",
+        "5 percent",
+        "five percent",
+        "5 per cent",
+        "five per cent"
+      ],
+      "maxWords": 2,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_reject_all",
+      "type": "tfng",
+      "documentIds": [
+        "d_contract"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the contract.",
+      "statement": "Under Clause 10, the Buyer may refuse the whole shipment if some of the goods arrive damaged.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_closure_length",
+      "type": "tfng",
+      "documentIds": [
+        "d_port_news"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the news report.",
+      "statement": "Cat Lai Port was closed to vessels for more than five full days.",
+      "answer": "true",
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_minh_argument",
+      "type": "mcq",
+      "documentIds": [
+        "d_email_chain"
+      ],
+      "prompt": "In his email of 20 May, why does Mr. Minh say that no penalty is payable?",
+      "options": [
+        "Because the Buyer had agreed to a later loading date",
+        "Because he sent written notice within the time allowed by Clause 9 and the goods were loaded the day after the port reopened",
+        "Because the penalty is higher than the maximum in the contract",
+        "Because the shipping line, not Mekong Oak, caused the delay"
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_clean_bl",
+      "type": "tfng",
+      "documentIds": [
+        "d_shipping_record"
+      ],
+      "prompt": "Decide if the statement is True, False or Not Given according to the shipping record.",
+      "statement": "The bill of lading records that some cartons were already damaged when they were loaded.",
+      "answer": "false",
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_loaded_date",
+      "type": "short",
+      "documentIds": [
+        "d_shipping_record"
+      ],
+      "prompt": "On what date were the goods actually shipped on board? (maximum 4 words)",
+      "acceptable": [
+        "19 May 2027",
+        "19 May",
+        "May 19",
+        "May 19 2027",
+        "19/5/2027",
+        "19/05/2027",
+        "19/5"
+      ],
+      "maxWords": 4,
+      "points": 1,
+      "required": true
+    },
+    {
+      "id": "q_cause",
+      "type": "mcq",
+      "documentIds": [
+        "d_inspection"
+      ],
+      "prompt": "According to the surveyor, what most likely caused the damage to the chairs?",
+      "options": [
+        "The container was dropped while it was being unloaded in Hamburg",
+        "Rain entered the container through holes in the roof",
+        "Condensation inside the thin cartons, because no moisture absorbers had been placed in the container",
+        "The wood was attacked by insects before production"
+      ],
+      "correctIndex": 2,
+      "points": 2,
+      "required": true
+    },
+    {
+      "id": "q_force_majeure",
+      "type": "explain",
+      "documentIds": [
+        "d_contract",
+        "d_port_news",
+        "d_email_chain"
+      ],
+      "prompt": "Was Mekong Oak entitled to rely on the force majeure clause for the delay? Refer to the conditions in Clause 9 and to the dates in the other documents. Answer in 2–4 sentences.",
+      "keyPoints": [
+        "A port closure by government authorities is one of the events listed in Clause 9.",
+        "The port was closed from 13 May to 18 May, which covers the 15 May loading deadline.",
+        "Written notice with official evidence (the closure order) was sent on 14 May, within three working days.",
+        "The delivery date is extended by the length of the event, and the goods were loaded on 19 May, so no penalty is payable."
+      ],
+      "sampleAnswer": "Yes. Clause 9 covers the closure of ports by government authorities, and the Port Authority closed Cat Lai from 13 to 18 May, which included the 15 May deadline. Mr. Minh sent written notice with the closure order on 14 May, within three working days, so the deadline was extended and the goods, loaded on 19 May, were not late under the contract.",
+      "points": 3,
+      "required": true
+    },
+    {
+      "id": "q_risk_argument",
+      "type": "explain",
+      "documentIds": [
+        "d_contract",
+        "d_inspection"
+      ],
+      "prompt": "Mr. Minh argues that the risk passed to Nordhaven at loading, so Mekong Oak is not responsible for the damage. Evaluate this argument. Answer in 2–4 sentences.",
+      "keyPoints": [
+        "It is true that risk normally passes to the Buyer when the goods are loaded (Clause 4).",
+        "However, Clause 10 makes the Seller responsible for damage caused by packing that does not meet Clause 6, even after risk has passed.",
+        "The inspection found 3-ply cartons instead of 5-ply and no moisture absorbers, and the damage was caused by condensation, not rough handling.",
+        "The tables in 5-ply cartons arrived undamaged, which supports the link between packing and damage."
+      ],
+      "sampleAnswer": "The argument is only partly correct. Risk does pass at loading under Clause 4, but Clause 10 says the Seller is still responsible for damage caused by packing that does not meet Clause 6. The surveyor found 3-ply cartons and no moisture absorbers and linked the damage to condensation, not rough handling, so Mekong Oak is responsible for the damaged chairs.",
+      "points": 3,
+      "required": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev_fm_clause",
+      "documentId": "d_contract",
+      "excerpt": "including typhoons, floods and the closure of ports by government authorities",
+      "label": "Force majeure covers port closures by the authorities",
+      "category": "verified",
+      "key": true,
+      "explanation": "The signed contract lists port closures by government authorities as force majeure, which is exactly what happened at Cat Lai."
+    },
+    {
+      "id": "ev_fm_notice_rule",
+      "documentId": "d_contract",
+      "excerpt": "must notify the other Party in writing within three (3) working days of the start of the event and provide official evidence",
+      "label": "Force majeure requires written notice within 3 working days",
+      "category": "verified",
+      "key": true,
+      "explanation": "The condition that decides whether Mekong Oak can rely on force majeure."
+    },
+    {
+      "id": "ev_packing_spec",
+      "documentId": "d_contract",
+      "excerpt": "Each chair shall be wrapped in foam and packed individually in double-wall (5-ply) export cartons",
+      "label": "Contract requires 5-ply cartons for the chairs",
+      "category": "verified",
+      "key": true,
+      "explanation": "The packing standard that the Seller had to meet."
+    },
+    {
+      "id": "ev_seller_packing_liability",
+      "documentId": "d_contract",
+      "excerpt": "The Seller is responsible for any loss or damage caused by packing that does not meet Clause 6, even if the damage appears after the risk has passed to the Buyer",
+      "label": "Seller is liable for packing damage even after risk passes",
+      "category": "verified",
+      "key": true,
+      "explanation": "This clause defeats the argument that the passing of risk at loading frees Mekong Oak from all responsibility."
+    },
+    {
+      "id": "ev_risk_passes",
+      "documentId": "d_contract",
+      "excerpt": "Risk passes from the Seller to the Buyer when the goods are loaded on board the vessel",
+      "label": "Risk passes to the Buyer at loading",
+      "category": "verified",
+      "key": false,
+      "explanation": "True, but it must be read together with Clause 10, which keeps the Seller responsible for packing damage."
+    },
+    {
+      "id": "ev_reject_only_damaged",
+      "documentId": "d_contract",
+      "excerpt": "The Buyer may reject only the goods that are damaged; undamaged goods must be accepted and paid for",
+      "label": "Buyer may reject only damaged goods",
+      "category": "verified",
+      "key": false,
+      "explanation": "Shows that Nordhaven cannot reject the whole shipment; the 314 undamaged chairs and 50 tables must be accepted."
+    },
+    {
+      "id": "ev_arbitration",
+      "documentId": "d_contract",
+      "excerpt": "shall be referred to the Asia-Pacific Trade Arbitration Centre in Singapore",
+      "label": "Disputes go to arbitration in Singapore",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "Where a dispute would be heard does not help decide who is responsible for the delay or the damage."
+    },
+    {
+      "id": "ev_notice_sent",
+      "documentId": "d_email_chain",
+      "excerpt": "14 May 2027, 10:32 – Tran Duc Minh to Katrin Bauer – Subject: Force majeure notice under Clause 9",
+      "label": "Force majeure notice sent on 14 May",
+      "category": "verified",
+      "key": true,
+      "explanation": "The email itself proves that written notice was sent one working day after the port closed, with the closure order attached."
+    },
+    {
+      "id": "ev_only_informed",
+      "documentId": "d_email_chain",
+      "excerpt": "We were only informed about this delay today",
+      "label": "Buyer says it was only informed on 20 May",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Ms. Bauer's claim is contradicted by the 14 May email; she simply read it late because she was on leave."
+    },
+    {
+      "id": "ev_rough_handling",
+      "documentId": "d_email_chain",
+      "excerpt": "The damage must have happened at sea because of rough handling by the shipping line",
+      "label": "Seller claims rough handling at sea caused the damage",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Mr. Minh's assumption is not supported by any document and is contradicted by the inspection findings."
+    },
+    {
+      "id": "ev_port_closed",
+      "documentId": "d_port_news",
+      "excerpt": "the port suspended all vessel operations from 06:00 on 13 May until 18:00 on 18 May",
+      "label": "Port closed by the authorities from 13 to 18 May",
+      "category": "verified",
+      "key": true,
+      "explanation": "Independent news confirms an official port closure covering the 15 May loading deadline."
+    },
+    {
+      "id": "ev_fishing_boats",
+      "documentId": "d_port_news",
+      "excerpt": "ordered more than 2,000 fishing boats to return to shore",
+      "label": "Fishing boats were ordered back to shore",
+      "category": "irrelevant",
+      "key": false,
+      "explanation": "True, but it has nothing to do with the furniture contract."
+    },
+    {
+      "id": "ev_shipped_19",
+      "documentId": "d_shipping_record",
+      "excerpt": "Shipped on board: 19 May 2027",
+      "label": "Goods loaded on 19 May, the day after the port reopened",
+      "category": "verified",
+      "key": false,
+      "explanation": "The bill of lading shows that the goods were loaded as soon as possible after the closure, within the extended deadline."
+    },
+    {
+      "id": "ev_clean_bl",
+      "documentId": "d_shipping_record",
+      "excerpt": "Clean on board – no visible damage to packages at loading",
+      "label": "No visible damage to cartons at loading",
+      "category": "verified",
+      "key": false,
+      "explanation": "Only shows that the outside of the cartons looked fine; it does not prove that the packing met the contract."
+    },
+    {
+      "id": "ev_carton_change",
+      "documentId": "d_packing_memo",
+      "excerpt": "the 400 chairs will be packed in 3-ply single-wall cartons from Thanh Dat Packaging",
+      "label": "Mekong Oak switched the chairs to 3-ply cartons",
+      "category": "verified",
+      "key": false,
+      "explanation": "Mekong Oak's own memo shows it knowingly used cartons that did not meet Clause 6."
+    },
+    {
+      "id": "ev_no_absorbers",
+      "documentId": "d_packing_memo",
+      "excerpt": "Moisture-absorber packs: NOT ADDED – team short of time after the port reopened",
+      "label": "No moisture absorbers were put in the container",
+      "category": "verified",
+      "key": false,
+      "explanation": "Breaks the Clause 6 requirement of at least 20 moisture-absorber packs per container."
+    },
+    {
+      "id": "ev_captain",
+      "documentId": "d_forwarder_chat",
+      "excerpt": "the captain reported no cargo incidents during the voyage",
+      "label": "Shipping line says there were no incidents at sea",
+      "category": "unverified",
+      "key": false,
+      "explanation": "Second-hand information: the forwarder has not seen the ship's log, so it is not confirmed."
+    },
+    {
+      "id": "ev_cartons_found",
+      "documentId": "d_inspection",
+      "excerpt": "The chairs were packed in single-wall 3-ply cartons, not the 5-ply cartons required by the contract specification",
+      "label": "Inspector found 3-ply cartons instead of 5-ply",
+      "category": "verified",
+      "key": true,
+      "explanation": "Independent confirmation that the packing did not meet Clause 6."
+    },
+    {
+      "id": "ev_cause",
+      "documentId": "d_inspection",
+      "excerpt": "the damage pattern is consistent with condensation inside the cartons rather than impact or rough handling",
+      "label": "Damage caused by condensation, not rough handling",
+      "category": "verified",
+      "key": true,
+      "explanation": "Links the damage to the packing failure and rules out the rough-handling theory."
+    },
+    {
+      "id": "ev_tables_ok",
+      "documentId": "d_inspection",
+      "excerpt": "All 50 tables, packed in 5-ply cartons with corner protectors, arrived in good condition",
+      "label": "Tables in 5-ply cartons arrived undamaged",
+      "category": "verified",
+      "key": false,
+      "explanation": "Goods in the same container but packed to the contract standard survived, which supports packing as the cause."
+    }
+  ],
+  "links": [
+    {
+      "a": "ev_fm_clause",
+      "b": "ev_port_closed",
+      "relation": "The official port closure is an event listed in the force majeure clause."
+    },
+    {
+      "a": "ev_fm_notice_rule",
+      "b": "ev_notice_sent",
+      "relation": "Notice was sent on 14 May, within three working days of the closure."
+    },
+    {
+      "a": "ev_notice_sent",
+      "b": "ev_only_informed",
+      "relation": "The buyer's claim that it was informed only on 20 May is contradicted by the 14 May email."
+    },
+    {
+      "a": "ev_packing_spec",
+      "b": "ev_cartons_found",
+      "relation": "The chairs were not packed in the cartons that the contract requires."
+    },
+    {
+      "a": "ev_cause",
+      "b": "ev_rough_handling",
+      "relation": "The inspection contradicts the claim that rough handling caused the damage."
+    }
+  ],
+  "characters": [
+    {
+      "id": "minh",
+      "name": "Mr. Tran Duc Minh",
+      "role": "Export Sales Manager, Mekong Oak Furniture",
+      "avatar": "manager_m",
+      "personality": "Confident, formal and loyal to his company; becomes defensive when the damage is mentioned but answers factual questions honestly.",
+      "background": "Mr. Minh negotiated and signed the contract with Nordhaven and handles all communication with the buyer. He also works with the freight forwarder, BlueWave Logistics.",
+      "greeting": "Good morning. I'm Tran Duc Minh, Export Sales Manager. I'm confident we did everything the contract required. What would you like to know?",
+      "facts": [
+        {
+          "id": "f_minh_ready",
+          "text": "All 400 chairs and 50 tables were finished and passed the factory quality check on 12 May 2027, three days before the loading deadline.",
+          "keywords": [
+            "ready",
+            "finished",
+            "production",
+            "factory",
+            "quality check"
+          ]
+        },
+        {
+          "id": "f_minh_notice",
+          "text": "Minh emailed the force majeure notice to Ms. Bauer at 10:32 on 14 May 2027 and attached the Port Authority's closure order, which BlueWave had sent him.",
+          "keywords": [
+            "notice",
+            "notify",
+            "force majeure",
+            "inform",
+            "informed"
+          ]
+        },
+        {
+          "id": "f_minh_booking",
+          "text": "The container was first booked on MV Coral Horizon, due to leave on 14 May, but the sailing was cancelled when the port closed.",
+          "keywords": [
+            "booked",
+            "booking",
+            "vessel",
+            "ship",
+            "sailing",
+            "original"
+          ]
+        },
+        {
+          "id": "f_minh_opinion",
+          "text": "Minh believes the shipping line handled the container roughly, but he admits that he has no document or report that shows this.",
+          "keywords": [
+            "rough",
+            "handling",
+            "damage",
+            "damaged",
+            "sea",
+            "cause",
+            "caused"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Company profit margins",
+          "forbiddenPhrases": [
+            "our profit margin",
+            "we make a profit of"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "katrin",
+      "name": "Ms. Katrin Bauer",
+      "role": "Purchasing Manager, Nordhaven Interiors GmbH (Hamburg)",
+      "avatar": "manager_f",
+      "personality": "Direct, precise and frustrated; expects suppliers to follow the contract exactly, but is willing to be fair when she is shown clear evidence.",
+      "background": "Ms. Bauer chose Mekong Oak as a new supplier for Nordhaven's showroom collection and signed the contract on behalf of the buyer.",
+      "greeting": "Hello. Katrin Bauer, Nordhaven Interiors. Frankly, this shipment has caused us serious problems. Please ask your questions.",
+      "facts": [
+        {
+          "id": "f_katrin_survey",
+          "text": "When the container reached Hamburg, Nordhaven asked Hanseatic Cargo Survey to inspect it on 18 June 2027, and Katrin is willing to share the surveyor's report.",
+          "keywords": [
+            "inspection",
+            "inspect",
+            "inspected",
+            "survey",
+            "surveyor",
+            "independent"
+          ],
+          "unlocksDocumentId": "d_inspection"
+        },
+        {
+          "id": "f_katrin_leave",
+          "text": "Katrin was on annual leave from 13 to 19 May and first read Minh's email of 14 May when she returned to the office on 20 May.",
+          "keywords": [
+            "leave",
+            "holiday",
+            "away",
+            "read",
+            "notice",
+            "office"
+          ]
+        },
+        {
+          "id": "f_katrin_claim",
+          "text": "Nordhaven is claiming a 2% late-delivery penalty and wants to send back the whole shipment because some of the chairs were damaged.",
+          "keywords": [
+            "claim",
+            "penalty",
+            "want",
+            "demand",
+            "compensation",
+            "refund"
+          ]
+        },
+        {
+          "id": "f_katrin_showroom",
+          "text": "Because of the problems, Nordhaven had to postpone the opening of its new Hamburg showroom from 1 June to 15 July.",
+          "keywords": [
+            "showroom",
+            "launch",
+            "opening",
+            "customers",
+            "impact",
+            "business"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Nordhaven's other suppliers and prices",
+          "forbiddenPhrases": [
+            "our other supplier",
+            "we pay other suppliers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phuc",
+      "name": "Mr. Le Van Phuc",
+      "role": "Warehouse and Packing Supervisor, Mekong Oak Furniture",
+      "avatar": "clerk_m",
+      "personality": "Honest, practical and a little nervous; uses short, direct sentences and does not like to blame other people.",
+      "background": "Mr. Phuc has managed packing and container loading at Mekong Oak's warehouse for eight years. He wrote the memo about the carton change.",
+      "greeting": "Hello, I'm Phuc from the warehouse. I'll tell you what I know about the packing.",
+      "facts": [
+        {
+          "id": "f_phuc_cartons",
+          "text": "In early May the usual 5-ply cartons ran out, so Phuc's team packed all 400 chairs in thinner 3-ply cartons, while the tables had already been packed in 5-ply cartons.",
+          "keywords": [
+            "carton",
+            "cartons",
+            "packing",
+            "packed",
+            "pack",
+            "boxes"
+          ]
+        },
+        {
+          "id": "f_phuc_absorbers",
+          "text": "Phuc's team did not put any moisture-absorber packs in the container because they loaded it in a hurry on the morning of 19 May, just after the port reopened.",
+          "keywords": [
+            "moisture",
+            "absorber",
+            "absorbers",
+            "humidity",
+            "loading",
+            "hurry"
+          ]
+        },
+        {
+          "id": "f_phuc_informed",
+          "text": "Phuc sent the sales team a memo about the carton change on 6 May, but he does not know whether anyone told the buyer about it.",
+          "keywords": [
+            "memo",
+            "told",
+            "sales team",
+            "buyer",
+            "informed",
+            "tell"
+          ]
+        }
+      ],
+      "restricted": [
+        {
+          "topic": "Blaming named colleagues",
+          "forbiddenPhrases": [
+            "it was mr. minh's fault",
+            "my manager told me to lie"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "question": "Based on the contract and the evidence, which conclusion about responsibility is best supported?",
+    "options": [
+      {
+        "id": "c_split",
+        "text": "The delay is covered by force majeure because the port was officially closed and Mekong Oak gave written notice in time, so no penalty applies; but Mekong Oak is responsible for the 86 damaged chairs because their packing did not meet Clause 6."
+      },
+      {
+        "id": "c_seller_all",
+        "text": "Mekong Oak is responsible for everything: it must pay the 2% late-delivery penalty and refund the whole shipment, because the goods were loaded late and some arrived damaged."
+      },
+      {
+        "id": "c_buyer_all",
+        "text": "Mekong Oak is not responsible for anything: the delay was force majeure and the risk passed to Nordhaven at loading, so all of the damage is Nordhaven's problem."
+      },
+      {
+        "id": "c_shipping_line",
+        "text": "The shipping line caused the damage through rough handling at sea, so Nordhaven must claim from the shipping line and neither company owes the other anything."
+      }
+    ],
+    "correctOptionId": "c_split",
+    "requiredEvidenceIds": [
+      "ev_fm_clause",
+      "ev_port_closed",
+      "ev_notice_sent",
+      "ev_packing_spec",
+      "ev_cartons_found"
+    ],
+    "minSupporting": 5,
+    "unsupportedClaims": [
+      "The shipping line handled the container roughly (no document shows any impact damage or incident).",
+      "Ms. Bauer never received the force majeure notice (it was sent on 14 May; she read it late because she was on leave).",
+      "Nordhaven may reject the entire shipment (Clause 10 allows it to reject only the damaged goods).",
+      "Mekong Oak deliberately used cheap cartons to save money (the memo says the usual cartons were out of stock).",
+      "Mekong Oak must compensate Nordhaven for the postponed showroom opening (the contract contains no such obligation)."
+    ]
+  },
+  "writingTask": {
+    "type": "email",
+    "prompt": "Write an email to Ms. Nguyen Thanh Huong, Export Director of Mekong Oak Furniture, who must reply to Nordhaven's claim this week. Explain who is responsible for the delay and who is responsible for the damage, referring to the contract clauses and the evidence. Say which of Nordhaven's demands are justified and which are not, and recommend what Mekong Oak should offer and what it should change in future. Use a clear subject line and a professional tone.",
+    "audience": "Ms. Nguyen Thanh Huong, Export Director, Mekong Oak Furniture Co., Ltd.",
+    "minWords": 180,
+    "maxWords": 250,
+    "sections": [
+      "Subject line and greeting",
+      "Purpose",
+      "The delay",
+      "The damage",
+      "Recommendations",
+      "Closing"
+    ],
+    "keyPoints": [
+      "The delay is covered by force majeure: a port closure by the authorities is a listed event in Clause 9.",
+      "Written notice with official evidence was sent on 14 May, within three working days, so the 2% penalty is not payable.",
+      "The damage was caused by packing that did not meet Clause 6 (3-ply cartons, no moisture absorbers), as the inspection report shows.",
+      "Under Clause 10, Mekong Oak is responsible for packing damage even though risk passed at loading.",
+      "Nordhaven may reject only the 86 damaged chairs, not the whole shipment.",
+      "Recommends offering replacement or a refund for the damaged chairs and improving packing control / informing buyers of any change."
+    ],
+    "rubric": {
+      "taskAchievement": 10,
+      "coherence": 7,
+      "vocabulary": 7,
+      "grammar": 6
+    }
+  },
+  "hints": {
+    "documents": [
+      "Read the contract first – especially Clauses 4, 6, 7, 9 and 10.",
+      "Put the key dates in order: deadline, port closure, notice, loading, arrival and claim.",
+      "The inspection report belongs to the buyer – ask Ms. Bauer about it."
+    ],
+    "evidence": [
+      "Highlight the exact clause wording that decides each issue, not only the facts of the story.",
+      "Statements in emails are claims by one side; check them against dates, records and the inspection report.",
+      "Where disputes are heard and what happened to fishing boats during the storm do not affect responsibility."
+    ],
+    "interviews": [
+      "Ask Mr. Minh when the goods were ready and when he sent the notice.",
+      "Ask Ms. Bauer whether the goods were inspected and when she read the notice.",
+      "Ask Mr. Phuc how the chairs and the container were packed."
+    ],
+    "analysis": [
+      "Treat the delay and the damage as two separate questions.",
+      "Clause 10 tells you what happens to packing damage after the risk has passed.",
+      "Avoid one-sided conclusions: each company is right about one issue and wrong about the other."
+    ],
+    "report": [
+      "Start with a clear subject line and state the purpose of your email in the first paragraph.",
+      "Use one paragraph for the delay and one for the damage, each with clause numbers and dates.",
+      "Recommend a realistic offer to Nordhaven and one change to prevent the problem in future."
+    ]
+  },
+  "limits": {
+    "interviewQuestionsPerCharacter": 8,
+    "assistantRequests": 10,
+    "minEvidenceToSubmit": 8,
+    "timeMinutes": 60
+  },
+  "sampleSolution": {
+    "highlights": [
+      {
+        "documentId": "d_contract",
+        "text": "including typhoons, floods and the closure of ports by government authorities",
+        "evidenceId": "ev_fm_clause"
+      },
+      {
+        "documentId": "d_contract",
+        "text": "must notify the other Party in writing within three (3) working days of the start of the event and provide official evidence",
+        "evidenceId": "ev_fm_notice_rule"
+      },
+      {
+        "documentId": "d_contract",
+        "text": "Each chair shall be wrapped in foam and packed individually in double-wall (5-ply) export cartons",
+        "evidenceId": "ev_packing_spec"
+      },
+      {
+        "documentId": "d_contract",
+        "text": "The Seller is responsible for any loss or damage caused by packing that does not meet Clause 6, even if the damage appears after the risk has passed to the Buyer",
+        "evidenceId": "ev_seller_packing_liability"
+      },
+      {
+        "documentId": "d_contract",
+        "text": "The Buyer may reject only the goods that are damaged; undamaged goods must be accepted and paid for",
+        "evidenceId": "ev_reject_only_damaged"
+      },
+      {
+        "documentId": "d_email_chain",
+        "text": "14 May 2027, 10:32 – Tran Duc Minh to Katrin Bauer – Subject: Force majeure notice under Clause 9",
+        "evidenceId": "ev_notice_sent"
+      },
+      {
+        "documentId": "d_email_chain",
+        "text": "We were only informed about this delay today",
+        "evidenceId": "ev_only_informed"
+      },
+      {
+        "documentId": "d_email_chain",
+        "text": "The damage must have happened at sea because of rough handling by the shipping line",
+        "evidenceId": "ev_rough_handling"
+      },
+      {
+        "documentId": "d_port_news",
+        "text": "the port suspended all vessel operations from 06:00 on 13 May until 18:00 on 18 May",
+        "evidenceId": "ev_port_closed"
+      },
+      {
+        "documentId": "d_shipping_record",
+        "text": "Shipped on board: 19 May 2027",
+        "evidenceId": "ev_shipped_19"
+      },
+      {
+        "documentId": "d_packing_memo",
+        "text": "the 400 chairs will be packed in 3-ply single-wall cartons from Thanh Dat Packaging",
+        "evidenceId": "ev_carton_change"
+      },
+      {
+        "documentId": "d_inspection",
+        "text": "The chairs were packed in single-wall 3-ply cartons, not the 5-ply cartons required by the contract specification",
+        "evidenceId": "ev_cartons_found"
+      },
+      {
+        "documentId": "d_inspection",
+        "text": "the damage pattern is consistent with condensation inside the cartons rather than impact or rough handling",
+        "evidenceId": "ev_cause"
+      },
+      {
+        "documentId": "d_inspection",
+        "text": "All 50 tables, packed in 5-ply cartons with corner protectors, arrived in good condition",
+        "evidenceId": "ev_tables_ok"
+      }
+    ],
+    "answers": {
+      "q_risk": 1,
+      "q_max_penalty": "5%",
+      "q_reject_all": "false",
+      "q_closure_length": "true",
+      "q_minh_argument": 1,
+      "q_clean_bl": "false",
+      "q_loaded_date": "19 May 2027",
+      "q_cause": 2,
+      "q_force_majeure": "Yes. Clause 9 covers port closures by government authorities, and Cat Lai was closed from 13 to 18 May, which included the 15 May deadline. Mr. Minh sent written notice with the official closure order on 14 May, within three working days, so the deadline was extended and no penalty is payable.",
+      "q_risk_argument": "The argument is only partly correct. Risk passes at loading under Clause 4, but Clause 10 keeps the Seller responsible for damage caused by packing that does not meet Clause 6. The surveyor found 3-ply cartons and no moisture absorbers and blamed condensation, not rough handling."
+    },
+    "interviewQuestions": [
+      {
+        "characterId": "katrin",
+        "question": "Did Nordhaven arrange an independent inspection when the goods arrived in Hamburg?",
+        "expectFactIds": [
+          "f_katrin_survey"
+        ]
+      },
+      {
+        "characterId": "katrin",
+        "question": "When did you first read the notice about the port closure? Were you on leave?",
+        "expectFactIds": [
+          "f_katrin_leave"
+        ]
+      },
+      {
+        "characterId": "minh",
+        "question": "When were the goods ready, and when did you send the force majeure notice?",
+        "expectFactIds": [
+          "f_minh_ready",
+          "f_minh_notice"
+        ]
+      },
+      {
+        "characterId": "phuc",
+        "question": "Which cartons did your team use for the chairs, and were moisture absorbers added?",
+        "expectFactIds": [
+          "f_phuc_cartons",
+          "f_phuc_absorbers"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "a": "ev_fm_clause",
+        "b": "ev_port_closed"
+      },
+      {
+        "a": "ev_fm_notice_rule",
+        "b": "ev_notice_sent"
+      },
+      {
+        "a": "ev_notice_sent",
+        "b": "ev_only_informed"
+      },
+      {
+        "a": "ev_packing_spec",
+        "b": "ev_cartons_found"
+      },
+      {
+        "a": "ev_cause",
+        "b": "ev_rough_handling"
+      }
+    ],
+    "conclusion": {
+      "optionId": "c_split",
+      "supportingEvidenceIds": [
+        "ev_fm_clause",
+        "ev_port_closed",
+        "ev_notice_sent",
+        "ev_fm_notice_rule",
+        "ev_packing_spec",
+        "ev_cartons_found",
+        "ev_seller_packing_liability",
+        "ev_cause",
+        "ev_shipped_19"
+      ],
+      "justification": "The port was officially closed from 13 to 18 May, a force majeure event under Clause 9, and notice was sent on 14 May within three working days, so the delay carries no penalty. However, the inspection shows that the chairs were packed in 3-ply cartons instead of the required 5-ply cartons and were damaged by condensation, and Clause 10 makes the Seller responsible for such packing damage even after risk has passed."
+    },
+    "report": "Subject: Nordhaven claim – responsibility for the delay and the damaged chairs\n\nDear Ms. Huong,\n\nI am writing to summarise my findings on Nordhaven's claim under Contract NH-MO-2027-014 and to recommend a response.\n\nThe delay: The goods were loaded on 19 May, four days after the deadline. However, the Port Authority closed Cat Lai Port from 13 to 18 May, and Clause 9 lists port closures by the authorities as force majeure. Mr. Minh sent written notice with the closure order on 14 May, within three working days. Ms. Bauer says she was informed only on 20 May, but she was simply on leave. Therefore, the 2% penalty is not justified.\n\nThe damage: Clause 6 requires 5-ply cartons and moisture absorbers, but the inspection report shows that the chairs were packed in 3-ply cartons and that no absorbers were found. The surveyor concluded that condensation, not rough handling, caused the damage. Under Clause 10, we are responsible for packing damage even after the risk has passed. Nevertheless, Nordhaven cannot reject the whole shipment, because only damaged goods may be rejected.\n\nRecommendations: I suggest that we offer to replace or refund the 86 damaged chairs (€7,310) but reject the penalty. In future, we should never change packing materials without the buyer's written approval.\n\nPlease let me know if you need any further details.\n\nBest regards,\nBusiness Analyst Intern"
+  }
+}

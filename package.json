@@ -1,0 +1,31 @@
+{
+  "name": "english-detective",
+  "private": true,
+  "version": "1.0.0",
+  "description": "English Detective – AI Mystery Challenge (K26 Game 2)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test:unit": "npm run test --workspace @ed/game-engine && npm run test --workspace @ed/ai && npm run test:unit --workspace @ed/api",
+    "test:integration": "firebase emulators:exec --only firestore,auth --project demo-ed \"npm run test:integration --workspace @ed/api && npm run test:rules --workspace @ed/api\"",
+    "test": "npm run test:unit && npm run test:integration",
+    "build": "npm run build --workspace @ed/web && npm run build --workspace @ed/api",
+    "emulators": "firebase emulators:start --only firestore,auth --project demo-ed",
+    "seed:local": "tsx scripts/seed.mts --local",
+    "dev:api": "npm run dev --workspace @ed/api",
+    "dev:web": "npm run dev --workspace @ed/web",
+    "test:e2e": "playwright test -c tests/e2e/playwright.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "firebase-tools": "14.27.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

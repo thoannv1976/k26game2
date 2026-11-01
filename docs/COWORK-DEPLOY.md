@@ -79,6 +79,14 @@ BƯỚC 9 – Kiểm tra (trình duyệt)
 6. Mở https://k26game1.web.app bằng cùng tài khoản sinh viên → đăng nhập được Game 1 (tài khoản dùng chung).
 7. Cloud Run → detective-api → Logs: không có PERMISSION_DENIED.
 
+BƯỚC 10 – Cập nhật Game 1 (để tài khoản tạo ở Game 2 đăng nhập được Game 1, và LMS dùng chung định dạng)
+Trong Cloud Shell, thư mục chứa mã Game 1 (k26game1; nếu chưa có thì git clone https://github.com/thoannv1976/k26game1.git):
+  cd ~/k26game1 && git pull
+  GEMINI_MODEL=<model bước 3> VERTEX_LOCATION=<location bước 3> bash scripts/deploy.sh
+(Dùng đúng model/location đang chạy cho Game 1 – KHÔNG để mặc định gemini-2.5-flash vì model này trả 404 trên k26game1.
+ File apps/web/.env.production của Game 1 đã có từ lần triển khai trước; nếu thiếu thì tạo lại như bước 4.)
+Kiểm tra lại https://k26game1.web.app vẫn chơi được nhiệm vụ M01.
+
 BÁO CÁO CHO TÔI
 - URL https://k26-detective.web.app, GEMINI_MODEL / VERTEX_LOCATION đã dùng
 - Kết quả từng mục ở bước 9 (đạt/không đạt, ảnh chụp nếu không đạt)

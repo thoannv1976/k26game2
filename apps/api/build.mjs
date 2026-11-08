@@ -1,4 +1,5 @@
 // Bundles the API (and @ed/shared + mission content) into dist/server.js for Cloud Run.
+import { fileURLToPath } from 'node:url';
 import { build } from 'esbuild';
 
 await build({
@@ -16,7 +17,7 @@ await build({
       name: 'bundle-workspace',
       setup(b) {
         for (const pkg of ['shared', 'game-engine', 'ai']) {
-          b.onResolve({ filter: new RegExp(`^@ed/${pkg}$`) }, () => ({ path: new URL(`../../packages/${pkg}/src/index.ts`, import.meta.url).pathname }));
+          b.onResolve({ filter: new RegExp(`^@ed/${pkg}$`) }, () => ({ path: fileURLToPath(new URL(`../../packages/${pkg}/src/index.ts`, import.meta.url)) }));
         }
       },
     },

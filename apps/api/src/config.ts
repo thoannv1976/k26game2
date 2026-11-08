@@ -17,11 +17,28 @@ export interface AppConfig {
   /** D4: service accounts (e.g. vstep-api@…) allowed to read learner evidence; empty = disabled. */
   lmsServiceAccounts: string[];
   lmsServiceAudience: string;
+  /** UniGame Hub (LTI 1.3) single sign-on + grade sync. Off unless LTI_ENABLED=true. */
+  ltiEnabled: boolean;
+  ltiHubUrl: string;
+  ltiGameId: string;
+  ltiGameSecret: string;
+  /** Hub tenant id -> this app's tenant id, e.g. {"aiedu-local":"demo-university"}. */
+  ltiTenantMap: Record<string, string>;
 }
 
 function str(name: string, def: string): string {
   const v = process.env[name];
   return v === undefined || v === '' ? def : v;
+}
+
+/** "hubTenant=appTenant;hub2=app2" (deploy-friendly) or a JSON object. */
+export function parseTenantMap(v: string): Record<string, string> {
+  const s = v.trim();
+  if (!s) return {};
+  if (s.startsWith('{')) return JSON.parse(s) as Record<string, string>;
+  return Object.fromEntries(
+    s.split(';').map((pair) => pair.split('=').map((x) => x.trim())).filter((p) => p.length === 2 && p[0] && p[1]) as [string, string][],
+  );
 }
 
 export function loadConfig(overrides: Partial<AppConfig> = {}): AppConfig {
@@ -42,6 +59,11 @@ export function loadConfig(overrides: Partial<AppConfig> = {}): AppConfig {
     rateLimitPerMinute: Number(str('RATE_LIMIT_PER_MINUTE', '240')),
     lmsServiceAccounts: str('LMS_SERVICE_ACCOUNTS', '').split(',').map((x) => x.trim()).filter(Boolean),
     lmsServiceAudience: str('LMS_SERVICE_AUDIENCE', 'k26-lms'),
+    ltiEnabled: str('LTI_ENABLED', 'false') === 'true',
+    ltiHubUrl: str('LTI_HUB_URL', '').replace(/\/+$/, ''),
+    ltiGameId: str('LTI_GAME_ID', 'k26game2'),
+    ltiGameSecret: str('LTI_GAME_SECRET', ''),
+    ltiTenantMap: parseTenantMap(str('LTI_TENANT_MAP', '')),
     ...overrides,
   };
   assertSafeConfig(cfg);
@@ -52,5 +74,12 @@ export function loadConfig(overrides: Partial<AppConfig> = {}): AppConfig {
 export function assertSafeConfig(cfg: AppConfig): void {
   if (cfg.env === 'production' && cfg.aiProvider !== 'vertex') {
     throw new Error('Refusing to start in production with offline providers: AI_PROVIDER');
+  }
+  if (cfg.ltiEnabled) {
+    const missing: string[] = [];
+    if (!cfg.ltiHubUrl.startsWith('https://')) missing.push('LTI_HUB_URL (https)');
+    if (cfg.ltiGameSecret.length < 32) missing.push('LTI_GAME_SECRET');
+    if (Object.keys(cfg.ltiTenantMap).length === 0) missing.push('LTI_TENANT_MAP');
+    if (missing.length) throw new Error(`LTI_ENABLED=true but missing: ${missing.join(', ')}`);
   }
 }

@@ -97,6 +97,12 @@ export const vi: Translation = {
     disabledTitle: 'Tài khoản đã bị khóa',
     disabledBody: 'Tài khoản này đã bị vô hiệu hóa. Vui lòng liên hệ quản trị viên của trường.',
   },
+  lti: {
+    signingIn: 'Đang đăng nhập bằng tài khoản Moodle…',
+    noTicket: 'Thiếu thông tin đăng nhập. Hãy mở lại hoạt động từ Moodle.',
+    expired: 'Phiên đăng nhập từ Moodle đã hết hạn hoặc đã được dùng. Hãy quay lại Moodle và bấm vào hoạt động lần nữa.',
+    failed: 'Không đăng nhập được qua Moodle. Vui lòng thử lại hoặc báo giảng viên.',
+  },
   login: {
     tagline: 'Thử thách phá án cùng AI – đọc bằng chứng, phỏng vấn nhân chứng và viết báo cáo bằng tiếng Anh (B1–B2).',
     title: 'Đăng nhập vào Văn phòng thám tử',

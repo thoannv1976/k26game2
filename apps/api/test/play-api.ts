@@ -2,12 +2,12 @@ import type { CaseDossier } from '@ed/shared';
 import { api, uuid, type TestCtx, type TestUser } from './helpers.js';
 
 /** Plays a case through the HTTP API with its sample solution (offline AI). Returns the session id. */
-export async function playViaApi(ctx: TestCtx, user: TestUser, d: CaseDossier, opts: { submit?: boolean; restart?: boolean } = {}) {
+export async function playViaApi(ctx: TestCtx, user: TestUser, d: CaseDossier, opts: { submit?: boolean; restart?: boolean; assignmentId?: string } = {}) {
   const ok = (r: { status: number; body: any }, what: string) => {
     if (r.status >= 300) throw new Error(`${what} failed: ${r.status} ${JSON.stringify(r.body)}`);
     return r.body;
   };
-  const start = ok(await api(ctx, user, 'POST', '/api/sessions', { caseId: d.id, restart: opts.restart ?? true }), 'start');
+  const start = ok(await api(ctx, user, 'POST', '/api/sessions', { caseId: d.id, restart: opts.restart ?? true, ...(opts.assignmentId ? { assignmentId: opts.assignmentId } : {}) }), 'start');
   const sid = start.session.id as string;
   ok(await api(ctx, user, 'POST', `/api/sessions/${sid}/briefing`), 'briefing');
   for (const doc of start.investigation.documents.filter((x: any) => !x.locked)) ok(await api(ctx, user, 'POST', `/api/sessions/${sid}/documents/${doc.id}/open`), 'open');

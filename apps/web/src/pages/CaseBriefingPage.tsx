@@ -107,7 +107,13 @@ export function CaseBriefingPage() {
           <div className="flex flex-col gap-2">
             {activeSessionId ? (
               <>
-                <Button data-testid="case-continue" size="lg" onClick={() => navigate(`/investigate/${activeSessionId}`)}>
+                {/* With an assignment, resume through the API so the open session is linked to it (LMS grade sync). */}
+                <Button
+                  data-testid="case-continue"
+                  size="lg"
+                  loading={start.isPending}
+                  onClick={() => (assignment ? start.mutate(false) : navigate(`/investigate/${activeSessionId}`))}
+                >
                   ▶ {t('briefing.continue')}
                 </Button>
                 <Button variant="secondary" onClick={() => setConfirmRestart(true)} disabled={start.isPending}>

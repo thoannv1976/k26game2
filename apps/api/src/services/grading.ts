@@ -19,6 +19,7 @@ import { paths } from '../paths.js';
 import { recordUsage, reserveAiCall } from '../quota.js';
 import { getCaseVersion, getTenant, listApprovedCases } from '../tenants.js';
 import { CRITERION_KEYS, type AssessmentDoc, type CriterionKey, type CriterionResult, type FinalReportDoc, type SessionDoc, type TeacherReview } from '../types.js';
+import { syncGrade } from '../lti/gradeSync.js';
 import { canViewStudent } from './access.js';
 import { withRetry } from './retry.js';
 
@@ -174,6 +175,8 @@ export async function ensureGraded(deps: Deps, tenantId: string, sessionId: stri
   if (claim.status !== 'claimed') return { status: claim.status };
 
   const s = claim.session;
+  let assessed: AssessmentDoc;
+  let gradedAt: string;
   try {
     const d = await getCaseVersion(deps, tenantId, s.caseId, s.caseVersion);
     const report = (await p.report(tenantId, sessionId).get()).data() as FinalReportDoc;
@@ -183,7 +186,8 @@ export async function ensureGraded(deps: Deps, tenantId: string, sessionId: stri
     const solved = concl.correct;
     const allCases = await listApprovedCases(deps, tenantId);
 
-    await deps.db.runTransaction(async (tx) => {
+    gradedAt = deps.now().toISOString();
+    assessed = await deps.db.runTransaction(async (tx) => {
       const userRef = p.user(tenantId, s.uid);
       const aRef = p.assessment(tenantId, sessionId);
       const [uSnap, aSnap] = await Promise.all([tx.get(userRef), tx.get(aRef)]);
@@ -254,7 +258,7 @@ export async function ensureGraded(deps: Deps, tenantId: string, sessionId: stri
         createdAt: prev?.createdAt ?? deps.now().toISOString(),
       };
       tx.set(aRef, doc);
-      tx.update(p.session(tenantId, sessionId), { status: 'graded', gradedAt: deps.now().toISOString(), lockId: null, lockSince: null });
+      tx.update(p.session(tenantId, sessionId), { status: 'graded', gradedAt, lockId: null, lockSince: null });
       if (user && firstTime) {
         const best = Math.max(user.bestPercent?.[d.id] ?? 0, t.percent);
         tx.update(userRef, {
@@ -266,12 +270,16 @@ export async function ensureGraded(deps: Deps, tenantId: string, sessionId: stri
           level: recommendation.nextLevel === 'B2' && user.level === 'B1' ? 'B2' : user.level,
         });
       }
+      return doc;
     });
-    return { status: 'graded' };
   } catch (e) {
     await ref.update({ status: 'submitted', lockId: null, lockSince: null }).catch(() => undefined);
     throw e;
   }
+  // Every path that decides a score (first status check after submission, teacher regrade) ends here.
+  // Reports to the LMS for LTI assignments only; never throws.
+  await syncGrade(deps, tenantId, assessed, gradedAt);
+  return { status: 'graded' };
 }
 
 export async function getResults(deps: Deps, m: Member, sessionId: string) {

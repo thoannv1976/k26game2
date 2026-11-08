@@ -59,7 +59,10 @@ test('student solves CASE01 end to end', async ({ page }) => {
   await page.getByTestId('tab-questions').click();
   for (const q of CASE01.questions) {
     const box = page.getByTestId(`question-${q.id}`);
-    if (!(await page.getByTestId(`question-submit-${q.id}`).isVisible().catch(() => false))) continue; // already answered (resumed session)
+    // Wait for the card first: isVisible() does not wait, so checking right after the tab switch skipped
+    // questions that had not rendered yet and left required ones unanswered (submit stayed disabled).
+    await expect(box).toBeVisible();
+    if ((await page.getByTestId(`question-submit-${q.id}`).count()) === 0) continue; // already answered (resumed session)
     const value = (CASE01.sampleSolution.answers as Record<string, string | number>)[q.id]!;
     if (q.type === 'mcq') await box.getByRole('radio').nth(value as number).check();
     else if (q.type === 'tfng') await box.getByRole('radio').nth(['true', 'false', 'not_given'].indexOf(String(value))).click();
@@ -91,6 +94,8 @@ test('student solves CASE01 end to end', async ({ page }) => {
   await page.getByTestId('report-editor').fill(CASE01.sampleSolution.report);
   await expect(page.getByTestId('report-wordcount')).toContainText(/1[5-9]\d/);
   await page.getByTestId('report-submit').click();
+  // Fails fast with the dialog's blocker list instead of a 2-minute click timeout.
+  await expect(page.getByTestId('submit-confirm')).toBeEnabled();
   const sub = waitApi(page, '/submit');
   await page.getByTestId('submit-confirm').click();
   await sub;

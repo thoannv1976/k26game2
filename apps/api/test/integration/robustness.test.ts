@@ -161,7 +161,9 @@ describe('cost control', () => {
   });
 
   it('records usage with estimated cost', async () => {
-    const logs = await paths(ctx.deps.db).usageLogs(tenantId).where('kind', '==', 'character').limit(3).get();
+    // Only successful calls: earlier tests in this file simulate AI outages, and failed calls are logged with cost 0,
+    // so an unfiltered query returned one of those first at random.
+    const logs = await paths(ctx.deps.db).usageLogs(tenantId).where('kind', '==', 'character').where('ok', '==', true).limit(3).get();
     expect(logs.size).toBeGreaterThan(0);
     expect(logs.docs[0]!.data().costUsd).toBeGreaterThan(0);
   });

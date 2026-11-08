@@ -26,8 +26,14 @@ test('student solves CASE01 end to end', async ({ page }) => {
   await expect(cont.or(start).first()).toBeVisible();
   await ((await cont.isVisible()) ? cont : start).click();
   await expect(page).toHaveURL(/\/investigate\//);
+  // The briefing dialog renders together with the workspace; wait for the workspace before checking for it,
+  // otherwise isVisible() (which does not wait) can run too early and the dialog later blocks every click.
+  await expect(page.getByTestId('tab-interviews')).toBeVisible();
   const ack = page.getByTestId('briefing-ack');
-  if (await ack.isVisible().catch(() => false)) await ack.click();
+  if (await ack.isVisible()) {
+    await ack.click();
+    await expect(ack).toBeHidden();
+  }
 
   // Interviews (unlock the IT report).
   await page.getByTestId('tab-interviews').click();
